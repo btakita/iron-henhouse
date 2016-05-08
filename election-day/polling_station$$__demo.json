@@ -1,0 +1,53 @@
+[
+  {
+    "id": "oakland-city-hall",
+    "name": "Oakland City Hall",
+    "address": "1 Frank H Ogawa Plaza",
+    "city": "Oakland",
+    "state": "CA",
+    "zip": "94612",
+    "lat": 37.8053088,
+    "lng": -122.2747346
+  },
+  {
+    "id": "94607-post-office-9th-st",
+    "name": "US Post Office",
+    "address": "388 9th St",
+    "address2": "#108",
+    "city": "Oakland",
+    "state": "CA",
+    "zip": "94607",
+    "lat": 37.8003299,
+    "lng": -122.2734659
+  },
+  {
+    "id": "94615-post-office-7th-st",
+    "name": "US Post Office",
+    "address": "1675 7th St",
+    "city": "Oakland",
+    "state": "CA",
+    "zip": "94615",
+    "lat": 37.8062316,
+    "lng": -122.3025152
+  },
+  {
+    "id": "94702-post-office-san-pablo-ave",
+    "name": "US Post Office",
+    "address": "2111 San Pablo Ave",
+    "city": "Berkeley",
+    "state": "CA",
+    "zip": "94702",
+    "lat": 37.8678103,
+    "lng": -122.293513
+  },
+  {
+    "id": "94104-post-office-sutter-st",
+    "name": "US Post Office",
+    "address": "150 Sutter St",
+    "city": "San Francisco",
+    "state": "CA",
+    "zip": "94104",
+    "lat": 37.7901725,
+    "lng": -122.4052289
+  }
+]
