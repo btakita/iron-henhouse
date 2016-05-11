@@ -5,17 +5,20 @@
     empty: ctx.polling_station$$ && !polling_station$$.length,
     present: ctx.polling_station$$ && polling_station$$.length,
     collapse: !!(ctx.polling_station$id)}">
-    <a
-      href="polling_stations/{id}"
+    <polling-station
       class="{selected: ctx.polling_station$id === id}"
-      onclick="{link$onclick}"
       each="{ctx.polling_station$$}">
-      <name>{name}</name>
-      <address>{address}</address>
-      <address2>{address2}</address2>
-      <city>{city}</city>
-      <zip>{zip}</zip>
-    </a>
+      <a
+        href="polling_stations/{id}"
+        onclick="{link$onclick}">
+        <name>{name}</name>
+        <address>{address}</address>
+        <address2>{address2}</address2>
+        <city>{city}</city>
+        <zip>{zip}</zip>
+      </a>
+      <a href="https://maps.google.com/?q={encodeURIComponent(`${address},${city},${state},${zip}`)}" target="_blank" class="map">map</a>
+    </polling-station>
   </content>
   <style>
     polling-station-select {
@@ -30,34 +33,45 @@
       font-style: italic;
       cursor: pointer;
     }
-    polling-station-select > content.collapse > a {
+    polling-station-select > content.collapse > polling-station {
       display: none;
     }
-    polling-station-select > content.collapse > a.selected {
+    polling-station-select > content.collapse > polling-station.selected {
       display: block;
     }
-    polling-station-select > content > a {
+    polling-station-select > content > polling-station {
       display: block;
       overflow: hidden;
-      clear: both;
       padding: 10px;
       border: 1px dotted #333333;
-      text-decoration: none;
-      color: #111111;
     }
-    polling-station-select > content > a.selected,polling-station-select > content > a:hover {
+    polling-station-select > content > polling-station.selected,polling-station-select > content > polling-station:hover {
       background: #dddddd;
       font-weight: bold;
     }
-    polling-station-select > content > a > * {
+    polling-station-select > content > polling-station > a {
+      display: block;
+      overflow: hidden;
+      clear: both;
+      text-decoration: none;
+      color: #111111;
+    }
+    polling-station-select > content > polling-station > a > * {
       display: block;
       font-style: normal;
     }
-    polling-station-select > content > a > city, polling-station-select > content > * > zip {
+    polling-station-select > content > polling-station > a > city, polling-station-select > content > polling-station > a > zip {
       float: left;
     }
-    polling-station-select > content > a > city:after {
+    polling-station-select > content > polling-station > a > city:after {
       content: ",\00a0";
+    }
+    polling-station-select > content > polling-station > a.map {
+      text-decoration: underline;
+      display: none;
+    }
+    polling-station-select > content.collapse > polling-station > a.map {
+      display: block;
     }
   </style>
   <script type="text/babel">

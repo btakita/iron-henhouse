@@ -6,6 +6,7 @@
     "city": "Oakland",
     "state": "CA",
     "zip": "94612",
+    "county": "Alameda",
     "lat": 37.8053088,
     "lng": -122.2747346
   },
@@ -17,6 +18,7 @@
     "city": "Oakland",
     "state": "CA",
     "zip": "94607",
+    "county": "Alameda",
     "lat": 37.8003299,
     "lng": -122.2734659
   },
@@ -27,6 +29,7 @@
     "city": "Oakland",
     "state": "CA",
     "zip": "94615",
+    "county": "Alameda",
     "lat": 37.8062316,
     "lng": -122.3025152
   },
@@ -37,6 +40,7 @@
     "city": "Berkeley",
     "state": "CA",
     "zip": "94702",
+    "county": "Alameda",
     "lat": 37.8678103,
     "lng": -122.293513
   },
@@ -47,6 +51,7 @@
     "city": "San Francisco",
     "state": "CA",
     "zip": "94104",
+    "county": "San Francisco",
     "lat": 37.7901725,
     "lng": -122.4052289
   }
