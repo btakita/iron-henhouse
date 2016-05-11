@@ -32,7 +32,10 @@ function start(id) {
   app.use(koa$bodyparser());
   app.use(koa$static("./public"));
   app$use__election_day(ctx);
-  app$use__http$post$cmd(ctx);
+ app.use(koa$route.get("/", function *() {
+    this.redirects("/election-day");
+  }));
+ app$use__http$post$cmd(ctx);
   app$use__echo(ctx);
   app.listen(env.port);
   info(`${logPrefix}|started|port`, env.port);

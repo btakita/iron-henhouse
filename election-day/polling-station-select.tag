@@ -1,8 +1,10 @@
 <polling-station-select>
-  <title>Select your polling station</title>
+  <title onclick="{title$onclick}">Select your polling station&hellip;</title>
   <content class="{
     loading: !ctx.polling_station$$,
-    empty: ctx.polling_station$$ && !polling_station$$.length}">
+    empty: ctx.polling_station$$ && !polling_station$$.length,
+    present: ctx.polling_station$$ && polling_station$$.length,
+    collapse: !!(ctx.polling_station$id)}">
     <a
       href="polling_stations/{id}"
       class="{selected: ctx.polling_station$id === id}"
@@ -26,6 +28,13 @@
     polling-station-select > title {
       padding: 10px;
       font-style: italic;
+      cursor: pointer;
+    }
+    polling-station-select > content.collapse > a {
+      display: none;
+    }
+    polling-station-select > content.collapse > a.selected {
+      display: block;
     }
     polling-station-select > content > a {
       display: block;
@@ -54,15 +63,20 @@
   <script type="text/babel">
     import {tag$assign__opts,link$onclick} from "ctx-core/tag/lib";
     import {assign} from "ctx-core/object/lib";
-    import {assign__polling_station$$_agent} from "election-day/agent";
-    import {url$anchor$assign} from "ctx-core/dom/lib";
+    import {
+      assign__polling_station$$_agent,
+      assign__polling_station$id_agent} from "election-day/agent";
+    import {$,url$anchor$assign} from "ctx-core/dom/lib";
+    import dom$classes from "dom-classes";
     import riot from "riot";
     import {log,debug} from "ctx-core/logger/lib";
     const self = tag$assign__opts(this, {
             assign__ctx$update: assign__ctx$update,
             self$update: self$update,
+            title$onclick: title$onclick,
             link$onclick: link$onclick})
         , logPrefix = "election-day/polling-station-select.tag";
+    let dom$content;
     log(logPrefix);
     self.on("mount", on$mount);
     self.on("unmount", on$unmount);
@@ -70,21 +84,31 @@
       log(`${logPrefix}|on$mount`);
       let ctx = self.ctx;
       assign__polling_station$$_agent(ctx);
+      assign__polling_station$id_agent(ctx);
       ctx.polling_station$$_agent.on("change", polling_station$$_agent$on$change);
+      ctx.polling_station$id_agent.on("change", polling_station$id_agent$on$change);
+      dom$content = $("content", self.root);
     }
     function on$unmount() {
       log(`${logPrefix}|on$unmount`);
       let ctx = self.ctx;
       ctx.polling_station$$_agent.off("change", polling_station$$_agent$on$change);
+      ctx.polling_station$id_agent.off("change", polling_station$id_agent$on$change);
     }
     function polling_station$$_agent$on$change() {
       log(`${logPrefix}|polling_station$$_agent$on$change`);
       assign__ctx$update();
     }
-    function onchange(e) {
-      log(`${logPrefix}|onchange`);
-      const target$value = e.target.value;
-      riot.route(`polling_stations/${target$value}`);
+    function polling_station$id_agent$on$change() {
+      log(`${logPrefix}|polling_station$id_agent$on$change`);
+      assign__ctx$update();
+      const ctx = self.ctx
+          , dom$classes$op = ctx.polling_station$id ? "add" : "remove";
+      dom$classes[dom$classes$op](dom$content, "collapse");
+    }
+    function title$onclick() {
+      log(`${logPrefix}|title$onclick`);
+      dom$classes.toggle(dom$content, "collapse");
     }
     function assign__ctx$update() {
       log(`${logPrefix}|assign__ctx$update`);

@@ -31,3 +31,16 @@ export function assign__agent__election_day$cmd(ctx, ...ctx$rest$$) {
     }, ...fn$cmd$ctx$ctx$rest$$);
   }
 }
+export function assign__polling_station$id_agent() {
+  log(`${logPrefix}|assign__polling_station$id_agent`);
+  let ctx = assign(...arguments);
+  if (!ctx.polling_station$id_agent) assign__polling_station$id_agent$();
+  return ctx;
+  function assign__polling_station$id_agent$() {
+    log(`${logPrefix}|assign__polling_station$id_agent|assign__polling_station$id_agent$`);
+    assign__agent(ctx, {
+      key$agent: "polling_station$id_agent",
+      agent$keys: ["polling_station$id"]
+    });
+  }
+}

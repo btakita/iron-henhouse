@@ -11,9 +11,17 @@ export function assign__election_day$route$$() {
   let ctx = assign(...arguments);
   return assign__route$$(
     ctx,
+    fn$route(ctx, {path: "", route$name: "election_day", fn: fn$route$election_day(ctx)}),
     fn$route(ctx, {path: "polling_stations", route$name: "polling_station$$", fn: fn$route$polling_station$$(ctx)}),
     fn$route(ctx, {path: "polling_stations/*", route$name: "polling_station", fn: fn$route$polling_station(ctx)})
   );
+}
+function fn$route$election_day(ctx) {
+  log(`${logPrefix}|fn$route$election_day`);
+  return route$ctx => {
+    log(`${logPrefix}|fn$route$polling_station$$|route`);
+    route$ctx.route__election_day = true;
+  }
 }
 function fn$route$polling_station$$(ctx) {
   log(`${logPrefix}|fn$route$polling_station$$`);
@@ -39,6 +47,7 @@ function fn$ctx() {
   return assign({
     route__polling_station$$: null,
     route__polling_station: null,
+    route__election_day: null,
     polling_station$id: null
   }, ...arguments);
 }
