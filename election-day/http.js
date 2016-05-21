@@ -6,7 +6,7 @@ import layoutHtml from "ctx-core/layout/layout.html";
 import {indentation,indentation$regexp} from "ctx-core/string/indendation";
 import {js$html} from "ctx-core/html/lib";
 import koa$route from "koa-route";
-import "./cmd";
+import "vote-where/cmd";
 import {log,info,error,debug} from "ctx-core/logger/lib"
 const logPrefix = "election-day/http";
 //GET /election-day

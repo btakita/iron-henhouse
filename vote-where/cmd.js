@@ -2,7 +2,7 @@ import {assign} from "ctx-core/object/lib";
 import {delegate$cmd$map__assign,cmd$api} from "ctx-core/cmd/lib";
 import {log,debug} from "ctx-core/logger/lib";
 import polling_station$$__demo from "./polling_station$$__demo.json";
-const logPrefix = "ctx-core/election-day/cmd";
+const logPrefix = "ctx-core/vote-where/cmd";
 log(logPrefix);
 delegate$cmd$map__assign({
   polling_station$$cmd: polling_station$$cmd

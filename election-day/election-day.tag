@@ -1,5 +1,7 @@
 <election-day>
-  <bernie-election-day-root ctx="{opts.ctx}"></bernie-election-day-root>
+  <bernie-election-day-root show="{ctx.route__election_day_root}" ctx="{opts.ctx}"></bernie-election-day-root>
+  <vote-where show="{ctx.route__vote_where}" ctx="{opts.ctx}"></vote-where>
+  <voting-issue show="{ctx.route__voting_issue}" ctx="{opts.ctx}"></voting-issue>
   <style>
     election-day {
       overflow-x: hidden;
@@ -13,7 +15,7 @@
     import {assign__election_day$route$$} from "./route";
     import {log,debug} from "ctx-core/logger/lib";
     const tag = fn$tag(this)
-        , logPrefix = "quovo_demo/quovo-demo.tag";
+        , logPrefix = "election-day/election-day.tag";
     tag.on("mount", on$mount);
     tag.on("unmount", on$unmount);
     log(logPrefix);
