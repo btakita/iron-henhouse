@@ -15,6 +15,7 @@ import koa$sslify from "koa-sslify";
 import koa$bodyparser from "koa-bodyparser";
 import koa$static from "koa-static";
 import koa$route from "koa-route";
+import {app$use__basic_auth} from "ctx-core/basic_auth/http";
 import {log,info,warn,error,debug} from "ctx-core/logger/lib";
 const app = koa()
     , env = env$assign({app: app})
@@ -31,6 +32,7 @@ function start(id) {
   app$use__log$request$time(ctx);
   if (!env.isLocalhost) {
     app.use(koa$sslify({trustProtoHeader: true}));
+    app$use__basic_auth(ctx);
   }
   app$use__http$error(ctx);
   app.use(koa$bodyparser());

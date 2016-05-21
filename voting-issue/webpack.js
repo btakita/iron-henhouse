@@ -1,1 +1,9 @@
 import "./voting-issue.tag";
+import "./voting-issue-no-ballots.tag";
+import "./voting-issue-wrong-ballots.tag";
+import "./voting-issue-no-evidence-of-registration.tag";
+import "./voting-issue-wrong-party-registration.tag";
+import "./voting-issue-campaigning-within-100-feet.tag";
+import "./voting-issue-polling-station-closed.tag";
+import "./voting-issue-sending-voters-away.tag";
+import "./voting-issue-wrong-location.tag";
