@@ -1,5 +1,11 @@
 <election-day>
-  <polling-station-select ctx="{opts.ctx}"></polling-station-select>
+  <bernie-election-day-root ctx="{opts.ctx}"></bernie-election-day-root>
+  <style>
+    election-day {
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+  </style>
   <script type="text/babel">
     import {assign} from "ctx-core/object/lib";
     import {fn$tag} from "ctx-core/tag/lib";
