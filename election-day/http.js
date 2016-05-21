@@ -39,17 +39,15 @@ export function election_day$body$html() {
   };
   return `
     <body>
-      <ctx>
-        <ctx-size ctx="{opts.ctx}">
-          <election-day ctx="{opts.ctx}"></election-day>
-        </ctx-size>
-      </ctx>
+      <spt-layout>
+        <election-day ctx="{opts.ctx}"></election-day>
+      </spt-layout>
       ${js$html(ctx, {indentation: indentation(6), indentFirstLine: false})}
       <script>
         (function() {
           var riot$mount$ctx = ${JSON.stringify(riot$mount$ctx)};
           window.ctx = riot$mount$ctx.ctx;
-          riot.mount(document.querySelector("ctx"), riot$mount$ctx);
+          riot.mount(document.querySelector("spt-layout"), riot$mount$ctx);
           riot.route.start();
         })();
       </script>
