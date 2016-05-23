@@ -2,7 +2,9 @@
   <ctx ctx="{opts.ctx}">
     <ctx-size ctx="{opts.ctx}">
       <spt-top-navigation ctx="{opts.ctx}"></spt-top-navigation>
-      <yield/>
+      <content>
+        <yield/>
+      </content>
       <spt-dialogs ctx="{opts.ctx}"></spt-dialogs>
     </ctx-size>
   </ctx>
@@ -18,6 +20,12 @@
     }
     spt-layout > ctx > ctx-size > spt-top-navigation {
       flex: inherit;
+    }
+    spt-layout > ctx > ctx-size > content {
+      display: block;
+      text-align: center;
+      overflow-x: hidden;
+      overflow-y: auto;
     }
   </style>
   <script type="text/babel">

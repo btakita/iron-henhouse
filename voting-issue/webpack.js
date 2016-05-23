@@ -1,4 +1,5 @@
 import "./voting-issue.tag";
+import "./voting-issue-tile.tag";
 import "./voting-issue-no-ballots.tag";
 import "./voting-issue-wrong-ballots.tag";
 import "./voting-issue-no-evidence-of-registration.tag";

@@ -9,8 +9,6 @@
   <style>
     bernie-election-day-root {
       display: block;
-      text-align: center;
-      padding: 10px;
     }
     bernie-election-day-root > .header-img {
       height: 99px;

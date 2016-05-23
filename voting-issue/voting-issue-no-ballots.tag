@@ -1,3 +1,3 @@
 <voting-issue-no-ballots>
-  <p>No ballots available</p>
+  <h1>No ballots available</h1>
 </voting-issue-no-ballots>

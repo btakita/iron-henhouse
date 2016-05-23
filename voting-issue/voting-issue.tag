@@ -2,28 +2,28 @@
   <h1>What problems are you facing?</h1>
   <h2>Select from one of the problems below:</h2>
   <a href="voting-issue/no-ballots" class="voting-issue-type no-ballots" onclick="{link$onclick}">
-    <p>No ballots available</p>
+    <p>{ctx.voting_issue$$map.no_ballots.title}</p>
   </a>
   <a href="voting-issue/wrong-ballots" class="voting-issue-type wrong-ballots" onclick="{link$onclick}">
-    <p>Wrong ballots available</p>
+    <p>{ctx.voting_issue$$map.wrong_ballots.title}</p>
   </a>
   <a href="voting-issue/no-evidence-of-registration" class="voting-issue-type no-evidence-of-registration" onclick="{link$onclick}">
-    <p>No evidence of registration</p>
+    <p>{ctx.voting_issue$$map.no_evidence_of_registration.title}</p>
   </a>
   <a href="voting-issue/wrong-party-registration" class="voting-issue-type wrong-party-registration" onclick="{link$onclick}">
-    <p>Wrong party registration</p>
+    <p>{ctx.voting_issue$$map.wrong_party_registration.title}</p>
   </a>
   <a href="voting-issue/campaigning-within-100-feet" class="voting-issue-type campaigning-within-100-feet" onclick="{link$onclick}">
-    <p>Campaigning within 100 feet</p>
+    <p>{ctx.voting_issue$$map.campaigning_within_100_feet.title}</p>
   </a>
   <a href="voting-issue/polling-station-closed" class="voting-issue-type polling-station-closed" onclick="{link$onclick}">
-    <p>Polling place closed</p>
+    <p>{ctx.voting_issue$$map.polling_station_closed.title}</p>
   </a>
   <a href="voting-issue/sending-voters-away" class="voting-issue-type sending-voters-away" onclick="{link$onclick}">
-    <p>Sending voters away</p>
+    <p>{ctx.voting_issue$$map.sending_voters_away.title}</p>
   </a>
   <a href="voting-issue/wrong-location" class="voting-issue-type wrong-location" onclick="{link$onclick}">
-    <p>Wrong location</p>
+    <p>{ctx.voting_issue$$map.wrong_location.title}</p>
   </a>
   <h2>Didn't find an answer? Call our rapid response team. They'll sort you out!</h2>
   <a href="tel:18002498683" class="call-us">
