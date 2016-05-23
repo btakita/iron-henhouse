@@ -2,15 +2,15 @@
   <h1>{ctx.voting_issue$title}</h1>
   <tabs>
     <a
-      href="{ctx.voting_issue$route$path}/your-rights"
+      href="voting-issue/{ctx.voting_issue$route$path}/your-rights"
       class="{selected: ctx.route$name__voting_issue$your_rights}"
       onclick="{link$onclick}">Your Rights</a>
     <a
-      href="{ctx.voting_issue$route$path}/video"
+      href="voting-issue/{ctx.voting_issue$route$path}/video"
       class="{selected: ctx.route$name__voting_issue$video}"
       onclick="{link$onclick}">Video</a>
     <a
-      href="{ctx.voting_issue$route$path}/help"
+      href="voting-issue/{ctx.voting_issue$route$path}/help"
       class="{selected: ctx.route$name__voting_issue$help}"
       onclick="{link$onclick}">Help!</a>
   </tabs>
@@ -37,8 +37,10 @@
     }
     voting-issue-tile > tabs {
       display: flex;
+      border-bottom: 2px solid #C2C2C2;
     }
     voting-issue-tile > tabs > a {
+      text-decoration: none;
       width: 33%;
       border-bottom: 3px solid transparent;
     }
@@ -47,7 +49,7 @@
       flex: auto;
     }
     voting-issue-tile > tabs > a.selected {
-      border-bottom: #087ED7;
+      border-bottom-color: #087ED7;
     }
   </style>
   <script type="text/babel">

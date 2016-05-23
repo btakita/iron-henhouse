@@ -15,13 +15,13 @@
       width: 100%;
       height: 100%;
     }
-    spt-layout > ctx > ctx-size > * {
+    spt-layout > ctx > ctx-size > content > * {
       flex: auto;
     }
-    spt-layout > ctx > ctx-size > spt-top-navigation {
+    spt-layout > ctx > ctx-size > content > spt-top-navigation {
       flex: inherit;
     }
-    spt-layout > ctx > ctx-size > content {
+    spt-layout > ctx > ctx-size > content > content {
       display: block;
       text-align: center;
       overflow-x: hidden;

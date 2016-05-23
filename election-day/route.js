@@ -34,14 +34,15 @@ function fn$voting_issue$route$$(ctx, ...ctx$rest$$) {
     , route$$;
   route$$ = keys(ctx.voting_issue$$map).reduce(
     (memo, voting_issue$route$name$) => {
-      const voting_issue$route$path$ = voting_issue$route$path(voting_issue$route$name$);
+      const voting_issue$route$path$ = voting_issue$route$path(voting_issue$route$name$)
+          , your_rights$path = `voting-issue/${voting_issue$route$path$}/your-rights`;
       memo.push(
         fn$route(ctx, {
           path: `voting-issue/${voting_issue$route$path$}`,
           route$name: voting_issue$route$name$,
-          fn: route$fn}, ctx$rest),
+          fn: root__route$fn}, ctx$rest),
         fn$route(ctx, {
-          path: `voting-issue/${voting_issue$route$path$}/your-rights`,
+          path: your_rights$path,
           route$name: `${voting_issue$route$name$}_your_rights`,
           fn: your_rights__route$fn}, ctx$rest),
         fn$route(ctx, {
@@ -54,6 +55,9 @@ function fn$voting_issue$route$$(ctx, ...ctx$rest$$) {
           fn: help__route$fn}, ctx$rest)
       );
       return memo;
+      function root__route$fn(route$ctx) {
+        riot.route(your_rights$path);
+      }
       function your_rights__route$fn(route$ctx) {
         route$ctx.route$name__voting_issue$your_rights = true;
         route$fn(...arguments);
@@ -68,7 +72,7 @@ function fn$voting_issue$route$$(ctx, ...ctx$rest$$) {
       }
       function route$fn(route$ctx) {
         assign(route$ctx, {
-          voting_issue$title: ctx.voting_issue$$map[voting_issue$route$name$],
+          voting_issue$title: ctx.voting_issue$$map[voting_issue$route$name$].title,
           voting_issue$tile: true,
           voting_issue$route$path: voting_issue$route$path$
         });
@@ -81,7 +85,7 @@ function voting_issue$route$path(voting_issue) {
   return voting_issue.replace(/_/g, "-");
 }
 function fn$route(ctx, ...ctx$rest$$) {
-  route$lib__fn$route(ctx, {fn$ctx: fn$ctx}, ...ctx$rest$$);
+  return route$lib__fn$route(ctx, {fn$ctx: fn$ctx}, ...ctx$rest$$);
 }
 function fn$ctx() {
   log(`${logPrefix}|fn$ctx`);
