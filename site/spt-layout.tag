@@ -21,8 +21,12 @@
     spt-layout > ctx > ctx-size > content > spt-top-navigation {
       flex: inherit;
     }
+    spt-layout > ctx > ctx-size > content {
+      display: flex;
+      flex-direction: column;
+    }
     spt-layout > ctx > ctx-size > content > content {
-      display: block;
+      flex: auto;
       text-align: center;
       overflow-x: hidden;
       overflow-y: auto;

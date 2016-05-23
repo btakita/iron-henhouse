@@ -33,25 +33,26 @@ function fn$voting_issue$route$$(ctx, ...ctx$rest$$) {
   let ctx$rest = clone(...ctx$rest$$)
     , route$$;
   route$$ = keys(ctx.voting_issue$$map).reduce(
-    (memo, voting_issue$route$name$) => {
-      const voting_issue$route$path$ = voting_issue$route$path(voting_issue$route$name$)
+    (memo, voting_issue$key) => {
+      const voting_issue$route$name = `voting_issue$${voting_issue$key}`
+          , voting_issue$route$path$ = voting_issue$route$path(voting_issue$key)
           , your_rights$path = `voting-issue/${voting_issue$route$path$}/your-rights`;
       memo.push(
         fn$route(ctx, {
           path: `voting-issue/${voting_issue$route$path$}`,
-          route$name: voting_issue$route$name$,
+          route$name: voting_issue$route$name,
           fn: root__route$fn}, ctx$rest),
         fn$route(ctx, {
           path: your_rights$path,
-          route$name: `${voting_issue$route$name$}_your_rights`,
+          route$name: `${voting_issue$route$name}$your_rights`,
           fn: your_rights__route$fn}, ctx$rest),
         fn$route(ctx, {
           path: `voting-issue/${voting_issue$route$path$}/video`,
-          route$name: `${voting_issue$route$name$}_video`,
+          route$name: `${voting_issue$route$name}$video`,
           fn: video__route$fn}, ctx$rest),
         fn$route(ctx, {
           path: `voting-issue/${voting_issue$route$path$}/help`,
-          route$name: `${voting_issue$route$name$}_help`,
+          route$name: `${voting_issue$route$name}$help`,
           fn: help__route$fn}, ctx$rest)
       );
       return memo;
@@ -59,6 +60,7 @@ function fn$voting_issue$route$$(ctx, ...ctx$rest$$) {
         riot.route(your_rights$path);
       }
       function your_rights__route$fn(route$ctx) {
+        debug(`${logPrefix}|fn$voting_issue$route$$|your_rights`);
         route$ctx.route$name__voting_issue$your_rights = true;
         route$fn(...arguments);
       }
@@ -72,11 +74,11 @@ function fn$voting_issue$route$$(ctx, ...ctx$rest$$) {
       }
       function route$fn(route$ctx) {
         assign(route$ctx, {
-          voting_issue$title: ctx.voting_issue$$map[voting_issue$route$name$].title,
+          voting_issue$title: ctx.voting_issue$$map[voting_issue$key].title,
           voting_issue$tile: true,
           voting_issue$route$path: voting_issue$route$path$
         });
-        route$ctx[`route$name__${voting_issue$route$name$}`] = true;
+        route$ctx[`route$name__${voting_issue$route$name}`] = true;
       }
     }, []);
   return route$$;
@@ -89,27 +91,28 @@ function fn$route(ctx, ...ctx$rest$$) {
 }
 function fn$ctx() {
   log(`${logPrefix}|fn$ctx`);
+  const voting_issue$$map = ctx.voting_issue$$map;
   return assign({
-    route$name__election_day_root: null,
-    route$name__vote_where: null,
-    route$name__voting_issue: null,
-    voting_issue$title: null,
-    voting_issue$tile: null,
-    voting_issue$route$path: null,
-    route$name__voting_issue$your_rights: null,
-    route$name__voting_issue$video: null,
-    route$name__voting_issue$help: null,
-    route$name__polling_station$$: null,
-    route$name__polling_station: null,
-    polling_station$id: null
-  },
-    keys(ctx.voting_issue$$map).reduce(
-    (memo, voting_issue$route$name) => {
-      memo[`route$name__voting_issue$$map{voting_issue$route$name}`] =
-        memo[`route$name__voting_issue$$map{voting_issue$route$name}_your_rights`] =
-        memo[`route$name__voting_issue$$map{voting_issue$route$name}_video`] =
-        memo[`route$name__voting_issue$$map{voting_issue$route$name}_help`] =
-        null;
-      return memo;
+      route$name__election_day_root: null,
+      route$name__vote_where: null,
+      route$name__voting_issue: null,
+      voting_issue$title: null,
+      voting_issue$tile: null,
+      voting_issue$route$path: null,
+      route$name__voting_issue$your_rights: null,
+      route$name__voting_issue$video: null,
+      route$name__voting_issue$help: null,
+      route$name__polling_station$$: null,
+      route$name__polling_station: null,
+      polling_station$id: null
+    },
+    keys(voting_issue$$map).reduce(
+      (memo, voting_issue$route$name) => {
+        memo[`route$name__voting_issue$${voting_issue$route$name}`] =
+          memo[`route$name__voting_issue$${voting_issue$route$name}$your_rights`] =
+          memo[`route$name__voting_issue$${voting_issue$route$name}$video`] =
+          memo[`route$name__voting_issue$${voting_issue$route$name}$help`] =
+          null;
+        return memo;
     }, {}), ...arguments);
 }

@@ -23,7 +23,9 @@
     <voting-issue-wrong-ballots show="{ctx.route$name__voting_issue$wrong_ballots}" ctx="{opts.ctx}"></voting-issue-wrong-ballots>
     <voting-issue-wrong-location show="{ctx.route$name__voting_issue$wrong_location}" ctx="{opts.ctx}"></voting-issue-wrong-location>
     <voting-issue-wrong-party-registration show="{ctx.route$name__voting_issue$wrong_party_registration}" ctx="{opts.ctx}"></voting-issue-wrong-party-registration>
-    <help ctx="{opts.ctx}" show="{ctx.route$name__voting_issue$help}"></help>
+    <voting-issue-help ctx="{opts.ctx}" show="{ctx.route$name__voting_issue$help}">
+      <p>{ctx.voting_issue$title} &mdash; Help</p>
+    </voting-issue-help>
   </content>
   <style>
     voting-issue-tile {
@@ -50,6 +52,15 @@
     }
     voting-issue-tile > tabs > a.selected {
       border-bottom-color: #087ED7;
+    }
+    voting-issue-tile > content {
+      display: block;
+    }
+    voting-issue-tile > content > * {
+      display: block;
+    }
+    voting-issue-tile > content > * > * {
+      display: block;
     }
   </style>
   <script type="text/babel">
