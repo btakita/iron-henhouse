@@ -22,7 +22,12 @@ function *http$get$election_day() {
   try {
     this.body = layoutHtml(ctx, {
       title: "Election Day",
-      body$html: election_day$body$html(ctx),
+      body$html: election_day$body$html(ctx, {
+        authentication: {
+          token_type: "Basic",
+          access_token: this.headers.authorization.split("Basic ")[1]
+        }
+      }),
       cssUrls: ["/layout"]
     });
   } catch (error$ctx) {
@@ -34,6 +39,7 @@ export function election_day$body$html() {
   log(`${logPrefix}|election_day$body$html`, keys(ctx));
   let riot$mount$ctx = {
     ctx: {
+      authentication: ctx.authentication
     }
   };
   return `
