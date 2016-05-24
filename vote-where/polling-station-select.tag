@@ -97,7 +97,7 @@
     import dom$classes from "dom-classes";
     import riot from "riot";
     import {log,debug} from "ctx-core/logger/lib";
-    const self = fn$tag(this, {
+    const tag = fn$tag(this, {
             assign__ctx$update: assign__ctx$update,
             self$update: self$update,
             title$onclick: title$onclick,
@@ -105,20 +105,20 @@
         , logPrefix = "election-day/polling-station-select.tag";
     let dom$content;
     log(logPrefix);
-    self.on("mount", on$mount);
-    self.on("unmount", on$unmount);
+    tag.on("mount", on$mount);
+    tag.on("unmount", on$unmount);
     function on$mount() {
       log(`${logPrefix}|on$mount`);
-      let ctx = self.ctx;
+      let ctx = tag.ctx;
       assign__polling_station$$_agent(ctx);
       assign__polling_station_agent(ctx);
       ctx.polling_station$$_agent.on("change", polling_station$$_agent$on$change);
       ctx.polling_station_agent.on("change", polling_station_agent$on$change);
-      dom$content = $("content", self.root);
+      dom$content = $("content", tag.root);
     }
     function on$unmount() {
       log(`${logPrefix}|on$unmount`);
-      let ctx = self.ctx;
+      let ctx = tag.ctx;
       ctx.polling_station$$_agent.off("change", polling_station$$_agent$on$change);
       ctx.polling_station_agent.off("change", polling_station_agent$on$change);
     }
@@ -129,7 +129,7 @@
     function polling_station_agent$on$change() {
       log(`${logPrefix}|polling_station_agent$on$change`);
       assign__ctx$update();
-      const ctx = self.ctx
+      const ctx = tag.ctx
           , dom$classes$op = ctx.polling_station ? "add" : "remove";
       dom$classes[dom$classes$op](dom$content, "collapse");
     }
@@ -139,13 +139,13 @@
     }
     function assign__ctx$update() {
       log(`${logPrefix}|assign__ctx$update`);
-      let ctx = assign(self.ctx, ...arguments);
-      assign(self, {ctx: ctx});
+      let ctx = assign(tag.ctx, ...arguments);
+      assign(tag, {ctx: ctx});
       self$update();
     }
     function self$update() {
       log(`${logPrefix}|self$update`);
-      self.update();
+      tag.update();
     }
   </script>
 </polling-station-select>

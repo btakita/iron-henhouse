@@ -5,7 +5,7 @@
       <content>
         <yield/>
       </content>
-      <spt-dialogs ctx="{opts.ctx}"></spt-dialogs>
+      <spt-dialog ctx="{opts.ctx}"></spt-dialog>
     </ctx-size>
   </ctx>
   <style>
@@ -19,7 +19,7 @@
       flex: auto;
     }
     spt-layout > ctx > ctx-size > content > spt-top-navigation {
-      flex: inherit;
+      flex: none;
     }
     spt-layout > ctx > ctx-size > content {
       display: flex;

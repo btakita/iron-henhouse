@@ -20,7 +20,6 @@ function *http$get$election_day() {
   info(`${logPrefix}|http$get$election_day`);
   let ctx = {};
   try {
-    debug(`${logPrefix}|http$get$election_day|1`, election_day$body$html(ctx));
     this.body = layoutHtml(ctx, {
       title: "Election Day",
       body$html: election_day$body$html(ctx),
