@@ -15,15 +15,15 @@
       width: 100%;
       height: 100%;
     }
+    spt-layout > ctx > ctx-size > content {
+      display: flex;
+      flex-direction: column;
+    }
     spt-layout > ctx > ctx-size > content > * {
       flex: auto;
     }
     spt-layout > ctx > ctx-size > content > spt-top-navigation {
       flex: none;
-    }
-    spt-layout > ctx > ctx-size > content {
-      display: flex;
-      flex-direction: column;
     }
     spt-layout > ctx > ctx-size > content > content {
       flex: auto;

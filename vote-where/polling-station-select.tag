@@ -93,7 +93,7 @@
     import {
       assign__polling_station$$_agent,
       assign__polling_station_agent} from "election-day/agent";
-    import {$,url$anchor$assign} from "ctx-core/dom/lib";
+    import {dom$,url$anchor$assign} from "ctx-core/dom/lib";
     import dom$classes from "dom-classes";
     import riot from "riot";
     import {log,debug} from "ctx-core/logger/lib";
@@ -114,7 +114,7 @@
       assign__polling_station_agent(ctx);
       ctx.polling_station$$_agent.on("change", polling_station$$_agent$on$change);
       ctx.polling_station_agent.on("change", polling_station_agent$on$change);
-      dom$content = $("content", tag.root);
+      dom$content = dom$("content", tag.root);
     }
     function on$unmount() {
       log(`${logPrefix}|on$unmount`);

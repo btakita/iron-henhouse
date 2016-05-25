@@ -1,6 +1,6 @@
 import {assign,clone} from "ctx-core/object/lib";
 import {error$throw} from "ctx-core/error/lib";
-import {assign__agent,assign__agent_cmd} from "ctx-core/agent/lib";
+import {assign__agent,assign__cmd_agent} from "ctx-core/agent/lib";
 import co from "co";
 import {log,debug} from "ctx-core/logger/lib";
 const logPrefix = "election-day/agent";
@@ -20,7 +20,7 @@ export function assign__polling_station$$_agent() {
 }
 export function assign__agent__election_day$cmd(ctx, ...ctx$rest$$) {
   log(`${logPrefix}|assign__agent__election_day$cmd`);
-  assign__agent_cmd(ctx, {
+  assign__cmd_agent(ctx, {
     fn$cmd$ctx: fn$cmd$ctx
   }, ...ctx$rest$$);
   return ctx;

@@ -4,6 +4,7 @@ global.riot = riot;
 import "./spt-layout.tag";
 import "./spt-dialog.tag";
 import "ctx-core/dialog/ctx-dialog.tag";
+import "ctx-core/dialog/ctx-dialog-right.tag";
 import "./spt-dialog-menu.tag";
 import "./spt-top-navigation.tag";
 import "ctx-core/dom/ctx.tag";
