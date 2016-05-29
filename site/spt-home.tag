@@ -15,9 +15,7 @@
         attempted voter suppression.
       </p>
       <p>
-        To prevent and respond to attempts at voter suppression, Suppress This will launch
-        an app to organize, report, and respond to expected voter irregularities and
-        contingencies.
+        The #SuppressThis Mobile Web App was created in an effort to arm all California Voters & Trained Poll Watchers with the LAW on June 7th! With detailed instructions on how to assert your rights, we highly recommend you keep SuppressThis.Org at your fingertips this Election Day! App Launches June 1, 2016.
       </p>
     </spt-about-us>
   </bottom>

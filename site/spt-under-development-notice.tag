@@ -1,5 +1,6 @@
 <spt-under-development-notice>
-  <p>suppressthis.org is currently under active development.</p>
+  <p>Come back and visit for SuppressThis.org launch on June 1.  Until then watch for #SuppressThisCA!
+</p>
   <style>
     spt-under-development-notice {
       display: block;
