@@ -5,6 +5,7 @@ import {
   app$use__http$error,
   app$use__echo} from "ctx-core/http/lib";
 import app$use__http$post$cmd from "ctx-core/cmd/http$cmd";
+import {app$use__home} from "site/http";
 import {app$use__election_day} from "election-day/http";
 import "babel-core";
 import {env$assign} from "ctx-core/env";
@@ -30,17 +31,17 @@ throng({
 function start(id) {
   koa$redirects(app, {});
   app$use__log$request$time(ctx);
-  if (!env.isLocalhost) {
-    app.use(koa$sslify({trustProtoHeader: true}));
-    app$use__basic_auth(ctx);
-  }
   app$use__http$error(ctx);
   app.use(koa$bodyparser());
   app.use(koa$static("./public"));
+  if (!env.isLocalhost) {
+    app.use(koa$sslify({trustProtoHeader: true}));
+  }
+  app$use__home(ctx);
+  if (!env.isLocalhost) {
+    app$use__basic_auth(ctx);
+  }
   app$use__election_day(ctx);
-  app.use(koa$route.get("/", function *() {
-    this.redirects("/election-day");
-  }));
   app$use__http$post$cmd(ctx);
   app$use__echo(ctx);
   app.listen(env.port);

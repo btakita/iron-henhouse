@@ -9,7 +9,8 @@ module.exports = {
     }
   },
   entry: {
-    "election-day": "./election-day/webpack"
+    "home": "./site/home.webpack",
+    "election-day": "./election-day/election-day.webpack"
   },
   output: {
     path: path.resolve(__dirname, "public/dist"),
