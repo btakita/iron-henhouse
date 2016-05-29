@@ -3,6 +3,15 @@
   <vote-where show="{ctx.route$name__vote_where}" ctx="{opts.ctx}"></vote-where>
   <voting-issue show="{ctx.route$name__voting_issue}" ctx="{opts.ctx}"></voting-issue>
   <voting-issue-tile show="{ctx.voting_issue$tile}" ctx="{opts.ctx}"></voting-issue-tile>
+  <style>
+    election-day {
+      display: block;
+      overflow: hidden;
+      height: 100%;
+      background: #FFFFFF;
+      color: #111111;
+    }
+  </style>
   <script type="text/babel">
     import {assign} from "ctx-core/object/lib";
     import {fn$tag} from "ctx-core/tag/lib";

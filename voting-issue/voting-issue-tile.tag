@@ -30,6 +30,7 @@
   <style>
     voting-issue-tile {
       display: block;
+      overflow: hidden;
     }
     voting-issue-tile > * {
       display: block;

@@ -9,6 +9,9 @@
     </ctx-size>
   </ctx>
   <style>
+    spt-layout {
+      display: block;
+    }
     spt-layout > ctx > ctx-size {
       display: flex;
       flex-direction: column;
@@ -18,9 +21,6 @@
     spt-layout > ctx > ctx-size > content {
       display: flex;
       flex-direction: column;
-    }
-    spt-layout > ctx > ctx-size > content > * {
-      flex: auto;
     }
     spt-layout > ctx > ctx-size > content > spt-top-navigation {
       flex: none;
