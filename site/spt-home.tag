@@ -24,7 +24,7 @@
   <style>
     spt-home {
       display: block;
-      padding: 140px 0 100px;
+      padding: 0 0 100px;
     }
     spt-home > logo {
       margin: 80px 0 0;

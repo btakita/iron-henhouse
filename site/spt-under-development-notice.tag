@@ -3,7 +3,8 @@
   <style>
     spt-under-development-notice {
       display: block;
-      background: #454545;
+      color: #111111;
+      background: #FDD102;
       border-top: 1px solid #FFFFFF;
       border-bottom: 1px solid #FFFFFF;
       text-transform: uppercase;
