@@ -1,5 +1,6 @@
 html {
   background: #111111;
+  background-image:url('suppress-this/voter_suppression.png'); background-repeat: repeat-y;
   color: #FFFFFF;
   box-sizing: border-box;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
