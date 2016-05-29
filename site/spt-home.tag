@@ -4,8 +4,8 @@
   <bottom>
     <spt-twitter>
       &nbsp;
-      <a class="twitter-timeline" href="https://twitter.com/SuppressThisCA" data-widget-id="736832656298672128">Tweets by @SuppressThisCA</a>
-      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+     <a class="twitter-timeline" href="https://twitter.com/search?q=%23SuppressThis%20OR%20%23SuppressThisCA%20OR%20%23SuppressThisCali%20OR%20from%3A%40SuppressThisCA%20include%3Aretweets" data-widget-id="737016220361232385">Tweets about #SuppressThis OR #SuppressThisCA OR #SuppressThisCali OR from:@SuppressThisCA include:retweets</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
     </spt-twitter>
     <spt-about-us>
       <h2>About Us</h2>
@@ -15,14 +15,14 @@
         attempted voter suppression.
       </p>
       <p>
-        To prevent and respond to attempts at voter suppression, Suppress This will launch
-        an app to organize, report, and respond to expected voter irregularities and
-        contingencies.
+        The #SuppressThis Mobile Web App was created in an effort to arm all California Voters & Trained Poll Watchers with the LAW on June 7th! With detailed instructions on how to assert your rights, we highly recommend you keep SuppressThis.Org at your fingertips this Election Day! App Launches June 1, 2016.
       </p>
     </spt-about-us>
   </bottom>
   <style>
     spt-home {
+      background-image: url('/suppress-this/voter_suppression.png');
+      background-repeat: repeat-y;
       display: block;
       padding: 0 0 100px;
     }
