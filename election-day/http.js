@@ -20,12 +20,13 @@ function *http$get$election_day() {
   info(`${logPrefix}|http$get$election_day`);
   let ctx = {};
   try {
+    const headers$authorization = this.headers.authorization;
     this.body = layoutHtml(ctx, {
       title: "Election Day",
       body$html: election_day$body$html(ctx, {
         authentication: {
           token_type: "Basic",
-          access_token: this.headers.authorization.split("Basic ")[1]
+          access_token: headers$authorization && headers$authorization.split("Basic ")[1]
         }
       }),
       cssUrls: ["/layout"]

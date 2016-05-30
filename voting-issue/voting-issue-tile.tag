@@ -43,7 +43,6 @@
       border-bottom: 2px solid #C2C2C2;
     }
     voting-issue-tile > tabs > a {
-      text-decoration: none;
       width: 33%;
       border-bottom: 3px solid transparent;
     }

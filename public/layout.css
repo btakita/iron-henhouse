@@ -29,3 +29,6 @@ iframe {
   font-weight: bold;
   background: #dddddd;
 }
+a {
+  text-decoration: none;
+}

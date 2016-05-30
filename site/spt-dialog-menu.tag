@@ -11,7 +11,6 @@
     spt-dialog-menu > content > a {
       display: block;
       padding: 12px 0;
-      text-decoration: none;
       font-size: 18px;
     }
   </style>

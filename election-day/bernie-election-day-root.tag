@@ -17,7 +17,6 @@
       display: block;
       padding: 20px;
       margin: 0;
-      text-decoration: none;
       color: #FFFFFF;
       font: 22px bold;
       border: 2px solid transparent;

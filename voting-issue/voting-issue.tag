@@ -26,7 +26,7 @@
     <p>{ctx.voting_issue$$map.wrong_location.title}</p>
   </a>
   <h2>Didn't find an answer? Call our rapid response team. They'll sort you out!</h2>
-  <a href="tel:18002498683" class="call-us">
+  <a href="tel:{ctx.spt__hotline$phone_number}" class="call-us">
     <p>
       Call us!<br/>
       1-800-CHX-VOTE
@@ -50,7 +50,6 @@
       -moz-border-radius: 4px;
       border-radius: 4px;;
       text-align: center;
-      text-decoration: none;
       font-size: 24px;
       font-weight: bold;
     }

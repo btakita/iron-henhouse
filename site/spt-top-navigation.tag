@@ -1,8 +1,13 @@
 <spt-top-navigation>
-  <content>&nbsp;</content>
+  <content>
+    <a href="tel:{ctx.spt__hotline$phone_number}" class="call-us">
+      Call us! 1-800-CHX-VOTE
+    </a>
+  </content>
   <a href="#" class="menu" onclick="{menu$onclick}">&equiv;</a>
   <style>
     spt-top-navigation {
+      position: relative;
       display: flex;
       border: 1px dotted #111111;
       background: #F9F9F9;
@@ -11,9 +16,14 @@
     }
     spt-top-navigation > content {
       flex: auto;
+      text-align: center;
+    }
+    spt-top-navigation > content > a {
+      color: #111111;
     }
     spt-top-navigation > .menu {
-      text-decoration: none;
+      position: absolute;
+      right: 0;
       margin: 0;
       padding: 0 20px;
       font-size: 24px;
