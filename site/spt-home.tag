@@ -108,22 +108,4 @@
       }
     }
   </style>
-  <script type="text/babel">
-    import {fn$tag} from "ctx-core/tag/lib";
-    import {assign} from "ctx-core/object/lib";
-    import {assign__ctx} from "./lib";
-    import {log,debug} from "ctx-core/logger/lib";
-    const tag = fn$tag(this)
-        , logPrefix = "site/spt-home.tag";
-    tag.on("mount", on$mount);
-    tag.on("unmount", on$unmount);
-    log(logPrefix);
-    function on$mount() {
-      log(`${logPrefix}|on$mount`);
-      assign__ctx(tag.ctx);
-    }
-    function on$unmount() {
-      log(`${logPrefix}|on$unmount`);
-    }
-  </script>
 </spt-home>

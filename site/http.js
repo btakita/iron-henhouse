@@ -39,9 +39,7 @@ export function home$body$html() {
   };
   return `
     <body>
-      <spt-layout>
-        <spt-home ctx="{opts.ctx}"></spt-home>
-      </spt-layout>
+      <spt-home ctx="{opts.ctx}"></spt-home>
       ${js$html(ctx, {indentation: indentation(6), indentFirstLine: false})}
       <script>
         (function() {
