@@ -4,6 +4,7 @@ public/dist
 .envrc
 logs
 *.log
+*.bak
 npm-debug.log*
 pids
 *.pid

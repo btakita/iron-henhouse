@@ -38,7 +38,7 @@
       background-image: url('/suppress-this/voter_suppression.png');
       background-repeat: repeat-y;
       background-size: 1200px auto;
-      opacity: 0.075;
+      opacity: 0.2;
     }
     spt-home > content {
       position: relative;
