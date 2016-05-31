@@ -6,8 +6,7 @@
   <style>
     election-day {
       display: block;
-      overflow: hidden;
-      height: 100%;
+      overflow-y: auto;
       background: #FFFFFF;
       color: #111111;
     }

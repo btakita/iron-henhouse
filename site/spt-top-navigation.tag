@@ -1,7 +1,7 @@
 <spt-top-navigation>
   <content>
     <a href="tel:{ctx.spt__hotline$phone_number}" class="call-us">
-      Call us! 1-800-CHX-VOTE
+      &nbsp;{ctx.l10n.tag$spt_top_navigation$call_us}&nbsp;
     </a>
   </content>
   <a href="#" class="menu" onclick="{menu$onclick}">&equiv;</a>
@@ -33,6 +33,7 @@
   <script type="text/babel">
     import {assign} from "ctx-core/object/lib";
     import {fn$tag} from "ctx-core/tag/lib";
+    import {assign__l10n_agent} from "site/agent";
     import {assign__dialog$$_agent} from "ctx-core/dialog/agent";
     import {log,debug} from "ctx-core/logger/lib";
     const tag = fn$tag(this, {
@@ -44,10 +45,14 @@
     log(logPrefix);
     function on$mount() {
       log(`${logPrefix}|on$mount`);
-      assign__dialog$$_agent(self.ctx);
+      let ctx = self.ctx;
+      assign__l10n_agent(ctx);
+      assign__dialog$$_agent(ctx);
+      ctx.l10n_agent.on("change", l10n_agent$on$change);
     }
     function on$unmount() {
       log(`${logPrefix}|on$unmount`);
+      self.ctx.l10n_agent.off("change", l10n_agent$on$change);
     }
     function menu$onclick(e) {
       log(`${logPrefix}|menu$onclick`);
@@ -58,6 +63,10 @@
           title: "Menu"
         }
       });
+    }
+    function l10n_agent$on$change() {
+      log(`${logPrefix}|l10n_agent$on$change`);
+      tag.assign__ctx$update();
     }
   </script>
 </spt-top-navigation>

@@ -1,7 +1,7 @@
 <polling-station-select>
   <query>
-    <input type="text" value="{ctx.polling_station && ctx.polling_station.zip}" placeholder="Enter your zip code&hellip;"/>
-    <title onclick="{title$onclick}">Select your polling station&hellip;</title>
+    <input type="text" value="{ctx.polling_station && ctx.polling_station.zip}" placeholder="{ctx.l10n.enter_zip_code}&hellip;"/>
+    <title onclick="{title$onclick}">{ctx.l10n.select_polling_station}&hellip;</title>
   </query>
   <content class="{
     loading: !ctx.polling_station$$,
@@ -92,13 +92,12 @@
     import {
       assign__polling_station$$_agent,
       assign__polling_station_agent} from "election-day/agent";
+    import {assign__l10n_agent} from "site/agent";
     import {dom$,url$anchor$assign} from "ctx-core/dom/lib";
     import dom$classes from "dom-classes";
     import riot from "riot";
     import {log,debug} from "ctx-core/logger/lib";
     const tag = fn$tag(this, {
-            assign__ctx$update: assign__ctx$update,
-            self$update: self$update,
             title$onclick: title$onclick,
             link$onclick: link$onclick})
         , logPrefix = "election-day/polling-station-select.tag";
@@ -109,8 +108,10 @@
     function on$mount() {
       log(`${logPrefix}|on$mount`);
       let ctx = tag.ctx;
+      assign__l10n_agent(ctx);
       assign__polling_station$$_agent(ctx);
       assign__polling_station_agent(ctx);
+      ctx.l10n_agent.on("change", l10n_agent$on$change);
       ctx.polling_station$$_agent.on("change", polling_station$$_agent$on$change);
       ctx.polling_station_agent.on("change", polling_station_agent$on$change);
       dom$content = dom$("content", tag.root);
@@ -118,16 +119,21 @@
     function on$unmount() {
       log(`${logPrefix}|on$unmount`);
       let ctx = tag.ctx;
+      self.ctx.l10n_agent.off("change", l10n_agent$on$change);
       ctx.polling_station$$_agent.off("change", polling_station$$_agent$on$change);
       ctx.polling_station_agent.off("change", polling_station_agent$on$change);
     }
+    function l10n_agent$on$change() {
+      log(`${logPrefix}|l10n_agent$on$change`);
+      tag.assign__ctx$update();
+    }
     function polling_station$$_agent$on$change() {
       log(`${logPrefix}|polling_station$$_agent$on$change`);
-      assign__ctx$update();
+      tag.assign__ctx$update();
     }
     function polling_station_agent$on$change() {
       log(`${logPrefix}|polling_station_agent$on$change`);
-      assign__ctx$update();
+      tag.assign__ctx$update();
       const ctx = tag.ctx
           , dom$classes$op = ctx.polling_station ? "add" : "remove";
       dom$classes[dom$classes$op](dom$content, "collapse");
@@ -135,16 +141,6 @@
     function title$onclick() {
       log(`${logPrefix}|title$onclick`);
       dom$classes.toggle(dom$content, "collapse");
-    }
-    function assign__ctx$update() {
-      log(`${logPrefix}|assign__ctx$update`);
-      let ctx = assign(tag.ctx, ...arguments);
-      assign(tag, {ctx: ctx});
-      self$update();
-    }
-    function self$update() {
-      log(`${logPrefix}|self$update`);
-      tag.update();
     }
   </script>
 </polling-station-select>

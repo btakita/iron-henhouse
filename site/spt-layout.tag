@@ -20,16 +20,24 @@
     }
     spt-layout > ctx > ctx-size > content {
       display: flex;
-      flex-direction: column;
+      flex-direction: inherit;
+    }
+    spt-layout > ctx > ctx-size > content > * {
+      width: 100%;
     }
     spt-layout > ctx > ctx-size > content > spt-top-navigation {
       flex: none;
     }
     spt-layout > ctx > ctx-size > content > content {
+      display: flex;
       flex: auto;
       text-align: center;
       overflow-x: hidden;
       overflow-y: auto;
+    }
+    spt-layout > ctx > ctx-size > content > content > * {
+      flex: auto;
+      width: 100%;
     }
   </style>
   <script type="text/babel">

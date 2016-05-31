@@ -1,4 +1,4 @@
-<spt-home>
+<spt-splash>
   <spt-under-development-notice ctx="{opts.ctx}"></spt-under-development-notice>
   <background-mask>&nbsp;</background-mask>
   <content>
@@ -23,12 +23,12 @@
       </bottom>
   </content>
   <style>
-    spt-home {
+    spt-splash {
       position: relative;
       display: block;
       padding: 0 0 100px;
     }
-    spt-home > background-mask {
+    spt-splash > background-mask {
       position: absolute;
       left: 50%;
       width: 1200px;
@@ -40,7 +40,7 @@
       background-size: 1200px auto;
       opacity: 0.2;
     }
-    spt-home > content {
+    spt-splash > content {
       position: relative;
       display: block;
       width: 1072px;
@@ -48,64 +48,64 @@
       margin: 0 0 0 -536px;
       z-index: 2;
     }
-    spt-home > content > logo {
+    spt-splash > content > logo {
       margin: 80px 0 0;
       display: flex;
       align-items: center;
       justify-content: center;
     }
-    spt-home > content > logo > img {
+    spt-splash > content > logo > img {
       display: block;
       width: 772px;
       height: 372px;
     }
-    spt-home > content > bottom {
+    spt-splash > content > bottom {
       display: block;
       min-height: 600px;
       margin: 100px 0 0;
       overflow: hidden;
     }
-    spt-home > content > bottom > * {
+    spt-splash > content > bottom > * {
       float: right;
       box-sizing: border-box;
       width: 536px;
     }
-    spt-home > content > bottom > spt-twitter {
+    spt-splash > content > bottom > spt-twitter {
       display: block;
       padding-right: 20px;
     }
-    spt-home > content > bottom > spt-twitter .twitter-timeline {
+    spt-splash > content > bottom > spt-twitter .twitter-timeline {
       display: none;
       width: 100%;
     }
-    spt-home > content > bottom > spt-about-us {
+    spt-splash > content > bottom > spt-about-us {
       padding-left: 20px;
     }
-    spt-home > content > bottom > spt-about-us > h2 {
+    spt-splash > content > bottom > spt-about-us > h2 {
       text-transform: uppercase;
     }
     @media (max-width: 1200px) {
-      spt-home > background-mask {
+      spt-splash > background-mask {
         width: 100%;
         margin: 0;
         left: auto;
       }
-      spt-home > content {
+      spt-splash > content {
         width: 100%;
         left: auto;
         margin: 0;
       }
-      spt-home > content > bottom {
+      spt-splash > content > bottom {
         display: flex;
         margin-top: 40px;
         flex-direction: column;
         align-items: center;
       }
-      spt-home > content > bottom > * {
+      spt-splash > content > bottom > * {
         float: none;
         width: auto;
         padding: 0 0 40px;
       }
     }
   </style>
-</spt-home>
+</spt-splash>

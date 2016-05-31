@@ -39,13 +39,13 @@ export function home$body$html() {
   };
   return `
     <body>
-      <spt-home ctx="{opts.ctx}"></spt-home>
+      <spt-splash ctx="{opts.ctx}"></spt-splash>
       ${js$html(ctx, {indentation: indentation(6), indentFirstLine: false})}
       <script>
         (function() {
           var riot$mount$ctx = ${JSON.stringify(riot$mount$ctx)};
           window.ctx = riot$mount$ctx.ctx;
-          riot.mount(document.querySelector("spt-home"), riot$mount$ctx);
+          riot.mount(document.querySelector("spt-splash"), riot$mount$ctx);
           riot.route.start();
         })();
       </script>

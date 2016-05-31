@@ -7,16 +7,15 @@ const logPrefix = "election-day/agent";
 export function assign__polling_station$$_agent() {
   log(`${logPrefix}|assign__polling_station$$_agent`);
   let ctx = assign(...arguments);
-  if (!ctx.polling_station$$_agent) assign__polling_station$$_agent$();
-  return ctx;
-  function assign__polling_station$$_agent$() {
-    log(`${logPrefix}|assign__polling_station$$_agent|assign__polling_station$$_agent$`);
+  if (!ctx.polling_station$$_agent) {
+    log(`${logPrefix}|assign__polling_station$$_agent|assign`);
     assign__agent__election_day$cmd(ctx, {
       key$agent: "polling_station$$_agent",
       agent$keys: ["polling_station$$"],
       cmd: ["polling_station$$cmd"]
     });
   }
+  return ctx;
 }
 export function assign__agent__election_day$cmd(ctx, ...ctx$rest$$) {
   log(`${logPrefix}|assign__agent__election_day$cmd`);
@@ -34,23 +33,22 @@ export function assign__agent__election_day$cmd(ctx, ...ctx$rest$$) {
 export function assign__polling_station$id_agent() {
   log(`${logPrefix}|assign__polling_station$id_agent`);
   let ctx = assign(...arguments);
-  if (!ctx.polling_station$id_agent) assign__polling_station$id_agent$();
-  return ctx;
-  function assign__polling_station$id_agent$() {
-    log(`${logPrefix}|assign__polling_station$id_agent|assign__polling_station$id_agent$`);
+  if (!ctx.polling_station$id_agent) {
+    log(`${logPrefix}|assign__polling_station$id_agent|assign`);
     assign__agent(ctx, {
       key$agent: "polling_station$id_agent",
       agent$keys: ["polling_station$id"]
     });
   }
+  return ctx;
 }
 export function assign__polling_station_agent() {
   log(`${logPrefix}|assign__polling_station_agent`);
   let ctx = assign(...arguments);
-  if (!ctx.polling_station_agent) assign__polling_station_agent$();
+  if (!ctx.polling_station_agent) assign$fn();
   return ctx;
-  function assign__polling_station_agent$() {
-    log(`${logPrefix}|assign__polling_station_agent|assign__polling_station_agent$`);
+  function assign$fn() {
+    log(`${logPrefix}|assign__polling_station_agent|assign$fn`);
     assign__polling_station$$_agent(ctx);
     assign__polling_station$id_agent(ctx);
     assign__agent(ctx, {

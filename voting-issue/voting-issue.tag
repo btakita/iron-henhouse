@@ -1,39 +1,41 @@
 <voting-issue>
-  <h1>What problems are you facing?</h1>
-  <h2>Select from one of the problems below:</h2>
+  <h1>&nbsp;{ctx.l10n.tag$voting_issue$title}&nbsp;</h1>
+  <h2>&nbsp;{ctx.l10n.tag$voting_issue$subtitle}&nbsp;</h2>
   <a href="voting-issue/no-ballots" class="voting-issue-type no-ballots" onclick="{link$onclick}">
-    <p>{ctx.voting_issue$$map.no_ballots.title}</p>
+    <p>&nbsp;{ctx.l10n.voting_issue$no_ballots.title}&nbsp;</p>
   </a>
   <a href="voting-issue/wrong-ballots" class="voting-issue-type wrong-ballots" onclick="{link$onclick}">
-    <p>{ctx.voting_issue$$map.wrong_ballots.title}</p>
+    <p>&nbsp;{ctx.l10n.voting_issue$wrong_ballots.title}&nbsp;</p>
   </a>
   <a href="voting-issue/no-evidence-of-registration" class="voting-issue-type no-evidence-of-registration" onclick="{link$onclick}">
-    <p>{ctx.voting_issue$$map.no_evidence_of_registration.title}</p>
+    <p>&nbsp;{ctx.l10n.voting_issue$no_evidence_of_registration.title}&nbsp;</p>
   </a>
   <a href="voting-issue/wrong-party-registration" class="voting-issue-type wrong-party-registration" onclick="{link$onclick}">
-    <p>{ctx.voting_issue$$map.wrong_party_registration.title}</p>
+    <p>&nbsp;{ctx.l10n.voting_issue$wrong_party_registration.title}&nbsp;</p>
   </a>
   <a href="voting-issue/campaigning-within-100-feet" class="voting-issue-type campaigning-within-100-feet" onclick="{link$onclick}">
-    <p>{ctx.voting_issue$$map.campaigning_within_100_feet.title}</p>
+    <p>&nbsp;{ctx.l10n.voting_issue$campaigning_within_100_feet.title}&nbsp;</p>
   </a>
   <a href="voting-issue/polling-station-closed" class="voting-issue-type polling-station-closed" onclick="{link$onclick}">
-    <p>{ctx.voting_issue$$map.polling_station_closed.title}</p>
+    <p>&nbsp;{ctx.l10n.voting_issue$polling_station_closed.title}&nbsp;</p>
   </a>
   <a href="voting-issue/sending-voters-away" class="voting-issue-type sending-voters-away" onclick="{link$onclick}">
-    <p>{ctx.voting_issue$$map.sending_voters_away.title}</p>
+    <p>&nbsp;{ctx.l10n.voting_issue$sending_voters_away.title}&nbsp;</p>
   </a>
   <a href="voting-issue/wrong-location" class="voting-issue-type wrong-location" onclick="{link$onclick}">
-    <p>{ctx.voting_issue$$map.wrong_location.title}</p>
+    <p>&nbsp;{ctx.l10n.voting_issue$wrong_location.title}&nbsp;</p>
   </a>
-  <h2>Didn't find an answer? Call our rapid response team. They'll sort you out!</h2>
+  <h2>{ctx.l10n.tag$voting_issue$call_us}</h2>
   <a href="tel:{ctx.spt__hotline$phone_number}" class="call-us">
     <p>
-      Call us!<br/>
-      1-800-CHX-VOTE
+      {ctx.l10n.call_us}<br/>
+      {ctx.l10n.hotline$phone}
     </p>
   </a>
   <style>
     voting-issue {
+      display: block;
+      overflow: hidden;
       text-align: center;
     }
     voting-issue > a {
@@ -71,6 +73,7 @@
   <script type="text/babel">
     import {assign} from "ctx-core/object/lib";
     import {fn$tag,link$onclick} from "ctx-core/tag/lib";
+    import {assign__l10n_agent} from "site/agent";
     import {log,debug} from "ctx-core/logger/lib";
     const tag = fn$tag(this, {link$onclick: link$onclick})
         , logPrefix = "voting-issue/voting-issue.tag";
@@ -79,9 +82,17 @@
     log(logPrefix);
     function on$mount() {
       log(`${logPrefix}|on$mount`);
+      let ctx = self.ctx;
+      assign__l10n_agent(ctx);
+      ctx.l10n_agent.on("change", l10n_agent$on$change);
     }
     function on$unmount() {
       log(`${logPrefix}|on$unmount`);
+      self.ctx.l10n_agent.off("change", l10n_agent$on$change);
+    }
+    function l10n_agent$on$change() {
+      log(`${logPrefix}|l10n_agent$on$change`);
+      tag.assign__ctx$update();
     }
   </script>
 </voting-issue>
