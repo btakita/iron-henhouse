@@ -1,7 +1,7 @@
 import "./env";
 import {assign} from "ctx-core/object/lib";
 import {error$throw} from "ctx-core/error/lib";
-import {assign__http$headers__cache$5min} from "ctx-core/http/lib";
+import {http$cache__5min} from "ctx-core/koa/lib";
 import {home$html} from "splash/html";
 import koa$route from "koa-route";
 import {log,info,error,debug} from "ctx-core/logger/lib"
@@ -17,7 +17,7 @@ function *http$get$home() {
   info(`${logPrefix}|http$get$home`);
   let ctx = {};
   try {
-    assign__http$headers__cache$5min(ctx);
+    http$cache__5min(this);
     this.body = home$html(ctx);
   } catch (error$ctx) {
     error$throw(ctx, error$ctx);
