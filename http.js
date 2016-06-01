@@ -34,9 +34,9 @@ function start(id) {
   app$use__log$request$time(ctx);
   app$use__http$error(ctx);
   app.use(koa$bodyparser());
-  app.use(koa$static$cache(path.join(__dirname, "public")), {
+  app.use(koa$static$cache(path.join(__dirname, "public"), {
     maxAge: 24 * 60 * 60
-  });
+  }));
   if (!env.isLocalhost) {
     app.use(koa$sslify({trustProtoHeader: true}));
   }
