@@ -1,5 +1,6 @@
 <spt-dialog-menu class="dialog">
   <content>
+    <a href="/" onclick="{a$onclick}">&nbsp;Suppress This&nbsp;</a>
     <a href="vote-where" onclick="{a$onclick}">&nbsp;{ctx.l10n.vote_where$menu$text}&nbsp;</a>
     <a href="voting-issue" onclick="{a$onclick}">&nbsp;{ctx.l10n.voting_issue$menu$text}&nbsp;</a>
   </content>

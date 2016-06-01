@@ -64,8 +64,10 @@
       opacity: 0.1;
     }
     spt-splash > content > logo {
+      overflow: hidden;
       padding: 40px 0 0;
       flex-grow: 0;
+      flex-shrink: 0;
     }
     spt-splash > content > logo > img {
       display: block;

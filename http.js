@@ -3,10 +3,10 @@ import {error$throw} from "ctx-core/error/lib";
 import {
   app$use__log$request$time,
   app$use__http$error,
-  app$use__echo} from "ctx-core/http/lib";
-import app$use__http$post$cmd from "ctx-core/cmd/http$cmd";
-import {app$use__home} from "site/http";
-import {app$use__election_day} from "election-day/http";
+  app$use__echo} from "ctx-core/koa/lib";
+import app$use__http$post$cmd from "ctx-core/cmd/koa";
+import {app$use__home} from "splash/koa";
+import {app$use__election_day} from "election-day/koa";
 import "babel-core";
 import {env$assign} from "ctx-core/env";
 import koa from "koa";
@@ -16,7 +16,7 @@ import koa$sslify from "koa-sslify";
 import koa$bodyparser from "koa-bodyparser";
 import koa$static from "koa-static";
 import koa$route from "koa-route";
-import {app$use__basic_auth} from "ctx-core/basic_auth/http";
+import {app$use__basic_auth} from "ctx-core/basic_auth/koa";
 import {log,info,warn,error,debug} from "ctx-core/logger/lib";
 const app = koa()
     , env = env$assign({app: app})

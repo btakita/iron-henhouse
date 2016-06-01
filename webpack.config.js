@@ -9,7 +9,7 @@ module.exports = {
     }
   },
   entry: {
-    "home": "./site/home.webpack",
+    "home": "./splash/splash.webpack",
     "election-day": "./election-day/election-day.webpack"
   },
   output: {
