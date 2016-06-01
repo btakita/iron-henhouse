@@ -14,8 +14,9 @@ import throng from "throng";
 import koa$redirects from "koa-redirects";
 import koa$sslify from "koa-sslify";
 import koa$bodyparser from "koa-bodyparser";
-import koa$static from "koa-static";
+import koa$static$cache from "koa-static-cache";
 import koa$route from "koa-route";
+import path from "path";
 import {app$use__basic_auth} from "ctx-core/basic_auth/koa";
 import {log,info,warn,error,debug} from "ctx-core/logger/lib";
 const app = koa()
@@ -33,7 +34,9 @@ function start(id) {
   app$use__log$request$time(ctx);
   app$use__http$error(ctx);
   app.use(koa$bodyparser());
-  app.use(koa$static("./public"));
+  app.use(koa$static$cache(path.join(__dirname, "public")), {
+    maxAge: 24 * 60 * 60
+  });
   if (!env.isLocalhost) {
     app.use(koa$sslify({trustProtoHeader: true}));
   }
