@@ -3,33 +3,56 @@
   <background-mask>&nbsp;</background-mask>
   <content>
     <logo><img src="/suppress-this/logo.png"/></logo>
-      <bottom>
-        <spt-about-us>
-          <h2>About Us</h2>
-          <p>
-            The California Primary takes place on June 7, 2016. With 548 delegates, California
-            has more delegates than any other state, and much more to lose in the case of
-            attempted voter suppression.
-          </p>
-          <p>
-            The #SuppressThis Mobile Web App was created in an effort to arm all California Voters & Trained Poll Watchers with the LAW on June 7th! With detailed instructions on how to assert your rights, we highly recommend you keep SuppressThis.Org at your fingertips this Election Day! App Launches June 1, 2016.
-          </p>
-        </spt-about-us>
-        <spt-twitter>
-          &nbsp;
-         <a class="twitter-timeline" href="https://twitter.com/search?q=%23SuppressThis%20OR%20%23SuppressThisCA%20OR%20%23SuppressThisCali%20OR%20from%3A%40SuppressThisCA%20include%3Aretweets" data-widget-id="737016220361232385">Tweets about #SuppressThis OR #SuppressThisCA OR #SuppressThisCali OR from:@SuppressThisCA include:retweets</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-        </spt-twitter>
-      </bottom>
+    <bottom>
+      <spt-about-us>
+        <h2>About Us</h2>
+        <p>
+          The California Primary takes place on June 7, 2016. With 548 delegates, California
+          has more delegates than any other state, and much more to lose in the case of
+          attempted voter suppression.
+        </p>
+        <p>
+          The #SuppressThis Mobile Web App was created in an effort to arm all California Voters & Trained Poll Watchers with the LAW on June 7th! With detailed instructions on how to assert your rights, we highly recommend you keep SuppressThis.Org at your fingertips this Election Day! App Launches June 1, 2016.
+        </p>
+      </spt-about-us>
+      <spt-twitter>
+        &nbsp;
+       <a class="twitter-timeline" href="https://twitter.com/search?q=%23SuppressThis%20OR%20%23SuppressThisCA%20OR%20%23SuppressThisCali%20OR%20from%3A%40SuppressThisCA%20include%3Aretweets" data-widget-id="737016220361232385">Tweets about #SuppressThis OR #SuppressThisCA OR #SuppressThisCali OR from:@SuppressThisCA include:retweets</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      </spt-twitter>
+    </bottom>
   </content>
   <style>
     spt-splash {
       position: relative;
-      display: block;
-      padding: 0 0 100px;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+    }
+    spt-splash > spt-under-development-notice {
+      position: relative;
+      width: 100%;
+      flex: 1;
+      flex-grow: 0;
+      height: 3em;
+      z-index: 2;
+    }
+    spt-splash > content {
+      position: relative;
+      padding: 0 0 40px;
+      flex: auto;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      z-index: 2;
     }
     spt-splash > background-mask {
       position: absolute;
+      top: 0;
       left: 50%;
       width: 1200px;
       height: 100%;
@@ -37,22 +60,12 @@
       z-index: 1;
       background-image: url('/suppress-this/voter_suppression.png');
       background-repeat: repeat-y;
-      background-size: 1200px auto;
-      opacity: 0.2;
-    }
-    spt-splash > content {
-      position: relative;
-      display: block;
-      width: 1072px;
-      left: 50%;
-      margin: 0 0 0 -536px;
-      z-index: 2;
+      background-size: cover;
+      opacity: 0.1;
     }
     spt-splash > content > logo {
-      margin: 80px 0 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      padding: 40px 0 0;
+      flex-grow: 0;
     }
     spt-splash > content > logo > img {
       display: block;
@@ -61,9 +74,7 @@
     }
     spt-splash > content > bottom {
       display: block;
-      min-height: 600px;
       margin: 100px 0 0;
-      overflow: hidden;
     }
     spt-splash > content > bottom > * {
       float: right;

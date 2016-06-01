@@ -2,6 +2,7 @@ import "./env";
 import {assign,clone,keys} from "ctx-core/object/lib";
 import {error$throw} from "ctx-core/error/lib";
 import {env$assign} from "ctx-core/env";
+import {assign__http$headers__cache$5min} from "ctx-core/xhr/lib";
 import layoutHtml from "ctx-core/layout/layout.html";
 import {indentation,indentation$regexp} from "ctx-core/string/indendation";
 import {js$html} from "ctx-core/html/lib";
@@ -18,6 +19,7 @@ export function app$use__home() {
 function *http$get$home() {
   info(`${logPrefix}|http$get$home`);
   let ctx = {};
+  assign__http$headers__cache$5min(ctx);
   try {
     this.body = layoutHtml(ctx, {
       title: "suppressthis.org",
