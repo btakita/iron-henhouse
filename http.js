@@ -13,6 +13,8 @@ import koa from "koa";
 import throng from "throng";
 import koa$redirects from "koa-redirects";
 import koa$sslify from "koa-sslify";
+import koa$conditional_get from "koa-conditional-get";
+import koa$etag from "koa-etag";
 import koa$bodyparser from "koa-bodyparser";
 import koa$static$cache from "koa-static-cache";
 import koa$route from "koa-route";
@@ -30,6 +32,8 @@ throng({
   lifetime: Infinity
 }, start);
 function start(id) {
+  app.use(koa$conditional_get());
+  app.use(koa$etag());
   koa$redirects(app, {});
   app$use__log$request$time(ctx);
   app$use__http$error(ctx);
