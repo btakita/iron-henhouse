@@ -8,7 +8,7 @@
       display: block;
       overflow-y: auto;
       background: #FFFFFF;
-      color: #111111;
+      color: #000000;
     }
   </style>
   <script type="text/babel">

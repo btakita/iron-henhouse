@@ -19,7 +19,7 @@
       text-align: center;
     }
     spt-top-navigation > content > a {
-      color: #111111;
+      color: #000000;
     }
     spt-top-navigation > .menu {
       position: absolute;

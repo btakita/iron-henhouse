@@ -66,7 +66,7 @@
       display: block;
       overflow: hidden;
       clear: both;
-      color: #111111;
+      color: #000000;
     }
     polling-station-select > content > polling-station > a > * {
       display: block;
