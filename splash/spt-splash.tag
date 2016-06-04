@@ -29,7 +29,7 @@
       display: flex;
       flex-direction: column;
     }
-    @media (max-width: 650px) {
+    @media (max-device-width: 650px) {
       spt-splash > spt-schedule-banner {
         height: 6em;
       }

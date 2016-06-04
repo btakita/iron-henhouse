@@ -24,7 +24,7 @@
       min-width: 400px;
       padding: 20px;
     }
-    @media (max-width: 650px) {
+    @media (max-device-width: 650px) {
       spt-splash-dialog > ctx-dialog > dialog > topbar {
         display: inherit;
       }
