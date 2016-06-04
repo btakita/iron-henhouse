@@ -3,7 +3,7 @@
   <content>
     <logo><img src="/suppress-this/logo.png"/></logo>
     <early-voting-link>
-      <a href="?early_voting=1" onclick="{link$onclick}">Early Voting</a>
+      <a class="yellow-button" href="?early_voting=1" onclick="{link$onclick}">Early Voting</a>
     </early-voting-link>
     <bottom>
       <spt-about-us>
@@ -72,8 +72,11 @@
       padding: 40px 0 0;
     }
     spt-splash-root > content > early-voting-link > a {
+      display: block;
+      overflow: hidden;
+      padding: 20px 80px;
       font-size: 30px;
-      color: #FDD102;
+      border-radius: 8px;
     }
     spt-splash-root > content > bottom {
       display: block;

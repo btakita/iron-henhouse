@@ -44,12 +44,12 @@ function start(id) {
   if (!env.isLocalhost) {
     app.use(koa$sslify({trustProtoHeader: true}));
   }
+  app$use__http$post$cmd(ctx);
   app$use__home(ctx);
   if (!env.isLocalhost) {
     app$use__basic_auth(ctx);
   }
   app$use__election_day(ctx);
-  app$use__http$post$cmd(ctx);
   app$use__echo(ctx);
   app.listen(env.port);
   info(`${logPrefix}|started|port`, env.port);

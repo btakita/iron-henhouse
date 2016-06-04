@@ -1,19 +1,18 @@
 <spt-early-voting-dialog class="dialog" show="{ctx.dialog.tag$name === 'spt-early-voting-dialog'}">
   <content>
-    <a href="http://voteearly.berniesandersvideo.com/">&nbsp;{ctx.l10n.vote_early_instructions$menu$text}&nbsp;</a>
-    <a href="?early_voting_issue=1" onclick="{link$onclick}">&nbsp;{ctx.l10n.early_voting_issue$menu$text}&nbsp;</a>
+    <a class="yellow-link" href="http://voteearly.berniesandersvideo.com/">&nbsp;{ctx.l10n.vote_early_instructions$menu$text}&nbsp;</a>
+    <a class="yellow-link" href="?early_voting_issue=1" onclick="{link$onclick}">&nbsp;{ctx.l10n.early_voting_issue$menu$text}&nbsp;</a>
   </content>
   <style>
     spt-early-voting-dialog > content {
       display: block;
       min-width: 400px;
-      padding-top: 12px;
+      padding: 20px;
     }
     spt-early-voting-dialog > content > a {
       display: block;
       padding: 12px 0;
       font-size: 18px;
-      color: #FDD102;
       font-weight: bold;
     }
     spt-early-voting-dialog > content > a.early-voting-issue {

@@ -32,3 +32,17 @@ iframe {
 a {
   text-decoration: none;
 }
+.yellow-button {
+  background: #FDD102;
+  color: #000000;
+}
+.yellow-button:hover {
+  background: #AB9C53;
+  color: #000000;
+}
+.yellow-link {
+  color: #FDD102;
+}
+.yellow-link:hover {
+  color: #AB9C53;
+}
