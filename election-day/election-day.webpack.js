@@ -1,8 +1,13 @@
-import "site/spt.webpack";
-import "site/spt-dialog.tag";
+import "babel-polyfill";
+import riot from "riot";
+global.riot = riot;
+import "ctx-core/dom/ctx.tag";
+import "election-day/spt-election-day-layout.tag";
+import "election-day/spt-election-day-dialog.tag";
 import "ctx-core/dialog/ctx-dialog.tag";
-import "ctx-core/dialog/ctx-dialog-right.tag";
-import "site/spt-dialog-menu.tag";
+import "ctx-core/dialog/ctx-dialog-topbar.tag";
+import "ctx-core/dialog/ctx-dialog-position-right.tag";
+import "election-day/spt-election-day-menu-dialog.tag";
 import "site/spt-top-navigation.tag";
 import "./election-day.tag";
 import "./bernie-election-day-root.tag";

@@ -3,7 +3,7 @@
   <content>
     <logo><img src="/suppress-this/logo.png"/></logo>
     <early-voting-link>
-      <a href="early-voting" onclick="{link$onclick}">Early Voting</a>
+      <a href="?early_voting=1" onclick="{link$onclick}">Early Voting</a>
     </early-voting-link>
     <bottom>
       <spt-about-us>
@@ -26,9 +26,10 @@
   </content>
   <style>
     spt-splash-root {
-      display: block;
-      overflow: hidden;
+      flex: auto;
+      overflow-y: auto;
       height: 100%;
+      position: relative;
     }
     spt-splash-root > background-mask {
       position: absolute;
@@ -71,11 +72,12 @@
       padding: 40px 0 0;
     }
     spt-splash-root > content > early-voting-link > a {
-      color: yellow;
+      font-size: 30px;
+      color: #FDD102;
     }
     spt-splash-root > content > bottom {
       display: block;
-      margin: 100px 0 0;
+      margin: 40px 0 0;
     }
     spt-splash-root > content > bottom > * {
       float: right;
@@ -123,7 +125,9 @@
   <script type="text/babel">
     import {assign} from "ctx-core/object/lib";
     import {fn$tag,link$onclick} from "ctx-core/tag/lib";
-    import riot from "riot";
+    import {assign__route$fragment_agent} from "ctx-core/route/lib";
+    import {assign__dialog_agent} from "ctx-core/dialog/agent";
+    import {dialog$$find__tag$name} from "ctx-core/dialog/lib";
     import {log,debug} from "ctx-core/logger/lib";
     const tag = fn$tag(this, {link$onclick: link$onclick})
         , logPrefix = "splash/spt-splash-root.tag";
@@ -132,9 +136,43 @@
     log(logPrefix);
     function on$mount() {
       log(`${logPrefix}|on$mount`);
+      let ctx = self.ctx;
+      assign__route$fragment_agent(ctx);
+      assign__dialog_agent(ctx);
+      ctx.route$fragment_agent.on("change", refresh);
+      refresh(true);
     }
     function on$unmount() {
       log(`${logPrefix}|on$unmount`);
+      self.ctx.route$fragment_agent.off("change", refresh);
+    }
+    function refresh(show) {
+      log(`${logPrefix}|refresh`);
+      let ctx = self.ctx;
+      const early_voting = ctx.route$query$map.early_voting
+          , early_voting_issue = ctx.route$query$map.early_voting_issue
+          , dialog$$_agent = ctx.dialog$$_agent
+          , dialog$spt_early_voting_dialog = dialog$$find__tag$name(ctx, "spt-early-voting-dialog")
+          , dialog$spt_early_voting_issue_dialog = dialog$$find__tag$name(ctx, "spt-early-voting-issue-dialog");
+      if (early_voting && !dialog$spt_early_voting_dialog) {
+        dialog$$_agent.push({
+          dialog$$: {
+            tag$name: "spt-early-voting-dialog"
+          }
+        });
+      } else if (!early_voting && dialog$spt_early_voting_dialog) {
+        dialog$$_agent.remove({dialog$$: dialog$spt_early_voting_dialog});
+      }
+      if (early_voting_issue && !dialog$spt_early_voting_issue_dialog) {
+        dialog$$_agent.push({
+          dialog$$: {
+            tag$name: "spt-early-voting-issue-dialog"
+          }
+        });
+      } else if (!early_voting_issue && dialog$spt_early_voting_issue_dialog) {
+        dialog$$_agent.remove({dialog$$: dialog$spt_early_voting_issue_dialog});
+      }
+      tag.assign__ctx$update();
     }
   </script>
 </spt-splash-root>

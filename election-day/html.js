@@ -28,15 +28,15 @@ export function election_day$body$html() {
   };
   return `
     <body>
-      <spt-layout>
+      <spt-election-day-layout>
         <election-day ctx="{opts.ctx}"></election-day>
-      </spt-layout>
+      </spt-election-day-layout>
       ${js$html(ctx, {indentation: indentation(6), indentFirstLine: false})}
       <script>
         (function() {
           var riot$mount$ctx = ${JSON.stringify(riot$mount$ctx)};
           window.ctx = riot$mount$ctx.ctx;
-          riot.mount(document.querySelector("spt-layout"), riot$mount$ctx);
+          riot.mount(document.querySelector("spt-election-day-layout"), riot$mount$ctx);
           riot.route.start();
         })();
       </script>

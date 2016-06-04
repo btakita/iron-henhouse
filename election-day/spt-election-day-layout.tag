@@ -1,41 +1,32 @@
-<spt-layout>
-  <ctx ctx="{opts.ctx}">
-    <ctx-size ctx="{opts.ctx}">
-      <spt-top-navigation ctx="{opts.ctx}"></spt-top-navigation>
-      <content>
-        <yield/>
-      </content>
-      <spt-dialog ctx="{opts.ctx}"></spt-dialog>
-    </ctx-size>
-  </ctx>
+<spt-election-day-layout>
+  <ctx ctx="{opts.ctx}"></ctx>
+  <spt-top-navigation ctx="{opts.ctx}"></spt-top-navigation>
+  <content>
+    <yield/>
+  </content>
+  <spt-election-day-dialog ctx="{opts.ctx}"></spt-election-day-dialog>
   <style>
-    spt-layout {
-      display: block;
-    }
-    spt-layout > ctx > ctx-size {
+    spt-election-day-layout {
       display: flex;
       flex-direction: column;
+      align-items: center;
       width: 100%;
       height: 100%;
     }
-    spt-layout > ctx > ctx-size > content {
-      display: flex;
-      flex-direction: inherit;
-    }
-    spt-layout > ctx > ctx-size > content > * {
+    spt-election-day-layout > * {
       width: 100%;
     }
-    spt-layout > ctx > ctx-size > content > spt-top-navigation {
+    spt-election-day-layout > spt-top-navigation {
       flex: none;
     }
-    spt-layout > ctx > ctx-size > content > content {
+    spt-election-day-layout > content {
       display: flex;
       flex: auto;
       text-align: center;
       overflow-x: hidden;
       overflow-y: auto;
     }
-    spt-layout > ctx > ctx-size > content > content > * {
+    spt-election-day-layout > content > * {
       flex: auto;
       width: 100%;
     }
@@ -43,10 +34,10 @@
   <script type="text/babel">
     import {fn$tag} from "ctx-core/tag/lib";
     import {assign} from "ctx-core/object/lib";
-    import {assign__ctx} from "./lib";
+    import {assign__ctx} from "site/lib";
     import {log,debug} from "ctx-core/logger/lib";
     const tag = fn$tag(this)
-        , logPrefix = "site/spt-layout.tag";
+        , logPrefix = "election-day/spt-election-day-layout.tag";
     tag.on("mount", on$mount);
     tag.on("unmount", on$unmount);
     log(logPrefix);
@@ -58,4 +49,4 @@
       log(`${logPrefix}|on$unmount`);
     }
   </script>
-</spt-layout>
+</spt-election-day-layout>

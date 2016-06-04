@@ -1,9 +1,10 @@
-<spt-splash>
+<spt-splash show="{show}">
+  <ctx ctx="{opts.ctx}"></ctx>
   <spt-schedule-banner ctx="{opts.ctx}"></spt-schedule-banner>
   <content>
     <spt-splash-root show="{ctx.route$name__splash_root}" ctx="{opts.ctx}"></spt-splash-root>
-    <spt-early-voting show="{ctx.route$name__early_voting}" ctx="{opts.ctx}"></spt-early-voting>
   </content>
+  <spt-splash-dialog ctx="{opts.ctx}"></spt-splash-dialog>
   <style>
     spt-splash {
       position: relative;
@@ -18,7 +19,21 @@
       width: 100%;
       flex: 1;
       flex-grow: 0;
+      flex-shrink: 0;
       height: 3em;
+    }
+    spt-splash > content {
+      flex: auto;
+      overflow-y: auto;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    spt-splash > spt-splash-dialog > ctx-dialog > dialog {
+      margin-top: 100px;
+    }
+    spt-splash > spt-splash-dialog > ctx-dialog > mask {
+      background: #000000;
     }
   </style>
   <script type="text/babel">
@@ -38,7 +53,10 @@
       assign__splash$route$$(ctx);
       ctx.route$name_agent.on("change", route$name_agent$on$change);
       riot.route.exec();
-      tag.assign__ctx$update();
+      setTimeout(() => {
+        tag.show = true;
+        tag.assign__ctx$update();
+      }, 0);
     }
     function on$unmount() {
       log(`${logPrefix}|on$unmount`);

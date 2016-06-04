@@ -1,15 +1,15 @@
-<spt-dialog-menu class="dialog">
+<spt-election-day-menu-dialog class="dialog" >
   <content>
     <a href="/" onclick="{a$onclick}">&nbsp;Suppress This&nbsp;</a>
     <a href="vote-where" onclick="{a$onclick}">&nbsp;{ctx.l10n.vote_where$menu$text}&nbsp;</a>
     <a href="voting-issue" onclick="{a$onclick}">&nbsp;{ctx.l10n.voting_issue$menu$text}&nbsp;</a>
   </content>
   <style>
-    spt-dialog-menu > content {
+    spt-election-day-menu-dialog > content {
       display: block;
       padding-top: 12px;
     }
-    spt-dialog-menu > content > a {
+    spt-election-day-menu-dialog > content > a {
       display: block;
       padding: 12px 0;
       font-size: 18px;
@@ -21,7 +21,7 @@
     import {assign__l10n_agent} from "site/agent";
     import {log,debug} from "ctx-core/logger/lib";
     const tag = fn$tag(this, {a$onclick: a$onclick})
-        , logPrefix = "site/spt-dialog-menu.tag";
+        , logPrefix = "site/spt-election-day-menu-dialog.tag";
     tag.on("mount", on$mount);
     tag.on("unmount", on$unmount);
     log(logPrefix);
@@ -46,4 +46,4 @@
       tag.assign__ctx$update();
     }
   </script>
-</spt-dialog-menu>
+</spt-election-day-menu-dialog>

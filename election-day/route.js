@@ -41,40 +41,40 @@ function fn$voting_issue$route$$(ctx, ...ctx$rest$$) {
         fn$route(ctx, {
           path: `voting-issue/${voting_issue$route$path$}`,
           route$name: voting_issue$key,
-          fn: root__route$fn}, ctx$rest),
+          fn: root__route}, ctx$rest),
         fn$route(ctx, {
           path: your_rights$path,
           route$name: `${voting_issue$key}$your_rights`,
-          fn: your_rights__route$fn}, ctx$rest),
+          fn: your_rights__route}, ctx$rest),
         fn$route(ctx, {
           path: `voting-issue/${voting_issue$route$path$}/video`,
           route$name: `${voting_issue$key}$video`,
-          fn: video__route$fn}, ctx$rest),
+          fn: video__route}, ctx$rest),
         fn$route(ctx, {
           path: `voting-issue/${voting_issue$route$path$}/help`,
           route$name: `${voting_issue$key}$help`,
-          fn: help__route$fn}, ctx$rest)
+          fn: help__route}, ctx$rest)
       );
       return memo;
-      function root__route$fn(route$ctx) {
+      function root__route(route$ctx) {
         riot.route(your_rights$path);
       }
-      function your_rights__route$fn(route$ctx) {
+      function your_rights__route(route$ctx) {
         log(`${logPrefix}|fn$voting_issue$route$$|your_rights`);
         route$ctx.route$name__voting_issue$your_rights = true;
-        route$fn(...arguments);
+        route(...arguments);
       }
-      function video__route$fn(route$ctx) {
+      function video__route(route$ctx) {
         log(`${logPrefix}|fn$voting_issue$route$$|video`);
         route$ctx.route$name__voting_issue$video = true;
-        route$fn(...arguments);
+        route(...arguments);
       }
-      function help__route$fn(route$ctx) {
+      function help__route(route$ctx) {
         log(`${logPrefix}|fn$voting_issue$route$$|help`);
         route$ctx.route$name__voting_issue$help = true;
-        route$fn(...arguments);
+        route(...arguments);
       }
-      function route$fn(route$ctx) {
+      function route(route$ctx) {
         assign(route$ctx, {
           voting_issue$key: voting_issue$key,
           voting_issue$tile: true,
@@ -89,7 +89,7 @@ function voting_issue$route$path(voting_issue) {
   return voting_issue.replace(/_/g, "-");
 }
 function fn$route(ctx, ...ctx$rest$$) {
-  return route$lib__fn$route(ctx, {fn$ctx: fn$ctx}, ...ctx$rest$$);
+  return route$lib__fn$route(ctx, {fn$route$ctx: fn$ctx}, ...ctx$rest$$);
 }
 function fn$ctx() {
   log(`${logPrefix}|fn$ctx`);

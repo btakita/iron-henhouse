@@ -1,7 +1,12 @@
 import "babel-polyfill";
 import riot from "riot";
 global.riot = riot;
+import "ctx-core/dom/ctx.tag";
+import "ctx-core/dialog/ctx-dialog.tag";
+import "ctx-core/dialog/ctx-dialog-position-center.tag";
 import "splash/spt-splash.tag";
 import "splash/spt-splash-root.tag";
+import "splash/spt-splash-dialog.tag";
 import "splash/spt-schedule-banner.tag";
-import "early-voting/spt-early-voting.tag";
+import "splash/spt-early-voting-dialog.tag";
+import "splash/spt-early-voting-issue-dialog.tag";

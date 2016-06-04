@@ -1,7 +1,10 @@
 {
   "l10n": {
     "call_us": "Call us!",
+    "vote_early_instructions$menu$text": "Early Voting Instructions",
+    "early_voting_issue$menu$text": "I have an early voting problem!",
     "enter_zip_code": "Enter your zip code",
+    "get_help": "Get help!",
     "help": "Help!",
     "hotline$phone": "1-800-CHX-VOTE",
     "select_polling_station": "Select your polling station",
