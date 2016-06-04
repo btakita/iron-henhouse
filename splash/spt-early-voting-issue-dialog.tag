@@ -7,6 +7,9 @@
     </a>
   </content>
   <style>
+    spt-early-voting-issue-dialog {
+      margin-top: 100px;
+    }
     spt-early-voting-issue-dialog > content {
       display: flex;
       flex-direction: column;

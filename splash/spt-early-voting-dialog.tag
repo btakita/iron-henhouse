@@ -5,6 +5,9 @@
     <a class="yellow-link" href="?early_voting_issue=1" onclick="{link$onclick}">&nbsp;{ctx.l10n.early_voting_issue$menu$text}&nbsp;</a>
   </content>
   <style>
+    spt-early-voting-dialog {
+      margin-top: 100px;
+    }
     spt-early-voting-dialog > content {
       display: block;
     }

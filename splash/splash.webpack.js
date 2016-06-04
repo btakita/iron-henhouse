@@ -12,3 +12,4 @@ import "splash/spt-schedule-banner.tag";
 import "splash/spt-early-voting-dialog.tag";
 import "splash/spt-early-voting-issue-dialog.tag";
 import "splash/spt-addtocalendar-dialog.tag";
+import "splash/spt-check-registration-dialog.tag";

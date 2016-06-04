@@ -3,12 +3,10 @@
     <spt-early-voting-dialog ctx="{opts.ctx}"></spt-early-voting-dialog>
     <spt-early-voting-issue-dialog ctx="{opts.ctx}"></spt-early-voting-issue-dialog>
     <spt-addtocalendar-dialog ctx="{opts.ctx}"></spt-addtocalendar-dialog>
+    <spt-check-registration-dialog ctx="{opts.ctx}"></spt-check-registration-dialog>
   </ctx-dialog>
   <ctx-dialog-position-center ctx="{opts.ctx}"></ctx-dialog-position-center>
   <style>
-    spt-splash-dialog > ctx-dialog > content {
-      margin-top: 100px;
-    }
     spt-splash-dialog > ctx-dialog > content > ctx-dialog-topbar {
       background: #222222;
       color: #ffffff;
@@ -73,6 +71,7 @@
       refresh__dialog$spt_early_voting_dialog();
       refresh__dialog$spt_early_voting_issue_dialog();
       refresh__dialog$spt_addtocalendar_dialog();
+      refresh__dialog$spt_check_registration_dialog();
       tag.assign__ctx$update();
     }
     function refresh__dialog$spt_early_voting_dialog() {
@@ -124,6 +123,23 @@
         });
       } else if (!addtocalendar && dialog$spt_addtocalendar_dialog) {
         dialog$$_agent.remove({dialog$$: dialog$spt_addtocalendar_dialog});
+      }
+    }
+    function refresh__dialog$spt_check_registration_dialog() {
+      log(`${logPrefix}|refresh__dialog$spt_check_registration_dialog`);
+      let ctx = self.ctx;
+      const check_registration = ctx.route$query$map.check_registration
+          , dialog$$_agent = ctx.dialog$$_agent
+          , dialog$spt_check_registration_dialog = dialog$$find__tag$name(ctx, "spt-check-registration-dialog");
+      if (check_registration && !dialog$spt_check_registration_dialog) {
+        dialog$$_agent.push({
+          dialog$$: {
+            tag$name: "spt-check-registration-dialog",
+            title: "Check Your Voter Registration"
+          }
+        });
+      } else if (!check_registration && dialog$spt_check_registration_dialog) {
+        dialog$$_agent.remove({dialog$$: dialog$spt_check_registration_dialog});
       }
     }
   </script>

@@ -16,11 +16,12 @@
   </content>
   <style>
     spt-addtocalendar-dialog {
-      min-width: 400px;
+      margin-top: 100px;
     }
     spt-addtocalendar-dialog > content {
       display: block;
       overflow: hidden;
+      min-height: 200px;
     }
     spt-addtocalendar-dialog > content > .addtocalendar {
       display: block;
