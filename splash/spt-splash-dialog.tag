@@ -6,27 +6,28 @@
   </ctx-dialog>
   <ctx-dialog-position-center ctx="{opts.ctx}"></ctx-dialog-position-center>
   <style>
-    spt-splash-dialog > ctx-dialog > dialog {
+    spt-splash-dialog > ctx-dialog > content {
       margin-top: 100px;
     }
-    spt-splash-dialog > ctx-dialog > dialog > ctx-dialog-topbar {
+    spt-splash-dialog > ctx-dialog > content > ctx-dialog-topbar {
       background: #222222;
       color: #ffffff;
     }
     spt-splash-dialog > ctx-dialog > mask {
       background: #000000;
     }
-    spt-splash-dialog > ctx-dialog > dialog > * > ctx-dialog-topbar {
+    spt-splash-dialog > ctx-dialog > content > * > ctx-dialog-topbar {
+      background: #222222;
       padding-left: 20px;
     }
-    spt-splash-dialog > ctx-dialog > dialog > * > content {
+    spt-splash-dialog > ctx-dialog > content > * > content {
       background: #333333;
       min-width: 400px;
       font-size: 18px;
       padding: 20px;
     }
     @media (max-width: 650px) {
-      spt-splash-dialog > ctx-dialog > dialog {
+      spt-splash-dialog > ctx-dialog > content {
         width: 100%;
         margin: 0;
       }
