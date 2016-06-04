@@ -30,6 +30,11 @@
     spt-early-voting-dialog > content > a.early-voting-issue > content {
       flex: auto;
     }
+    @media (max-width: 650px) {
+      spt-early-voting-dialog {
+        margin-top: 0;
+      }
+    }
   </style>
   <script type="text/babel">
     import {assign} from "ctx-core/object/lib";

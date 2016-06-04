@@ -17,10 +17,10 @@
     spt-splash > spt-schedule-banner {
       position: relative;
       width: 100%;
-      flex: 1;
-      flex-grow: 0;
+      flex: auto;
+      flex-grow: 1;
       flex-shrink: 0;
-      height: 3em;
+      min-height: 3em;
     }
     spt-splash > content {
       flex: auto;
@@ -28,11 +28,6 @@
       width: 100%;
       display: flex;
       flex-direction: column;
-    }
-    @media (max-width: 650px) {
-      spt-splash > spt-schedule-banner {
-        height: 6em;
-      }
     }
   </style>
   <script type="text/babel">

@@ -6,12 +6,16 @@
   <style>
     spt-schedule-banner {
       display: block;
+      overflow: hidden;
       color: #000000;
       background: #FDD102;
       border-top: 1px solid #FFFFFF;
       border-bottom: 1px solid #FFFFFF;
       text-transform: uppercase;
       text-align: center;
+    }
+    spt-schedule-banner > p {
+      display: block;
     }
   </style>
   <script type="text/babel">

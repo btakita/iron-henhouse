@@ -33,6 +33,11 @@
       width: 80px;
       height: 80px;
     }
+    @media (max-width: 650px) {
+      spt-early-voting-issue-dialog {
+        margin-top: 0;
+      }
+    }
   </style>
   <script type="text/babel">
     import {assign} from "ctx-core/object/lib";

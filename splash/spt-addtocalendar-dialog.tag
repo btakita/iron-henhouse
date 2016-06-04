@@ -40,5 +40,10 @@
       color: #ffffff;
       margin-top: 4px;
     }
+    @media (max-width: 650px) {
+      spt-addtocalendar-dialog {
+        margin-top: 0;
+      }
+    }
   </style>
 </spt-addtocalendar-dialog>
