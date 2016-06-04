@@ -17,6 +17,7 @@
     spt-splash-dialog > ctx-dialog > content > * > ctx-dialog-topbar {
       background: #222222;
       padding-left: 20px;
+      padding-right: 10px;
     }
     spt-splash-dialog > ctx-dialog > content > * > content {
       background: #333333;
