@@ -1,4 +1,4 @@
-<spt-election-day-menu-dialog class="dialog" >
+<spt-election-day-menu-dialog class="dialog">
   <ctx-dialog-topbar ctx="{opts.ctx}"></ctx-dialog-topbar>
   <content>
     <a href="/" onclick="{a$onclick}">&nbsp;Suppress This&nbsp;</a>

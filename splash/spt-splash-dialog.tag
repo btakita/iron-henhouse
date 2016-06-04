@@ -11,8 +11,8 @@
       background: #222222;
       color: #ffffff;
     }
-    spt-splash-dialog > ctx-dialog > mask {
-      background: #000000;
+    spt-splash-dialog > ctx-dialog {
+      background: rgba(0,0,0,0.6);
     }
     spt-splash-dialog > ctx-dialog > content > * > .topbar {
       background: #222222;
