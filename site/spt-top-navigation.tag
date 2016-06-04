@@ -33,7 +33,7 @@
   <script type="text/babel">
     import {assign} from "ctx-core/object/lib";
     import {fn$tag} from "ctx-core/tag/lib";
-    import {assign__l10n_agent} from "site/agent";
+    import {assign__l10n_agent} from "l10n/agent";
     import {assign__dialog$$_agent} from "ctx-core/dialog/agent";
     import {log,debug} from "ctx-core/logger/lib";
     const tag = fn$tag(this, {

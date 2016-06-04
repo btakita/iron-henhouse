@@ -1,25 +1,24 @@
 <spt-splash-dialog>
   <ctx-dialog ctx="{opts.ctx}">
-    <yield to="topbar">
-      <ctx-dialog-topbar ctx="{opts.ctx}"></ctx-dialog-topbar>
-    </yield>
-    <yield to="content">
-      <spt-early-voting-dialog ctx="{opts.ctx}"></spt-early-voting-dialog>
-      <spt-early-voting-issue-dialog ctx="{opts.ctx}"></spt-early-voting-issue-dialog>
-    </yield>
+    <spt-early-voting-dialog ctx="{opts.ctx}"></spt-early-voting-dialog>
+    <spt-early-voting-issue-dialog ctx="{opts.ctx}"></spt-early-voting-issue-dialog>
   </ctx-dialog>
   <ctx-dialog-position-center ctx="{opts.ctx}"></ctx-dialog-position-center>
   <style>
     spt-splash-dialog > ctx-dialog > dialog {
       margin-top: 100px;
     }
-    spt-splash-dialog > ctx-dialog > dialog > topbar {
-      display: none;
+    spt-splash-dialog > ctx-dialog > dialog > ctx-dialog-topbar {
+      background: #222222;
+      color: #ffffff;
     }
     spt-splash-dialog > ctx-dialog > mask {
       background: #000000;
     }
-    spt-splash-dialog > ctx-dialog > dialog > content {
+    spt-splash-dialog > ctx-dialog > dialog > * > ctx-dialog-topbar {
+      padding-left: 20px;
+    }
+    spt-splash-dialog > ctx-dialog > dialog > * > content {
       background: #333333;
       min-width: 400px;
       font-size: 18px;
@@ -29,9 +28,6 @@
       spt-splash-dialog > ctx-dialog > dialog {
         width: 100%;
         margin: 0;
-      }
-      spt-splash-dialog > ctx-dialog > dialog > topbar {
-        display: inherit;
       }
     }
   </style>

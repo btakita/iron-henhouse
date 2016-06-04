@@ -92,7 +92,7 @@
     import {
       assign__polling_station$$_agent,
       assign__polling_station_agent} from "election-day/agent";
-    import {assign__l10n_agent} from "site/agent";
+    import {assign__l10n_agent} from "l10n/agent";
     import {dom$,url$anchor$assign} from "ctx-core/dom/lib";
     import dom$classes from "dom-classes";
     import riot from "riot";

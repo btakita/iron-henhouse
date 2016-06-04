@@ -3,7 +3,6 @@ import {assign} from "ctx-core/object/lib";
 import {error$throw} from "ctx-core/error/lib";
 import {election_day$html} from "election-day/html";
 import koa$route from "koa-route";
-import "site/cmd";
 import "vote-where/cmd";
 import {log,info,error,debug} from "ctx-core/logger/lib"
 const logPrefix = "election-day/koa";

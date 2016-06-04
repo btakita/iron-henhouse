@@ -1,4 +1,5 @@
 <spt-early-voting-issue-dialog class="dialog" show="{ctx.dialog.tag$name === 'spt-early-voting-issue-dialog'}">
+  <ctx-dialog-topbar ctx="{opts.ctx}"></ctx-dialog-topbar>
   <content>
     <h2>&nbsp;{ctx.l10n.get_help}&nbsp;</h2>
     <a class="yellow-link" href="tel:4157958065">
@@ -34,7 +35,7 @@
     import {assign} from "ctx-core/object/lib";
     import {fn$tag,link$onclick} from "ctx-core/tag/lib";
     import {dialog$$find__tag$name} from "ctx-core/dialog/lib"
-    import {assign__l10n_agent} from "site/agent";
+    import {assign__l10n_agent} from "l10n/agent";
     import {log,debug} from "ctx-core/logger/lib";
     const tag = fn$tag(this, {link$onclick: link$onclick})
         , logPrefix = "splash/spt-early-voting-issue-dialog.tag";

@@ -6,6 +6,7 @@ import {
   app$use__echo} from "ctx-core/koa/lib";
 import app$use__http$post$cmd from "ctx-core/cmd/koa";
 import {app$use__home} from "splash/koa";
+import {app$use__l10n} from "l10n/koa";
 import {app$use__election_day} from "election-day/koa";
 import "babel-core";
 import {env$assign} from "ctx-core/env";
@@ -44,11 +45,12 @@ function start(id) {
   if (!env.isLocalhost) {
     app.use(koa$sslify({trustProtoHeader: true}));
   }
-  app$use__http$post$cmd(ctx);
+  app$use__l10n(ctx);
   app$use__home(ctx);
   if (!env.isLocalhost) {
     app$use__basic_auth(ctx);
   }
+  app$use__http$post$cmd(ctx);
   app$use__election_day(ctx);
   app$use__echo(ctx);
   app.listen(env.port);

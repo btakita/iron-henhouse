@@ -40,7 +40,7 @@
   <script type="text/babel">
     import {assign} from "ctx-core/object/lib";
     import {fn$tag,link$onclick} from "ctx-core/tag/lib";
-    import {assign__l10n_agent} from "site/agent";
+    import {assign__l10n_agent} from "l10n/agent";
     import {log,debug} from "ctx-core/logger/lib";
     const tag = fn$tag(this, {link$onclick: link$onclick})
         , logPrefix = "election-day/bernie-election-day-root.tag";

@@ -173,7 +173,8 @@
       if (early_voting && !dialog$spt_early_voting_dialog) {
         dialog$$_agent.push({
           dialog$$: {
-            tag$name: "spt-early-voting-dialog"
+            tag$name: "spt-early-voting-dialog",
+            title: "Early Voting"
           }
         });
       } else if (!early_voting && dialog$spt_early_voting_dialog) {
@@ -182,7 +183,8 @@
       if (early_voting_issue && !dialog$spt_early_voting_issue_dialog) {
         dialog$$_agent.push({
           dialog$$: {
-            tag$name: "spt-early-voting-issue-dialog"
+            tag$name: "spt-early-voting-issue-dialog",
+            title: "Early Voting Problem"
           }
         });
       } else if (!early_voting_issue && dialog$spt_early_voting_issue_dialog) {
