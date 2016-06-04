@@ -7,14 +7,14 @@
   </ctx-dialog>
   <ctx-dialog-position-center ctx="{opts.ctx}"></ctx-dialog-position-center>
   <style>
-    spt-splash-dialog > ctx-dialog > content > ctx-dialog-topbar {
+    spt-splash-dialog > ctx-dialog > content > .topbar {
       background: #222222;
       color: #ffffff;
     }
     spt-splash-dialog > ctx-dialog > mask {
       background: #000000;
     }
-    spt-splash-dialog > ctx-dialog > content > * > ctx-dialog-topbar {
+    spt-splash-dialog > ctx-dialog > content > * > .topbar {
       background: #222222;
       padding-left: 20px;
       padding-right: 10px;
