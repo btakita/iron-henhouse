@@ -1,6 +1,6 @@
 import {assign,clone,keys} from "ctx-core/object/lib";
 import layoutHtml from "ctx-core/layout/layout.html";
-import {indentation,indentation$regexp} from "ctx-core/string/indendation";
+import {fn$indentation,indentation$regexp} from "ctx-core/string/indendation";
 import {js$html} from "ctx-core/html/lib";
 import {log,debug} from "ctx-core/logger/lib"
 const logPrefix = "election-day/html";
@@ -31,7 +31,7 @@ export function election_day$body$html() {
       <spt-election-day-layout>
         <election-day ctx="{opts.ctx}"></election-day>
       </spt-election-day-layout>
-      ${js$html(ctx, {indentation: indentation(6), indentFirstLine: false})}
+      ${js$html(ctx, {indentation: fn$indentation(6), indentFirstLine: false})}
       <script>
         (function() {
           var riot$mount$ctx = ${JSON.stringify(riot$mount$ctx)};

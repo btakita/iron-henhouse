@@ -1,6 +1,7 @@
 import {assign,keys} from "ctx-core/object/lib";
 import layoutHtml from "ctx-core/layout/layout.html";
-import {indentation,indentation$regexp} from "ctx-core/string/indendation";
+import {fn$indentation,indentation$regexp} from "ctx-core/string/indendation";
+import {addtocalendar$html} from "ctx-core/addtocalendar.com/html";
 import {js$html} from "ctx-core/html/lib";
 import {log,debug} from "ctx-core/logger/lib"
 const logPrefix = "splash/html";
@@ -20,10 +21,12 @@ export function home$body$html() {
       authentication: ctx.authentication
     }
   };
+  const indentation = fn$indentation(6);
   return `
     <body>
       <spt-splash ctx="{opts.ctx}"></spt-splash>
-      ${js$html(ctx, {indentation: indentation(6), indentFirstLine: false})}
+      ${js$html(ctx, {indentation: indentation, indentFirstLine: false})}
+      ${addtocalendar$html({indentation: indentation})}
       <script>
         (function() {
           var riot$mount$ctx = ${JSON.stringify(riot$mount$ctx)};

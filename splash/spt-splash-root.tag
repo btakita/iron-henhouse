@@ -141,9 +141,7 @@
   <script type="text/babel">
     import {assign} from "ctx-core/object/lib";
     import {fn$tag,link$onclick} from "ctx-core/tag/lib";
-    import {assign__route$fragment_agent} from "ctx-core/route/lib";
     import {assign__dialog_agent} from "ctx-core/dialog/agent";
-    import {dialog$$find__tag$name} from "ctx-core/dialog/lib";
     import {log,debug} from "ctx-core/logger/lib";
     const tag = fn$tag(this, {link$onclick: link$onclick})
         , logPrefix = "splash/spt-splash-root.tag";
@@ -153,44 +151,11 @@
     function on$mount() {
       log(`${logPrefix}|on$mount`);
       let ctx = self.ctx;
-      assign__route$fragment_agent(ctx);
       assign__dialog_agent(ctx);
-      ctx.route$fragment_agent.on("change", refresh);
-      refresh(true);
     }
     function on$unmount() {
       log(`${logPrefix}|on$unmount`);
       self.ctx.route$fragment_agent.off("change", refresh);
-    }
-    function refresh(show) {
-      log(`${logPrefix}|refresh`);
-      let ctx = self.ctx;
-      const early_voting = ctx.route$query$map.early_voting
-          , early_voting_issue = ctx.route$query$map.early_voting_issue
-          , dialog$$_agent = ctx.dialog$$_agent
-          , dialog$spt_early_voting_dialog = dialog$$find__tag$name(ctx, "spt-early-voting-dialog")
-          , dialog$spt_early_voting_issue_dialog = dialog$$find__tag$name(ctx, "spt-early-voting-issue-dialog");
-      if (early_voting && !dialog$spt_early_voting_dialog) {
-        dialog$$_agent.push({
-          dialog$$: {
-            tag$name: "spt-early-voting-dialog",
-            title: "Early Voting"
-          }
-        });
-      } else if (!early_voting && dialog$spt_early_voting_dialog) {
-        dialog$$_agent.remove({dialog$$: dialog$spt_early_voting_dialog});
-      }
-      if (early_voting_issue && !dialog$spt_early_voting_issue_dialog) {
-        dialog$$_agent.push({
-          dialog$$: {
-            tag$name: "spt-early-voting-issue-dialog",
-            title: "Early Voting Problem"
-          }
-        });
-      } else if (!early_voting_issue && dialog$spt_early_voting_issue_dialog) {
-        dialog$$_agent.remove({dialog$$: dialog$spt_early_voting_issue_dialog});
-      }
-      tag.assign__ctx$update();
     }
   </script>
 </spt-splash-root>

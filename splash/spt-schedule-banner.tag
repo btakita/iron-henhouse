@@ -1,5 +1,8 @@
 <spt-schedule-banner>
-  <p>Return here on <a target="_blank" href="https://www.google.com/calendar/render?action=TEMPLATE&text=suppressthis.org&dates=20160707T140000Z/20160708T030000Z&details=suppressthis.org+%E2%80%94+Your+voting+companion&location=California&sf=true&output=xml">June 7</a> for Election Information and Voter Alerts</p>
+  <p>
+    Return here on June 7 for Election Information and Voter Alerts &mdash;
+    <a href="?addtocalendar=1" onclick="{link$onclick}">Add to Calendar</a>
+  </p>
   <style>
     spt-schedule-banner {
       display: block;
@@ -10,8 +13,21 @@
       text-transform: uppercase;
       text-align: center;
     }
-    spt-schedule-banner a:visited {
-      /*color: #;*/
-    }
   </style>
+  <script type="text/babel">
+    import {assign} from "ctx-core/object/lib";
+    import {fn$tag,link$onclick} from "ctx-core/tag/lib";
+    import {log,debug} from "ctx-core/logger/lib";
+    const tag = fn$tag(this, {link$onclick: link$onclick})
+        , logPrefix = "splash/spt-schedule-banner.tag";
+    tag.on("mount", on$mount);
+    tag.on("unmount", on$unmount);
+    log(logPrefix);
+    function on$mount() {
+      log(`${logPrefix}|on$mount`);
+    }
+    function on$unmount() {
+      log(`${logPrefix}|on$unmount`);
+    }
+  </script>
 </spt-schedule-banner>
