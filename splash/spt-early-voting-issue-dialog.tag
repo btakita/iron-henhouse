@@ -1,15 +1,15 @@
 <spt-early-voting-issue-dialog class="dialog" show="{ctx.dialog.tag$name === 'spt-early-voting-issue-dialog'}">
   <content>
-    <p>{ctx.l10n.get_help}</p>
+    <h2>&nbsp;{ctx.l10n.get_help}&nbsp;</h2>
     <a class="yellow-link" href="tel:4157958065">
       <img src="/textlinks-phone.svg" />
-      <content>&nbsp;(415) 795-8065&nbsp;</content>
     </a>
   </content>
   <style>
     spt-early-voting-issue-dialog > content {
-      display: block;
-      min-width: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       padding-top: 12px;
     }
     spt-early-voting-issue-dialog > content > * {
@@ -18,20 +18,16 @@
       color: #FDD102;
       font-weight: bold;
     }
+    spt-early-voting-issue-dialog > content > h2 {
+      flex-shrink: 0;
+      flex-grow: 0;
+    }
     spt-early-voting-issue-dialog > content > a {
-      display: flex;
-      align-items: center;
       padding: 12px 0;
     }
     spt-early-voting-issue-dialog > content > a > img {
-      flex: 1;
-      flex-shrink: 0;
-      flex-grow: 0;
-      width: 1.25em;
-      height: 1.25em;
-    }
-    spt-early-voting-issue-dialog > content > a > content {
-      flex: auto;
+      width: 80px;
+      height: 80px;
     }
   </style>
   <script type="text/babel">

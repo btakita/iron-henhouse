@@ -29,11 +29,10 @@
       display: flex;
       flex-direction: column;
     }
-    spt-splash > spt-splash-dialog > ctx-dialog > dialog {
-      margin-top: 100px;
-    }
-    spt-splash > spt-splash-dialog > ctx-dialog > mask {
-      background: #000000;
+    @media (max-width: 650px) {
+      spt-splash > spt-schedule-banner {
+        height: 6em;
+      }
     }
   </style>
   <script type="text/babel">
@@ -56,7 +55,7 @@
       setTimeout(() => {
         tag.show = true;
         tag.assign__ctx$update();
-      }, 0);
+      }, 100); // TODO: Use events instead of hard-coded timeout
     }
     function on$unmount() {
       log(`${logPrefix}|on$unmount`);

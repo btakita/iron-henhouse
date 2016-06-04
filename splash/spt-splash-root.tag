@@ -81,6 +81,7 @@
     spt-splash-root > content > bottom {
       display: block;
       margin: 40px 0 0;
+      padding: 0 40px;
     }
     spt-splash-root > content > bottom > * {
       float: right;
@@ -122,6 +123,18 @@
         float: none;
         width: auto;
         padding: 0 0 40px;
+      }
+      spt-splash-root > content > bottom > spt-twitter {
+        padding-right: 0;
+      }
+      spt-splash-root > content > bottom > spt-about-us {
+        padding-left: 0;
+      }
+    }
+    @media (max-width: 650px) {
+      spt-splash-root > content > logo > img {
+        width: 386px;
+        height: 186px;
       }
     }
   </style>

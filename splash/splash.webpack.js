@@ -3,6 +3,7 @@ import riot from "riot";
 global.riot = riot;
 import "ctx-core/dom/ctx.tag";
 import "ctx-core/dialog/ctx-dialog.tag";
+import "ctx-core/dialog/ctx-dialog-topbar.tag";
 import "ctx-core/dialog/ctx-dialog-position-center.tag";
 import "splash/spt-splash.tag";
 import "splash/spt-splash-root.tag";

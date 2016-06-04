@@ -6,8 +6,6 @@
   <style>
     spt-early-voting-dialog > content {
       display: block;
-      min-width: 400px;
-      padding: 20px;
     }
     spt-early-voting-dialog > content > a {
       display: block;
