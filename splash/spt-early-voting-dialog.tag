@@ -10,7 +10,6 @@
     spt-early-voting-dialog > content > a {
       display: block;
       padding: 12px 0;
-      font-size: 18px;
       font-weight: bold;
     }
     spt-early-voting-dialog > content > a.early-voting-issue {

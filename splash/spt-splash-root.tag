@@ -102,7 +102,7 @@
     spt-splash-root > content > bottom > spt-about-us > h2 {
       text-transform: uppercase;
     }
-    @media (max-device-width: 1200px) {
+    @media (max-width: 1200px) {
       spt-splash-root > background-mask {
         width: 100%;
         margin: 0;
@@ -131,7 +131,7 @@
         padding-left: 0;
       }
     }
-    @media (max-device-width: 650px) {
+    @media (max-width: 650px) {
       spt-splash-root > content > logo > img {
         width: 386px;
         height: 186px;

@@ -22,15 +22,16 @@
     spt-splash-dialog > ctx-dialog > dialog > content {
       background: #333333;
       min-width: 400px;
+      font-size: 18px;
       padding: 20px;
     }
-    @media (max-device-width: 650px) {
-      spt-splash-dialog > ctx-dialog > dialog > topbar {
-        display: inherit;
-      }
+    @media (max-width: 650px) {
       spt-splash-dialog > ctx-dialog > dialog {
         width: 100%;
         margin: 0;
+      }
+      spt-splash-dialog > ctx-dialog > dialog > topbar {
+        display: inherit;
       }
     }
   </style>
