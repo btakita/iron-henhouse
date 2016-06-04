@@ -7,8 +7,11 @@
   <spt-election-day-dialog ctx="{opts.ctx}"></spt-election-day-dialog>
   <style>
     spt-election-day-layout {
+      display: -webkit-box;
       display: flex;
+      -webkit-flex-direction: column;
       flex-direction: column;
+      -webkit-align-items: center;
       align-items: center;
       width: 100%;
       height: 100%;
@@ -17,16 +20,20 @@
       width: 100%;
     }
     spt-election-day-layout > spt-top-navigation {
+      -webkit-flex: auto;
       flex: none;
     }
     spt-election-day-layout > content {
+      display: -webkit-box;
       display: flex;
+      -webkit-flex: auto;
       flex: auto;
       text-align: center;
       overflow-x: hidden;
       overflow-y: auto;
     }
     spt-election-day-layout > content > * {
+      -webkit-flex: auto;
       flex: auto;
       width: 100%;
     }

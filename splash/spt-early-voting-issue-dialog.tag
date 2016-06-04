@@ -11,8 +11,11 @@
       margin-top: 100px;
     }
     spt-early-voting-issue-dialog > content {
+      display: -webkit-box;
       display: flex;
+      -webkit-flex-direction: column;
       flex-direction: column;
+      -webkit-align-items: center;
       align-items: center;
       padding-top: 12px;
     }
@@ -23,7 +26,9 @@
       font-weight: bold;
     }
     spt-early-voting-issue-dialog > content > h2 {
+      -webkit-flex-shrink: 0;
       flex-shrink: 0;
+      -webkit-flex-grow: 0;
       flex-grow: 0;
     }
     spt-early-voting-issue-dialog > content > a {

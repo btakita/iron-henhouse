@@ -5,13 +5,17 @@
   </content>
   <style>
     spt-check-registration-dialog > content {
+      -webkit-flex: auto;
       flex: auto;
+      display: -webkit-box;
       display: flex;
+      -webkit-flex-direction: column;
       flex-direction: column;
       overflow: hidden;
       width: 100%;
     }
     spt-check-registration-dialog > content > iframe {
+      -webkit-flex: auto;
       flex: auto;
     }
   </style>

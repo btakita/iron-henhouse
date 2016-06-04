@@ -39,6 +39,7 @@
       color: #087ED7;
     }
     voting-issue-tile > tabs {
+      display: -webkit-box;
       display: flex;
       border-bottom: 2px solid #C2C2C2;
     }
@@ -48,6 +49,7 @@
     }
     voting-issue-tile > tabs > a:last-child {
       width: auto;
+      -webkit-flex: auto;
       flex: auto;
     }
     voting-issue-tile > tabs > a.selected {

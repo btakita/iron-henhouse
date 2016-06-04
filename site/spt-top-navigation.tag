@@ -8,6 +8,7 @@
   <style>
     spt-top-navigation {
       position: relative;
+      display: -webkit-box;
       display: flex;
       border: 1px dotted #111111;
       background: #F9F9F9;
@@ -15,6 +16,7 @@
       line-height: 2.5em;
     }
     spt-top-navigation > content {
+      -webkit-flex: auto;
       flex: auto;
       text-align: center;
     }

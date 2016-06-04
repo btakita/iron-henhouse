@@ -32,6 +32,7 @@
   </content>
   <style>
     spt-splash-root {
+      -webkit-flex: auto;
       flex: auto;
       overflow-y: auto;
       height: 100%;
@@ -52,19 +53,25 @@
     }
     spt-splash-root > content {
       position: relative;
+      -webkit-flex: auto;
       flex: auto;
       overflow-y: auto;
       width: 100%;
       z-index: 2;
+      display: -webkit-box;
       display: flex;
+      -webkit-flex-direction: column;
       flex-direction: column;
       padding: 0 0 40px;
+      -webkit-align-items: center;
       align-items: center;
     }
     spt-splash-root > content > logo {
       overflow: hidden;
       padding: 40px 0 0;
+      -webkit-flex-grow: 0;
       flex-grow: 0;
+      -webkit-flex-shrink: 0;
       flex-shrink: 0;
     }
     spt-splash-root > content > logo > img {
@@ -112,17 +119,18 @@
       spt-splash-root > background-mask {
         width: 100%;
         margin: 0;
-        left: auto;
       }
       spt-splash-root > content {
         width: 100%;
-        left: auto;
         margin: 0;
       }
       spt-splash-root > content > bottom {
+        display: -webkit-box;
         display: flex;
         margin-top: 40px;
+        -webkit-flex-direction: column;
         flex-direction: column;
+        -webkit-align-items: center;
         align-items: center;
       }
       spt-splash-root > content > bottom > * {
