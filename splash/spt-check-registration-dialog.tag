@@ -15,6 +15,7 @@
     }
     spt-check-registration-dialog > content > iframe {
       display: block;
+      width: 100%;
       height: calc(100% - 3rem);
     }
   </style>
