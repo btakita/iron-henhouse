@@ -32,18 +32,15 @@
   </content>
   <style>
     spt-splash-root {
-      flex: auto;
-      overflow-y: auto;
-      height: 100%;
-      position: relative;
+      display: block;
     }
     spt-splash-root > background-mask {
       position: absolute;
       top: 0;
       left: 50%;
-      width: 1200px;
+      width: 80%;
       height: 100%;
-      margin: 0 0 0 -600px;
+      margin: 0 0 0 -40%;
       z-index: 1;
       background-image: url('/suppress-this/voter_suppression.png');
       background-repeat: repeat-y;
@@ -51,24 +48,20 @@
       opacity: 0.1;
     }
     spt-splash-root > content {
-      position: relative;
-      flex: auto;
+      display: block;
       overflow-y: auto;
       width: 100%;
       z-index: 2;
-      display: flex;
-      flex-direction: column;
       padding: 0 0 40px;
       align-items: center;
     }
     spt-splash-root > content > logo {
+      display: block;
       overflow: hidden;
       padding: 40px 0 0;
-      flex-grow: 0;
-      flex-shrink: 0;
+      text-align: center;
     }
     spt-splash-root > content > logo > img {
-      display: block;
       width: 772px;
       height: 372px;
     }
@@ -76,16 +69,23 @@
       display: block;
       overflow: hidden;
       padding: 40px 0 0;
+      text-align: center;
     }
-    spt-splash-root > content > early-voting-link > a {
+    spt-splash-root > content > early-voting-link {
       display: block;
       overflow: hidden;
+      margin: 20px 0 0;
+      height: 100px;
+      text-align: center;
+    }
+    spt-splash-root > content > early-voting-link > a {
       padding: 20px 80px;
       font-size: 30px;
       border-radius: 8px;
     }
     spt-splash-root > content > bottom {
       display: block;
+      overflow: hidden;
       margin: 40px 0 0;
       padding: 0 40px;
     }
@@ -116,14 +116,11 @@
       }
       spt-splash-root > content {
         width: 100%;
-        left: auto;
         margin: 0;
       }
       spt-splash-root > content > bottom {
-        display: flex;
+        display: block;
         margin-top: 40px;
-        flex-direction: column;
-        align-items: center;
       }
       spt-splash-root > content > bottom > * {
         float: none;
@@ -137,10 +134,16 @@
         padding-left: 0;
       }
     }
-    @media (max-width: 650px) {
+    @media (max-width: 772px) {
       spt-splash-root > content > logo > img {
-        width: 386px;
-        height: 186px;
+        width: 90%;
+        margin: 0 5%;
+        height: auto;
+      }
+      spt-splash-root > content > early-voting-link > a {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
       }
     }
   </style>

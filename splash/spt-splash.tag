@@ -7,27 +7,37 @@
   <spt-splash-dialog ctx="{opts.ctx}"></spt-splash-dialog>
   <style>
     spt-splash {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      width: 100%;
+      position: fixed;
+      display: block;
       height: 100%;
-      align-items: center;
+      width: 100%;
+      overflow: hidden;
     }
     spt-splash > spt-schedule-banner {
-      position: relative;
-      width: 100%;
-      flex: auto;
-      flex-grow: 1;
-      flex-shrink: 0;
-      min-height: 3em;
+      display: block;
+      overflow: hidden;
+      height: 3em;
     }
     spt-splash > content {
-      flex: auto;
+      display: block;
       overflow-y: auto;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
+      height: calc(100% - 3em);
+    }
+    @media (max-width: 700px) {
+      spt-splash > spt-schedule-banner {
+        height: 3.8em;
+      }
+      spt-splash > content {
+        height: calc(100% - 3.8em);
+      }
+    }
+    @media (max-width: 650px) {
+      spt-splash > spt-schedule-banner {
+        height: 4em;
+      }
+      spt-splash > content {
+        height: calc(100% - 4em);
+      }
     }
   </style>
   <script type="text/babel">
