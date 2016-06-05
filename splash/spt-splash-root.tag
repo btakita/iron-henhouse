@@ -98,11 +98,11 @@
       float: right;
       box-sizing: border-box;
       width: 50%;
+      padding: 0 2rem;
     }
     spt-splash-root > content > bottom > spt-twitter {
       float: right;
       height: 600px;
-      padding-right: 2rem;
     }
     spt-splash-root > content > bottom > spt-twitter iframe {
       float: right;
@@ -115,7 +115,6 @@
     }
     spt-splash-root > content > bottom > spt-about-us {
       float: right;
-      padding-left: 2rem;
     }
     spt-splash-root > content > bottom > spt-about-us > h2 {
       text-transform: uppercase;
