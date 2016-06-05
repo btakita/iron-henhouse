@@ -16,7 +16,7 @@
       padding: 12px 0;
       font-weight: bold;
     }
-    @media (max-width: 650px) {
+    @media (max-width: 900px) {
       spt-early-voting-dialog {
         margin-top: 0;
       }

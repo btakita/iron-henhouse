@@ -1,7 +1,6 @@
 <spt-early-voting-issue-dialog class="dialog" show="{ctx.dialog.tag$name === 'spt-early-voting-issue-dialog'}">
   <ctx-dialog-topbar ctx="{opts.ctx}"></ctx-dialog-topbar>
   <content>
-    <h2>&nbsp;{ctx.l10n.get_help}&nbsp;</h2>
     <a class="yellow-link" href="tel:4157958065">
       <img src="/textlinks-phone.svg" />
     </a>
@@ -11,20 +10,15 @@
       margin-top: 100px;
     }
     spt-early-voting-issue-dialog > content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      display: block;
       padding-top: 12px;
+      text-align: center;
     }
     spt-early-voting-issue-dialog > content > * {
       margin: 0;
       font-size: 18px;
       color: #FDD102;
       font-weight: bold;
-    }
-    spt-early-voting-issue-dialog > content > h2 {
-      flex-shrink: 0;
-      flex-grow: 0;
     }
     spt-early-voting-issue-dialog > content > a {
       padding: 12px 0;
@@ -33,7 +27,7 @@
       width: 80px;
       height: 80px;
     }
-    @media (max-width: 650px) {
+    @media (max-width: 900px) {
       spt-early-voting-issue-dialog {
         margin-top: 0;
       }
