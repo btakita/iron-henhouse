@@ -6,6 +6,11 @@
     </a>
   </content>
   <style>
+    ctx-dialog.spt-early-voting-issue-dialog > content {
+      width: 300px;
+      margin-left: -150px;
+      height: 400px;
+    }
     spt-early-voting-issue-dialog {
       margin-top: 100px;
     }
@@ -28,6 +33,11 @@
       height: 80px;
     }
     @media (max-width: 900px) {
+      ctx-dialog.spt-early-voting-issue-dialog > content {
+        width: inherit;
+        margin-left: inherit;
+        height: inherit;
+      }
       spt-early-voting-issue-dialog {
         margin-top: 0;
       }
