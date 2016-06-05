@@ -9,7 +9,7 @@
       <a class="yellow-link" href="?check_registration=1" onclick="{link$onclick}">Check Your Voter Registration</a>
     </check-registration-link>
     <npp-registration-link class="splash-link">
-      <a class="yellow-link" target="_blank" href="http://youdownwithnpp.com/">Voting as No Party Preference?</a>
+      <a class="yellow-link" target="_blank" href="http://youdownwithnpp.com/?{ctx.ref$query}">Voting as No Party Preference?</a>
     </npp-registration-link>
     <bottom>
       <spt-about-us>

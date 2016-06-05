@@ -1,7 +1,7 @@
 <spt-early-voting-dialog class="dialog" show="{ctx.dialog.tag$name === 'spt-early-voting-dialog'}">
   <ctx-dialog-topbar ctx="{opts.ctx}"></ctx-dialog-topbar>
   <content>
-    <a target="_blank" class="yellow-link" href="http://voteearly.berniesandersvideo.com/">&nbsp;{ctx.l10n.vote_early_instructions$menu$text}&nbsp;</a>
+    <a target="_blank" class="yellow-link" href="http://voteearly.berniesandersvideo.com/?{ctx.ref$query}">&nbsp;{ctx.l10n.vote_early_instructions$menu$text}&nbsp;</a>
     <a class="yellow-link" href="?early_voting_issue=1" onclick="{link$onclick}">&nbsp;{ctx.l10n.early_voting_issue$menu$text}&nbsp;</a>
   </content>
   <style>
