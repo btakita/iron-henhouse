@@ -4,11 +4,11 @@
   <h2>&nbsp;{ctx.l10n.tag$election_day$subtitle}&nbsp;</h2>
   <a class="action where" href="vote-where" onclick="{link$onclick}">&nbsp;{ctx.l10n.vote_where$menu$text}&nbsp;</a>
   <a class="action issue" href="voting-issue" onclick="{link$onclick}">&nbsp;{ctx.l10n.voting_issue$menu$text}&nbsp;</a>
-  <a class="twitter-timeline" href="https://twitter.com/BernieSanders" data-widget-id="734025080737566720">Tweets by @BernieSanders</a>
-  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  <spt-twitter ctx="{opts.ctx}"></spt-twitter>
   <style>
     bernie-pioneer-root {
       display: block;
+      text-align: center;
     }
     bernie-pioneer-root > .header-img {
       height: 99px;
@@ -30,11 +30,8 @@
     bernie-pioneer-root > .issue {
       background: #EA504E;
     }
-    bernie-pioneer-root > .twitter-timeline,bernie-pioneer-root > iframe {
-      display: none;
-      position: relative;
-      width: 520px;
-      height: 600px;
+    bernie-pioneer-root > spt-twitter {
+      margin: 3rem 0 0;
     }
   </style>
   <script type="text/babel">

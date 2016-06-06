@@ -5,7 +5,7 @@
         &nbsp;{ctx.l10n.tag$spt_top_navigation$call_us}&nbsp;
       </a>
     </p>
-    <a href="#" class="menu" onclick="{menu$onclick}">&equiv;</a>
+    <a href="?" class="menu" onclick="{menu$onclick}">&equiv;</a>
   </spt-banner>
   <style>
     spt-pioneer-banner {
@@ -24,11 +24,12 @@
       padding: 0 20px;
       font-size: 24px;
       font-weight: bold;
+      z-index: 1;
     }
   </style>
   <script type="text/babel">
     import {assign} from "ctx-core/object/lib";
-    import {fn$tag} from "ctx-core/tag/lib";
+    import {fn$tag,link$onclick} from "ctx-core/tag/lib";
     import {assign__l10n_agent} from "l10n/agent";
     import {assign__dialog$$_agent} from "ctx-core/dialog/agent";
     import {log,debug} from "ctx-core/logger/lib";
@@ -45,6 +46,7 @@
       assign__l10n_agent(ctx);
       assign__dialog$$_agent(ctx);
       ctx.l10n_agent.on("change", l10n_agent$on$change);
+      tag.assign__ctx$update();
     }
     function on$unmount() {
       log(`${logPrefix}|on$unmount`);
@@ -53,6 +55,7 @@
     function menu$onclick(e) {
       log(`${logPrefix}|menu$onclick`);
       e.preventDefault();
+      link$onclick(e);
       self.ctx.dialog$$_agent.push({
         dialog$$: {
           tag$name: "spt-pioneer-menu-dialog",

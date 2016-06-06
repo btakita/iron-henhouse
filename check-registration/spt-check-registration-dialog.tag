@@ -1,9 +1,12 @@
-<spt-check-registration-dialog class="dialog" show="{ctx.dialog.tag$name === 'spt-check-registration-dialog'}">
+<spt-check-registration-dialog class="dialog">
   <ctx-dialog-topbar ctx="{opts.ctx}"></ctx-dialog-topbar>
   <content>
     <iframe src="https://verify.vote.org?{ctx.ref$query}" width="100%" marginheight="0" frameborder="0" id="frame3" scrollable="no"></iframe>
   </content>
   <style>
+    ctx-dialog.spt-check-registration-dialog spt-check-registration-dialog {
+      display: block;
+    }
     spt-check-registration-dialog {
       height: 100vh;
     }

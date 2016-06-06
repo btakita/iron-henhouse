@@ -1,9 +1,27 @@
 <spt-election-day class="page">
   <ctx ctx="{opts.ctx}"></ctx>
   <spt-election-day-banner ctx="{opts.ctx}"></spt-election-day-banner>
+  <navigation>
+    <a href="/?dialog=early_voting" onclick="{link$onclick}">Early Voting</a>
+    <a href="/?dialog=early_voting_issue" onclick="{link$onclick}">Early Issue Voting</a>
+    <a href="/?dialog=check_registration" onclick="{link$onclick}">Check Registration</a>
+    <a href="/?dialog=zip_code" onclick="{link$onclick}">Zip Code</a>
+  </navigation>
+  <spt-election-day-dialog ctx="{opts.ctx}"></spt-election-day-dialog>
   <style>
     spt-election-day {
       display: block;
+    }
+    spt-election-day > navigation {
+      display: block;
+      overflow: hidden;
+      margin-top: 2rem;
+    }
+    spt-election-day > navigation > * {
+      display: block;
+      overflow: hidden;
+      margin: 0.2em 0;
+      text-align: center;
     }
   </style>
   <script type="text/babel">
@@ -11,6 +29,7 @@
     import {fn$tag} from "ctx-core/tag/lib";
     import riot from "riot";
     import {assign__election_day$route$$} from "./route";
+    import {assign__route$dialog$map} from "dialog/lib";
     import {log,debug} from "ctx-core/logger/lib";
     const tag = fn$tag(this)
         , logPrefix = "pioneer/spt-pioneer.tag";

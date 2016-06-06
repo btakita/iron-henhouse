@@ -12,5 +12,6 @@ import "pioneer/spt-pioneer-menu-dialog.tag";
 import "banner/spt-banner.tag";
 import "pioneer/spt-pioneer-banner.tag";
 import "pioneer/bernie-pioneer-root.tag";
+import "site/spt-twitter.tag";
 import "vote-where/vote-where.webpack";
 import "voting-issue/voting-issue.webpack";

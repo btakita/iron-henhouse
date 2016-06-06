@@ -1,9 +1,6 @@
-import {assign,clone,keys} from "ctx-core/object/lib";
-import {error$throw} from "ctx-core/error/lib";
+import {assign} from "ctx-core/object/lib";
 import {fn$route as route$lib__fn$route,assign__route$$} from "ctx-core/route/lib";
 import {assign__dialog$$_agent} from "ctx-core/dialog/agent";
-import riot from "riot";
-import co from "co";
 import {log,debug} from "ctx-core/logger/lib";
 const logPrefix = "splash/route";
 export function assign__splash$route$$() {

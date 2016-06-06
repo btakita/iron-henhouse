@@ -1,6 +1,6 @@
 <spt-splash show="{show}" class="page">
   <ctx ctx="{opts.ctx}"></ctx>
-  <spt-schedule-banner ctx="{opts.ctx}"></spt-schedule-banner>
+  <spt-splash-banner ctx="{opts.ctx}"></spt-splash-banner>
   <content>
     <spt-splash-root show="{ctx.route$name__splash_root}" ctx="{opts.ctx}"></spt-splash-root>
   </content>

@@ -59,14 +59,13 @@
       border: 1px dotted #333333;
     }
     polling-station-select > content > polling-station.selected,polling-station-select > content > polling-station:hover {
-      background: #dddddd;
+      border: 1px solid #FFFFFF;
       font-weight: bold;
     }
     polling-station-select > content > polling-station > a {
       display: block;
       overflow: hidden;
       clear: both;
-      color: #000000;
     }
     polling-station-select > content > polling-station > a > * {
       display: block;

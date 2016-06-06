@@ -1,4 +1,4 @@
-<spt-early-voting-issue-dialog class="dialog" show="{ctx.dialog.tag$name === 'spt-early-voting-issue-dialog'}">
+<spt-early-voting-issue-dialog class="dialog">
   <ctx-dialog-topbar ctx="{opts.ctx}"></ctx-dialog-topbar>
   <content>
     <a href="tel:4157958065">
@@ -12,7 +12,10 @@
       height: 400px;
     }
     spt-early-voting-issue-dialog {
-      margin-top: 100px;
+      margin-top: 6rem;
+    }
+    ctx-dialog.spt-early-voting-issue-dialog spt-early-voting-issue-dialog {
+      display: block;
     }
     spt-early-voting-issue-dialog > content {
       display: block;
@@ -39,7 +42,7 @@
         height: inherit;
       }
       spt-early-voting-issue-dialog {
-        margin-top: 0;
+        margin-top: inherit;
       }
     }
   </style>

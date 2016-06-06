@@ -1,9 +1,7 @@
-import {assign,clone,keys} from "ctx-core/object/lib";
-import {error$throw} from "ctx-core/error/lib";
+import {assign,clone} from "ctx-core/object/lib";
 import {fn$route as route$lib__fn$route,assign__route$$} from "ctx-core/route/lib";
 import {assign__voting_issue$$} from "voting-issue/lib";
 import riot from "riot";
-import co from "co";
 import {log,debug} from "ctx-core/logger/lib";
 const logPrefix = "pioneer/route";
 export function assign__pioneer$route$$() {
