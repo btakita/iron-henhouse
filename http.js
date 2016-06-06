@@ -39,9 +39,7 @@ function start(id) {
   app$use__log$request$time(ctx);
   app$use__http$error(ctx);
   app.use(koa$bodyparser());
-  app.use(koa$static$cache(path.join(__dirname, "public"), {
-    maxAge: 24 * 60 * 60
-  }));
+  fn$koa$static$cache(ctx);
   if (!env.isLocalhost) {
     app.use(koa$sslify({trustProtoHeader: true}));
   }
@@ -59,4 +57,17 @@ function start(id) {
     log(`Worker ${id} exiting...`);
     process.exit();
   });
+}
+function fn$koa$static$cache(ctx) {
+  log(`${logPrefix}|fn$koa$static$cache`);
+  let koa$static$cache$files = {};
+  app.use(koa$static$cache(path.join(__dirname, "public"), {
+    maxAge: 24 * 60 * 60,
+    filter: []
+  }, koa$static$cache$files));
+  koa$static$cache(path.join(__dirname, "public/.well-known"), {
+    maxAge: 24 * 60 * 60,
+    prefix: "/.well-known"
+  }, koa$static$cache$files);
+  return ctx;
 }
