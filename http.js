@@ -40,9 +40,9 @@ function start(id) {
   app$use__http$error(ctx);
   app.use(koa$bodyparser());
   fn$koa$static$cache(ctx);
-  if (!env.isLocalhost) {
-    app.use(koa$sslify({trustProtoHeader: true}));
-  }
+  //if (!env.isLocalhost) {
+  //  app.use(koa$sslify({trustProtoHeader: true}));
+  //}
   app$use__l10n(ctx);
   app$use__home(ctx);
   if (!env.isLocalhost) {
