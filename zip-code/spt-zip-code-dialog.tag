@@ -1,11 +1,12 @@
 <spt-zip-code-dialog class="dialog">
   <ctx-dialog-topbar ctx="{opts.ctx}"></ctx-dialog-topbar>
-  <form-error-banner show="{form$error}">{form$error}</form-error-banner>
+  <form-error-banner show="{ctx.tag$spt_zip_code_dialog__form$error}">{ctx.tag$spt_zip_code_dialog__form$error}</form-error-banner>
   <content>
     <form action="#" onsubmit="{form$onsubmit}">
       <label for="zip_code">Enter your zip code</label>
       <input type="text" id="zip_code" maxlength="5" value="{ctx.zip_code}"/>
     </form>
+    <reset show="{ctx.zip_code}" onclick="{reset$onclick}">Reset</reset>
   </content>
   <style>
     ctx-dialog.spt-zip-code-dialog > content {
@@ -34,6 +35,11 @@
       height: 2em;
       width: 4em;
     }
+    spt-zip-code-dialog > content > reset {
+      display: block;
+      overflow: hidden;
+      cursor: pointer;
+    }
     @media (max-width: 900px) {
       ctx-dialog.spt-zip-code-dialog > content {
         width: inherit;
@@ -52,16 +58,25 @@
     import {dom$} from "ctx-core/dom/lib";
     import {l10n__tag$mount} from "l10n/tag";
     import {log,debug} from "ctx-core/logger/lib";
-    const tag = fn$tag(this, {form$onsubmit: form$onsubmit})
+    const tag = fn$tag(this, {
+            form$onsubmit: form$onsubmit,
+            reset$onclick: reset$onclick})
         , logPrefix = "zip-code/spt-zip-code-dialog.tag";
     log(logPrefix);
     tag.on("show", on$show);
+    tag.on("hide", on$hide);
     l10n__tag$mount(tag);
     function on$show() {
       log(`${logPrefix}|on$show`);
+      reset();
+      tag.assign__ctx$update();
       const dom$zip_code = dom$("#zip_code", tag.root);
       // TODO: remove setTimeout
       setTimeout(() => dom$zip_code.focus(), 100);
+    }
+    function on$hide() {
+      log(`${logPrefix}|on$hide`);
+      reset();
     }
     function form$onsubmit(e) {
       log(`${logPrefix}|form$onsubmit`);
@@ -72,8 +87,19 @@
         agent$$trigger$change(ctx, {zip_code: zip_code});
         ctx.dialog_agent.remove();
       } else {
-        tag.form$error = "Enter a valid zip code";
+        assign(ctx, {tag$spt_zip_code_dialog__form$error: "Enter a valid zip code"})
       }
+    }
+    function reset$onclick() {
+      log(`${logPrefix}|reset$onclick`);
+      agent$$trigger$change(ctx, {zip_code: null});
+      ctx.dialog_agent.remove();
+    }
+    function reset() {
+      log(`${logPrefix}|reset`);
+      let ctx = tag.ctx;
+      assign(ctx, {tag$spt_zip_code_dialog__form$error: null});
+      dom$("#zip_code", tag.root).value = ctx.zip_code || "";
     }
   </script>
 </spt-zip-code-dialog>

@@ -8,9 +8,9 @@
   <script type="text/babel">
     import {assign} from "ctx-core/object/lib";
     import {fn$tag} from "ctx-core/tag/lib";
-    import riot from "riot";
     import {route__tag$mount} from "ctx-core/route/tag";
     import {assign__splash$route$$} from "./route";
+    import {dialog__assign__ctx$update__defer} from "dialog/tag";
     import {log,debug} from "ctx-core/logger/lib";
     const tag = fn$tag(this)
         , logPrefix = "splash/spt-splash.tag";
@@ -22,10 +22,7 @@
     });
     function on$mount() {
       log(`${logPrefix}|on$mount`);
-      setTimeout(() => {
-        tag.show = true;
-        tag.assign__ctx$update();
-      }, 100); // TODO: Use events instead of hard-coded timeout
+      dialog__assign__ctx$update__defer(tag);
     }
     function on$unmount() {
       log(`${logPrefix}|on$unmount`);

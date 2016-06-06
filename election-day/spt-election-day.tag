@@ -1,4 +1,4 @@
-<spt-election-day class="page">
+<spt-election-day show="{show}" class="page">
   <ctx ctx="{opts.ctx}"></ctx>
   <spt-election-day-banner ctx="{opts.ctx}"></spt-election-day-banner>
   <navigation>
@@ -31,6 +31,10 @@
     import {assign} from "ctx-core/object/lib";
     import {fn$tag} from "ctx-core/tag/lib";
     import {assign__election_day$route$$} from "./route";
+    import {assign__dialog$$_agent} from "ctx-core/dialog/agent";
+    import {assign__route$dialog$map} from "dialog/lib";
+    import {dialog__assign__ctx$update__defer} from "dialog/tag";
+    import {localStorage$load} from "ctx-core/localStorage/lib";
     import {route__tag$mount} from "ctx-core/route/tag";
     import {zip_code__tag$mount} from "zip-code/tag";
     import {log,debug} from "ctx-core/logger/lib";
@@ -44,6 +48,18 @@
     zip_code__tag$mount(tag);
     function on$mount() {
       log(`${logPrefix}|on$mount`);
+      let ctx = tag.ctx;
+      assign(ctx, localStorage$load());
+      assign__route$dialog$map(ctx);
+      assign__dialog$$_agent(ctx);
+      const dialog = ctx.dialog
+          , zip_code = ctx.zip_code;
+      if (!dialog && !zip_code) {
+        ctx.dialog$$_agent.push({
+          dialog$$: ctx.route$dialog$map["zip_code"]
+        });
+      }
+      dialog__assign__ctx$update__defer(tag);
     }
     function on$unmount() {
       log(`${logPrefix}|on$unmount`);
