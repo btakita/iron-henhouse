@@ -55,3 +55,10 @@ export function dialog__tag$mount(tag) {
     return ctx;
   }
 }
+export function dialog__assign__ctx$update__defer(tag) {
+  log(`${logPrefix}|dialog__assign__ctx$update__defer`);
+  setTimeout(() => {
+    tag.show = true;
+    tag.assign__ctx$update();
+  }, 100); // TODO: Use events instead of hard-coded timeout
+}

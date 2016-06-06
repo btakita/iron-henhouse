@@ -6,6 +6,7 @@
       <label for="zip_code">Enter your zip code</label>
       <input type="text" id="zip_code" maxlength="5" value="{ctx.zip_code}"/>
     </form>
+    <reset show="{ctx.zip_code}" onclick="{reset$onclick}">Reset</reset>
   </content>
   <style>
     ctx-dialog.spt-zip-code-dialog > content {
@@ -34,6 +35,11 @@
       height: 2em;
       width: 4em;
     }
+    spt-zip-code-dialog > content > reset {
+      display: block;
+      overflow: hidden;
+      cursor: pointer;
+    }
     @media (max-width: 900px) {
       ctx-dialog.spt-zip-code-dialog > content {
         width: inherit;
@@ -52,7 +58,9 @@
     import {dom$} from "ctx-core/dom/lib";
     import {l10n__tag$mount} from "l10n/tag";
     import {log,debug} from "ctx-core/logger/lib";
-    const tag = fn$tag(this, {form$onsubmit: form$onsubmit})
+    const tag = fn$tag(this, {
+            form$onsubmit: form$onsubmit,
+            reset$onclick: reset$onclick})
         , logPrefix = "zip-code/spt-zip-code-dialog.tag";
     log(logPrefix);
     tag.on("show", on$show);
@@ -81,6 +89,11 @@
       } else {
         assign(ctx, {tag$spt_zip_code_dialog__form$error: "Enter a valid zip code"})
       }
+    }
+    function reset$onclick() {
+      log(`${logPrefix}|reset$onclick`);
+      agent$$trigger$change(ctx, {zip_code: null});
+      ctx.dialog_agent.remove();
     }
     function reset() {
       log(`${logPrefix}|reset`);
