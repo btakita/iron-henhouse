@@ -62,9 +62,6 @@
         margin-left: inherit;
         height: inherit;
       }
-      spt-addtocalendar-dialog {
-        margin-top: 0;
-      }
       spt-addtocalendar-dialog > content {
         height: 11rem;
       }

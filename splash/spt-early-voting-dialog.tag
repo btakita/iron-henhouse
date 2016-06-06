@@ -5,6 +5,11 @@
     <a class="yellow-link" href="?early_voting_issue=1" onclick="{link$onclick}">&nbsp;{ctx.l10n.early_voting_issue$menu$text}&nbsp;</a>
   </content>
   <style>
+    ctx-dialog.spt-early-voting-dialog > content {
+      width: 22rem;
+      margin-left: -11rem;
+      height: 40rem;
+    }
     spt-early-voting-dialog {
       margin-top: 100px;
     }
@@ -17,6 +22,11 @@
       font-weight: bold;
     }
     @media (max-width: 900px) {
+      ctx-dialog.spt-early-voting-dialog > content {
+        width: inherit;
+        margin-left: inherit;
+        height: inherit;
+      }
       spt-early-voting-dialog {
         margin-top: 0;
       }
