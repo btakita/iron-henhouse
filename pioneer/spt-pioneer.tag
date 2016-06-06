@@ -1,5 +1,5 @@
-<spt-pioneer>
-  <bernie-pioneer-root show="{ctx.route$name__election_day_root}" ctx="{opts.ctx}"></bernie-pioneer-root>
+<spt-pioneer class="page">
+  <bernie-pioneer-root show="{ctx.route$name__pioneer_root}" ctx="{opts.ctx}"></bernie-pioneer-root>
   <vote-where show="{ctx.route$name__vote_where}" ctx="{opts.ctx}"></vote-where>
   <voting-issue show="{ctx.route$name__voting_issue}" ctx="{opts.ctx}"></voting-issue>
   <voting-issue-tile show="{ctx.voting_issue$tile}" ctx="{opts.ctx}"></voting-issue-tile>
@@ -7,15 +7,13 @@
     spt-pioneer {
       display: block;
       overflow-y: auto;
-      background: #FFFFFF;
-      color: #000000;
     }
   </style>
   <script type="text/babel">
     import {assign} from "ctx-core/object/lib";
     import {fn$tag} from "ctx-core/tag/lib";
     import riot from "riot";
-    import {assign__election_day$route$$} from "./route";
+    import {assign__pioneer$route$$} from "./route";
     import {log,debug} from "ctx-core/logger/lib";
     const tag = fn$tag(this)
         , logPrefix = "pioneer/spt-pioneer.tag";
@@ -25,7 +23,7 @@
     function on$mount() {
       log(`${logPrefix}|on$mount`);
       let ctx = tag.ctx;
-      assign__election_day$route$$(ctx);
+      assign__pioneer$route$$(ctx);
       ctx.route$name_agent.on("change", route$name_agent$on$change);
       riot.route.exec();
       tag.assign__ctx$update();

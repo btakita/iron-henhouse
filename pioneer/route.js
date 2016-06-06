@@ -2,18 +2,17 @@ import {assign,clone,keys} from "ctx-core/object/lib";
 import {error$throw} from "ctx-core/error/lib";
 import {fn$route as route$lib__fn$route,assign__route$$} from "ctx-core/route/lib";
 import {assign__voting_issue$$} from "voting-issue/lib";
-import {agent$$trigger$change} from "ctx-core/agent/lib";
 import riot from "riot";
 import co from "co";
 import {log,debug} from "ctx-core/logger/lib";
 const logPrefix = "pioneer/route";
-export function assign__election_day$route$$() {
-  log(`${logPrefix}|assign__election_day$route$$`);
+export function assign__pioneer$route$$() {
+  log(`${logPrefix}|assign__pioneer$route$$`);
   let ctx = assign(...arguments);
   assign__voting_issue$$(ctx);
   return assign__route$$(
     ctx,
-    fn$route(ctx, {path: "", route$name: "election_day_root"}),
+    fn$route(ctx, {path: "", route$name: "pioneer_root"}),
     fn$route(ctx, {path: "vote-where", route$name: "vote_where"}),
     fn$route(ctx, {path: "voting-issue", route$name: "voting_issue"}),
     ...fn$voting_issue$route$$(ctx),
@@ -95,7 +94,7 @@ function fn$ctx() {
   log(`${logPrefix}|fn$ctx`);
   const voting_issue$$ = ctx.voting_issue$$;
   return assign({
-      route$name__election_day_root: null,
+      route$name__pioneer_root: null,
       route$name__vote_where: null,
       route$name__voting_issue: null,
       voting_issue$title: null,

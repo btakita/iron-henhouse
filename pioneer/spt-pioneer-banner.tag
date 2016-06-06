@@ -1,28 +1,24 @@
-<spt-top-navigation>
-  <content>
-    <a href="tel:{ctx.spt__hotline$phone_number}" class="call-us">
-      &nbsp;{ctx.l10n.tag$spt_top_navigation$call_us}&nbsp;
-    </a>
-  </content>
-  <a href="#" class="menu" onclick="{menu$onclick}">&equiv;</a>
+<spt-pioneer-banner>
+  <spt-banner ctx="{opts.ctx}">
+    <p>
+      <a href="tel:{ctx.spt__hotline$phone_number}" class="call-us">
+        &nbsp;{ctx.l10n.tag$spt_top_navigation$call_us}&nbsp;
+      </a>
+    </p>
+    <a href="#" class="menu" onclick="{menu$onclick}">&equiv;</a>
+  </spt-banner>
   <style>
-    spt-top-navigation {
-      position: relative;
-      display: flex;
+    spt-pioneer-banner {
+      display: block;
+      overflow: hidden;
       border: 1px dotted #111111;
-      background: #F9F9F9;
-      height: 2.5em;
-      line-height: 2.5em;
     }
-    spt-top-navigation > content {
-      flex: auto;
+    spt-pioneer-banner > p {
       text-align: center;
     }
-    spt-top-navigation > content > a {
-      color: #000000;
-    }
-    spt-top-navigation > .menu {
+    spt-pioneer-banner > spt-banner > .menu {
       position: absolute;
+      top: 0.3em;
       right: 0;
       margin: 0;
       padding: 0 20px;
@@ -39,7 +35,7 @@
     const tag = fn$tag(this, {
               menu$onclick: menu$onclick
             })
-        , logPrefix = "site/spt-top-navigation.tag";
+        , logPrefix = "pioneer/spt-pioneer-banner.tag";
     tag.on("mount", on$mount);
     tag.on("unmount", on$unmount);
     log(logPrefix);
@@ -69,4 +65,4 @@
       tag.assign__ctx$update();
     }
   </script>
-</spt-top-navigation>
+</spt-pioneer-banner>
