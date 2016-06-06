@@ -4,11 +4,11 @@
   <h2>&nbsp;{ctx.l10n.tag$election_day$subtitle}&nbsp;</h2>
   <a class="action where" href="vote-where" onclick="{link$onclick}">&nbsp;{ctx.l10n.vote_where$menu$text}&nbsp;</a>
   <a class="action issue" href="voting-issue" onclick="{link$onclick}">&nbsp;{ctx.l10n.voting_issue$menu$text}&nbsp;</a>
-  <a class="twitter-timeline" href="https://twitter.com/BernieSanders" data-widget-id="734025080737566720">Tweets by @BernieSanders</a>
-  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  <spt-twitter ctx="{opts.ctx}"></spt-twitter>
   <style>
     bernie-pioneer-root {
       display: block;
+      text-align: center;
     }
     bernie-pioneer-root > .header-img {
       height: 99px;
@@ -30,36 +30,26 @@
     bernie-pioneer-root > .issue {
       background: #EA504E;
     }
-    bernie-pioneer-root > .twitter-timeline,bernie-pioneer-root > iframe {
-      display: none;
-      position: relative;
-      width: 520px;
-      height: 600px;
+    bernie-pioneer-root > spt-twitter {
+      margin: 3rem 0 0;
     }
   </style>
   <script type="text/babel">
     import {assign} from "ctx-core/object/lib";
-    import {fn$tag,link$onclick} from "ctx-core/tag/lib";
-    import {assign__l10n_agent} from "l10n/agent";
+    import {fn$tag} from "ctx-core/tag/lib";
+    import {l10n__tag$mount} from "l10n/tag";
     import {log,debug} from "ctx-core/logger/lib";
-    const tag = fn$tag(this, {link$onclick: link$onclick})
+    const tag = fn$tag(this)
         , logPrefix = "pioneer/bernie-pioneer-root.tag";
     tag.on("mount", on$mount);
     tag.on("unmount", on$unmount);
+    l10n__tag$mount(tag);
     log(logPrefix);
     function on$mount() {
       log(`${logPrefix}|on$mount`);
-      let ctx = self.ctx;
-      assign__l10n_agent(ctx);
-      ctx.l10n_agent.on("change", l10n_agent$on$change);
     }
     function on$unmount() {
       log(`${logPrefix}|on$unmount`);
-      self.ctx.l10n_agent.off("change", l10n_agent$on$change);
-    }
-    function l10n_agent$on$change() {
-      log(`${logPrefix}|l10n_agent$on$change`);
-      tag.assign__ctx$update();
     }
   </script>
 </bernie-pioneer-root>

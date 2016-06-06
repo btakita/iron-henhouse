@@ -24,6 +24,25 @@ body, html {
 iframe {
   border: none;
 }
+body > .page {
+  position: fixed;
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+body > .page > content {
+  display: block;
+  overflow-y: auto;
+  height: calc(100% - 2.8em);
+  /*spt-banner 100% - height*/
+}
+@media (max-width: 900px) {
+  body > .page > content {
+    height: calc(100% - 4rem);
+    /*spt-banner 100% - height*/
+  }
+}
 .loading:before,.empty:before {
   display: block;
   text-align: center;
