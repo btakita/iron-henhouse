@@ -12,21 +12,8 @@
       <a target="_blank" href="http://youdownwithnpp.com/?{ctx.ref$query}">Voting as No Party Preference?</a>
     </npp-registration-link>
     <bottom>
-      <spt-about-us>
-        <h2>About Us</h2>
-        <p>
-          The California Primary takes place on June 7, 2016. With 548 delegates, California
-          has more delegates than any other state, and much more to lose in the case of
-          attempted voter suppression.
-        </p>
-        <p>
-          The #SuppressThis Mobile Web App was created in an effort to arm all California Voters with the LAW on June 7th! With detailed instructions on how to assert your rights, we highly recommend you keep SuppressThis.Org at your fingertips this Election Day! App Launches June 7, 2016.
-        </p>
-      </spt-about-us>
-      <spt-twitter>
-       <a class="twitter-timeline" href="https://twitter.com/search?q=%23SuppressThis%20OR%20%23SuppressThisCA%20OR%20%23SuppressThisCali%20OR%20from%3A%40SuppressThisCA%20include%3Aretweets" data-widget-id="737016220361232385">Loading &hellip;</a>
-       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-      </spt-twitter>
+      <spt-about-us ctx="{opts.ctx}"></spt-about-us>
+      <spt-twitter ctx="{opts.ctx}"></spt-twitter>
     </bottom>
   </content>
   <style>
@@ -95,25 +82,19 @@
     }
     spt-splash-root > content > bottom > * {
       display: block;
+      float: right;
       box-sizing: border-box;
       width: 50%;
       padding: 0 2rem;
     }
-    spt-splash-root > content > bottom > spt-twitter {
-      height: 600px;
+    spt-splash-root > content > bottom > spt-twitter a.twitter-timeline {
+      margin-top: 1.6em;
+      width: 100%;
+      text-align: center;
+      float: right;
     }
     spt-splash-root > content > bottom > spt-twitter iframe {
       float: right;
-    }
-    spt-splash-root > content > bottom > spt-twitter a.twitter-timeline {
-      color: #ffffff;
-      margin-top: 1.6em;
-      width: 100%;
-      float: right;
-      text-align: center;
-    }
-    spt-splash-root > content > bottom > spt-about-us > h2 {
-      text-transform: uppercase;
     }
     @media (max-width: 1200px) {
       spt-splash-root > background-mask {
