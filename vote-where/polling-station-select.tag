@@ -91,7 +91,7 @@
     import {assign} from "ctx-core/object/lib";
     import {
       assign__polling_station$$_agent,
-      assign__polling_station_agent} from "election-day/agent";
+      assign__polling_station_agent} from "pioneer/agent";
     import {assign__l10n_agent} from "l10n/agent";
     import {dom$,url$anchor$assign} from "ctx-core/dom/lib";
     import dom$classes from "dom-classes";
@@ -100,7 +100,7 @@
     const tag = fn$tag(this, {
             title$onclick: title$onclick,
             link$onclick: link$onclick})
-        , logPrefix = "election-day/polling-station-select.tag";
+        , logPrefix = "pioneer/polling-station-select.tag";
     let dom$content;
     log(logPrefix);
     tag.on("mount", on$mount);

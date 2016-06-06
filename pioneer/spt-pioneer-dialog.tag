@@ -1,11 +1,11 @@
-<spt-election-day-dialog>
+<spt-pioneer-dialog>
   <ctx-dialog ctx="{opts.ctx}">
-    <spt-election-day-menu-dialog ctx="{opts.ctx}"></spt-election-day-menu-dialog>
+    <spt-pioneer-menu-dialog ctx="{opts.ctx}"></spt-pioneer-menu-dialog>
   </ctx-dialog>
   <ctx-dialog-position-right ctx="{opts.ctx}"></ctx-dialog-position-right>
   <style>
-    spt-election-day-dialog > ctx-dialog {
+    spt-pioneer-dialog > ctx-dialog {
       background: rgba(0,0,0,0.6);
     }
   </style>
-</spt-election-day-dialog>
+</spt-pioneer-dialog>

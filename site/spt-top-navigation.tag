@@ -59,7 +59,7 @@
       e.preventDefault();
       self.ctx.dialog$$_agent.push({
         dialog$$: {
-          tag$name: "spt-election-day-menu-dialog",
+          tag$name: "spt-pioneer-menu-dialog",
           title: "Menu"
         }
       });

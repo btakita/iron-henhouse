@@ -10,7 +10,7 @@ module.exports = {
   },
   entry: {
     "home": "./splash/splash.webpack",
-    "election-day": "./election-day/election-day.webpack"
+    "pioneer": "./pioneer/pioneer.webpack"
   },
   output: {
     path: path.resolve(__dirname, "public/dist"),

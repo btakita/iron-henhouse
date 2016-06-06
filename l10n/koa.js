@@ -8,7 +8,7 @@ import {log,info,error,debug} from "ctx-core/logger/lib"
 const l10n$map = {
         en: l10n$en
       }
-      , logPrefix = "election-day/koa";
+      , logPrefix = "pioneer/koa";
 //GET /l10n/*
 export function app$use__l10n() {
   log(`${logPrefix}|app$use__l10n`);
