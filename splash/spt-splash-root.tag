@@ -111,7 +111,7 @@
       margin-top: 1.6em;
       width: 100%;
       float: right;
-      text-align: right;
+      text-align: center;
     }
     spt-splash-root > content > bottom > spt-about-us {
       float: right;
