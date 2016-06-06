@@ -1,7 +1,7 @@
 import {assign,keys} from "ctx-core/object/lib";
 import layoutHtml from "ctx-core/layout/layout.html";
 import {fn$indentation,indentation$regexp} from "ctx-core/string/indendation";
-import {fn$riot$mount$ctx} from "html/lib";
+import {fn$riot$mount$ctx,google$analytics$html} from "html/lib";
 import {addtocalendar$html} from "ctx-core/addtocalendar.com/html";
 import {js$html} from "ctx-core/html/lib";
 import {log,debug} from "ctx-core/logger/lib"
@@ -32,5 +32,6 @@ export function home$body$html() {
           riot.route.start();
         })();
       </script>
+      ${google$analytics$html(ctx)}
     </body>`.replace(indentation$regexp(4), "");
 }

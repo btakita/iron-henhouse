@@ -1,4 +1,4 @@
-<spt-addtocalendar-dialog class="dialog" show="{ctx.dialog.tag$name === 'spt-addtocalendar-dialog'}">
+<spt-addtocalendar-dialog class="dialog">
   <ctx-dialog-topbar ctx="{opts.ctx}"></ctx-dialog-topbar>
   <content>
     <span class="addtocalendar atc-style-blue">
@@ -21,6 +21,9 @@
       width: 20rem;
       margin-left: -10rem;
     }
+    ctx-dialog.spt-addtocalendar-dialog spt-addtocalendar-dialog {
+      display: block;
+    }
     spt-addtocalendar-dialog > content > loading ~ spt-addtocalendar-dialog > content > loading {
       display: block;
     }
@@ -28,7 +31,7 @@
       display: none;
     }
     spt-addtocalendar-dialog {
-      margin-top: 100px;
+      margin-top: 6rem;
     }
     spt-addtocalendar-dialog > content {
       position: relative;
@@ -59,6 +62,9 @@
         width: inherit;
         margin-left: inherit;
         height: inherit;
+      }
+      spt-addtocalendar-dialog {
+        margin-top: inherit;
       }
       spt-addtocalendar-dialog > content {
         height: 11rem;

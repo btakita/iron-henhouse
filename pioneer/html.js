@@ -10,23 +10,30 @@ export function election_day$html(ctx, ...ctx$rest$$) {
       , headers$authorization = ctx$clone.headers$authorization;
   return layoutHtml(ctx, {
     title: "Election Day",
-    body$html: election_day$body$html(ctx, {}),
+    body$html: election_day$body$html(ctx, {
+      authentication: {
+        token_type: "Basic",
+        access_token: headers$authorization && headers$authorization.split("Basic ")[1]
+      }
+    }),
     cssUrls: ["/layout"]
   }, ...ctx$rest$$);
 }
 export function election_day$body$html() {
-  const ctx = assign({jsUrls: ["/dist/election-day"]}, ...arguments);
-  log(`${logPrefix}|election_day$body$html`);
+  const ctx = assign({jsUrls: ["/dist/pioneer"]}, ...arguments);
+  log(`${logPrefix}|election_day$body$html`, keys(ctx));
   let riot$mount$ctx = fn$riot$mount$ctx(ctx);
   return `
     <body>
-      <spt-election-day></spt-election-day>
+      <spt-pioneer-layout>
+        <spt-pioneer ctx="{opts.ctx}"></spt-pioneer>
+      </spt-pioneer-layout>
       ${js$html(ctx, {indentation: fn$indentation(6), indentFirstLine: false})}
       <script>
         (function() {
           var riot$mount$ctx = ${JSON.stringify(riot$mount$ctx)};
           window.ctx = riot$mount$ctx.ctx;
-          riot.mount(document.querySelector("spt-election-day"), riot$mount$ctx);
+          riot.mount(document.querySelector("spt-pioneer-layout"), riot$mount$ctx);
           riot.route.start();
         })();
       </script>

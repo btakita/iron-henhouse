@@ -12,10 +12,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <content>
     <logo><img src="/suppress-this/logo.png"/></logo>
     <early-voting-link class="splash-link">
-      <a class="yellow-button" href="?early_voting=1" onclick="{link$onclick}">Early Voting</a>
+      <a class="yellow-button" href="/?dialog=early_voting" onclick="{link$onclick}">Early Voting</a>
     </early-voting-link>
     <check-registration-link class="splash-link">
-      <a href="?check_registration=1" onclick="{link$onclick}">Check Your Voter Registration</a>
+      <a href="/?dialog=check_registration" onclick="{link$onclick}">Check Your Voter Registration</a>
     </check-registration-link>
     <npp-registration-link class="splash-link">
       <a target="_blank" href="http://youdownwithnpp.com/?{ctx.ref$query}">Voting as No Party Preference?</a>
@@ -151,10 +151,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </style>
   <script type="text/babel">
     import {assign} from "ctx-core/object/lib";
-    import {fn$tag,link$onclick} from "ctx-core/tag/lib";
+    import {fn$tag} from "ctx-core/tag/lib";
     import {assign__dialog_agent} from "ctx-core/dialog/agent";
     import {log,debug} from "ctx-core/logger/lib";
-    const tag = fn$tag(this, {link$onclick: link$onclick})
+    const tag = fn$tag(this)
         , logPrefix = "splash/spt-splash-root.tag";
     tag.on("mount", on$mount);
     tag.on("unmount", on$unmount);

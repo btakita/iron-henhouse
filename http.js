@@ -8,6 +8,7 @@ import app$use__http$post$cmd from "ctx-core/cmd/koa";
 import {app$use__home} from "splash/koa";
 import {app$use__l10n} from "l10n/koa";
 import {app$use__election_day} from "election-day/koa";
+import {app$use__pioneer} from "pioneer/koa";
 import "babel-core";
 import {env$assign} from "ctx-core/env";
 import koa from "koa";
@@ -17,10 +18,9 @@ import koa$sslify from "koa-sslify";
 import koa$conditional_get from "koa-conditional-get";
 import koa$etag from "koa-etag";
 import koa$bodyparser from "koa-bodyparser";
-import koa$static$cache from "koa-static-cache";
+import koa$static from "koa-static";
 import koa$route from "koa-route";
 import path from "path";
-import {app$use__basic_auth} from "ctx-core/basic_auth/koa";
 import {log,info,warn,error,debug} from "ctx-core/logger/lib";
 const app = koa()
     , env = env$assign({app: app})
@@ -39,17 +39,18 @@ function start(id) {
   app$use__log$request$time(ctx);
   app$use__http$error(ctx);
   app.use(koa$bodyparser());
-  fn$koa$static$cache(ctx);
-  //if (!env.isLocalhost) {
-  //  app.use(koa$sslify({trustProtoHeader: true}));
-  //}
+  app.use(koa$static(path.join(__dirname, "public"), {
+    maxAge: 24 * 60 * 60,
+    hidden: true
+  }));
+  if (!env.isLocalhost) {
+    app.use(koa$sslify({trustProtoHeader: true}));
+  }
   app$use__l10n(ctx);
   app$use__home(ctx);
-  if (!env.isLocalhost) {
-    app$use__basic_auth(ctx);
-  }
   app$use__http$post$cmd(ctx);
   app$use__election_day(ctx);
+  app$use__pioneer(ctx);
   app$use__echo(ctx);
   app.listen(env.port);
   info(`${logPrefix}|started|port`, env.port);
@@ -57,17 +58,4 @@ function start(id) {
     log(`Worker ${id} exiting...`);
     process.exit();
   });
-}
-function fn$koa$static$cache(ctx) {
-  log(`${logPrefix}|fn$koa$static$cache`);
-  let koa$static$cache$files = {};
-  app.use(koa$static$cache(path.join(__dirname, "public"), {
-    maxAge: 24 * 60 * 60,
-    filter: []
-  }, koa$static$cache$files));
-  koa$static$cache(path.join(__dirname, "public/.well-known"), {
-    maxAge: 24 * 60 * 60,
-    prefix: "/.well-known"
-  }, koa$static$cache$files);
-  return ctx;
 }

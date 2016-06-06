@@ -59,14 +59,13 @@
       border: 1px dotted #333333;
     }
     polling-station-select > content > polling-station.selected,polling-station-select > content > polling-station:hover {
-      background: #dddddd;
+      border: 1px solid #FFFFFF;
       font-weight: bold;
     }
     polling-station-select > content > polling-station > a {
       display: block;
       overflow: hidden;
       clear: both;
-      color: #000000;
     }
     polling-station-select > content > polling-station > a > * {
       display: block;
@@ -87,31 +86,28 @@
     }
   </style>
   <script type="text/babel">
-    import {fn$tag,link$onclick} from "ctx-core/tag/lib";
+    import {fn$tag} from "ctx-core/tag/lib";
     import {assign} from "ctx-core/object/lib";
     import {
       assign__polling_station$$_agent,
-      assign__polling_station_agent} from "election-day/agent";
-    import {assign__l10n_agent} from "l10n/agent";
+      assign__polling_station_agent} from "pioneer/agent";
+    import {l10n__tag$mount} from "l10n/tag";
     import {dom$,url$anchor$assign} from "ctx-core/dom/lib";
     import dom$classes from "dom-classes";
     import riot from "riot";
     import {log,debug} from "ctx-core/logger/lib";
-    const tag = fn$tag(this, {
-            title$onclick: title$onclick,
-            link$onclick: link$onclick})
-        , logPrefix = "election-day/polling-station-select.tag";
+    const tag = fn$tag(this, {title$onclick: title$onclick})
+        , logPrefix = "pioneer/polling-station-select.tag";
     let dom$content;
     log(logPrefix);
     tag.on("mount", on$mount);
     tag.on("unmount", on$unmount);
+    l10n__tag$mount(tag);
     function on$mount() {
       log(`${logPrefix}|on$mount`);
       let ctx = tag.ctx;
-      assign__l10n_agent(ctx);
       assign__polling_station$$_agent(ctx);
       assign__polling_station_agent(ctx);
-      ctx.l10n_agent.on("change", l10n_agent$on$change);
       ctx.polling_station$$_agent.on("change", polling_station$$_agent$on$change);
       ctx.polling_station_agent.on("change", polling_station_agent$on$change);
       dom$content = dom$("content", tag.root);
@@ -119,13 +115,8 @@
     function on$unmount() {
       log(`${logPrefix}|on$unmount`);
       let ctx = tag.ctx;
-      self.ctx.l10n_agent.off("change", l10n_agent$on$change);
       ctx.polling_station$$_agent.off("change", polling_station$$_agent$on$change);
       ctx.polling_station_agent.off("change", polling_station_agent$on$change);
-    }
-    function l10n_agent$on$change() {
-      log(`${logPrefix}|l10n_agent$on$change`);
-      tag.assign__ctx$update();
     }
     function polling_station$$_agent$on$change() {
       log(`${logPrefix}|polling_station$$_agent$on$change`);

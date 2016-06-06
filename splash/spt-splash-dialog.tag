@@ -32,115 +32,21 @@
     }
   </style>
   <script type="text/babel">
-    import {assign} from "ctx-core/object/lib";
+    import {assign,clone} from "ctx-core/object/lib";
     import {fn$tag} from "ctx-core/tag/lib";
-    import {assign__dialog_agent} from "ctx-core/dialog/agent";
-    import {assign__route$fragment_agent} from "ctx-core/route/lib";
-    import {dialog$$find__tag$name} from "ctx-core/dialog/lib";
+    import {dialog__tag$mount} from "dialog/tag";
     import {log,debug} from "ctx-core/logger/lib";
     const tag = fn$tag(this)
-        , logPrefix = "splash/spt-early-voting-dialog.tag";
+        , logPrefix = "splash/spt-splash-dialog.tag";
     tag.on("mount", on$mount);
     tag.on("unmount", on$unmount);
+    dialog__tag$mount(tag);
     log(logPrefix);
     function on$mount() {
       log(`${logPrefix}|on$mount`);
-      let ctx = self.ctx;
-      assign__route$fragment_agent(ctx);
-      assign__dialog_agent(ctx);
-      ctx.route$fragment_agent.on("change", refresh);
-      ctx.dialog_agent.on("change", dialog_agent$on$change);
-      refresh(true);
     }
     function on$unmount() {
       log(`${logPrefix}|on$unmount`);
-      let ctx = self.ctx;
-      self.ctx.route$fragment_agent.off("change", refresh);
-      ctx.dialog_agent.off("change", dialog_agent$on$change);
-    }
-    function dialog_agent$on$change() {
-      log(`${logPrefix}|dialog_agent$on$change`);
-      const ctx = self.ctx;
-      if (!ctx.dialog) {
-        riot.route("");
-      }
-    }
-    function refresh(show) {
-      log(`${logPrefix}|refresh`);
-      let ctx = self.ctx;
-      refresh__dialog$spt_early_voting_dialog();
-      refresh__dialog$spt_early_voting_issue_dialog();
-      refresh__dialog$spt_addtocalendar_dialog();
-      refresh__dialog$spt_check_registration_dialog();
-      tag.assign__ctx$update();
-    }
-    function refresh__dialog$spt_early_voting_dialog() {
-      log(`${logPrefix}|refresh__dialog$spt_early_voting_dialog`);
-      let ctx = self.ctx;
-      const early_voting = ctx.route$query$map.early_voting
-          , dialog$$_agent = ctx.dialog$$_agent
-          , dialog$spt_early_voting_dialog = dialog$$find__tag$name(ctx, "spt-early-voting-dialog");
-      if (early_voting && !dialog$spt_early_voting_dialog) {
-        dialog$$_agent.push({
-          dialog$$: {
-            tag$name: "spt-early-voting-dialog",
-            title: "Early Voting"
-          }
-        });
-      } else if (!early_voting && dialog$spt_early_voting_dialog) {
-        dialog$$_agent.remove({dialog$$: dialog$spt_early_voting_dialog});
-      }
-    }
-    function refresh__dialog$spt_early_voting_issue_dialog() {
-      log(`${logPrefix}|refresh__dialog$spt_early_voting_issue_dialog`);
-      let ctx = self.ctx;
-      const early_voting_issue = ctx.route$query$map.early_voting_issue
-          , dialog$$_agent = ctx.dialog$$_agent
-          , dialog$spt_early_voting_issue_dialog = dialog$$find__tag$name(ctx, "spt-early-voting-issue-dialog");
-      if (early_voting_issue && !dialog$spt_early_voting_issue_dialog) {
-        dialog$$_agent.push({
-          dialog$$: {
-            tag$name: "spt-early-voting-issue-dialog",
-            title: "Get Help!"
-          }
-        });
-      } else if (!early_voting_issue && dialog$spt_early_voting_issue_dialog) {
-        dialog$$_agent.remove({dialog$$: dialog$spt_early_voting_issue_dialog});
-      }
-    }
-    function refresh__dialog$spt_addtocalendar_dialog() {
-      log(`${logPrefix}|refresh__dialog$spt_addtocalendar_dialog`);
-      let ctx = self.ctx;
-      const addtocalendar = ctx.route$query$map.addtocalendar
-          , dialog$$_agent = ctx.dialog$$_agent
-          , dialog$spt_addtocalendar_dialog = dialog$$find__tag$name(ctx, "spt-addtocalendar-dialog");
-      if (addtocalendar && !dialog$spt_addtocalendar_dialog) {
-        dialog$$_agent.push({
-          dialog$$: {
-            tag$name: "spt-addtocalendar-dialog",
-            title: "Add to Calendar"
-          }
-        });
-      } else if (!addtocalendar && dialog$spt_addtocalendar_dialog) {
-        dialog$$_agent.remove({dialog$$: dialog$spt_addtocalendar_dialog});
-      }
-    }
-    function refresh__dialog$spt_check_registration_dialog() {
-      log(`${logPrefix}|refresh__dialog$spt_check_registration_dialog`);
-      let ctx = self.ctx;
-      const check_registration = ctx.route$query$map.check_registration
-          , dialog$$_agent = ctx.dialog$$_agent
-          , dialog$spt_check_registration_dialog = dialog$$find__tag$name(ctx, "spt-check-registration-dialog");
-      if (check_registration && !dialog$spt_check_registration_dialog) {
-        dialog$$_agent.push({
-          dialog$$: {
-            tag$name: "spt-check-registration-dialog",
-            title: "Check Your Voter Registration"
-          }
-        });
-      } else if (!check_registration && dialog$spt_check_registration_dialog) {
-        dialog$$_agent.remove({dialog$$: dialog$spt_check_registration_dialog});
-      }
     }
   </script>
 </spt-splash-dialog>
