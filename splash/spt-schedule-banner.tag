@@ -1,7 +1,8 @@
 <spt-schedule-banner>
   <p>
-    Return here on June 7 for Election Information and Voter Alerts &mdash;
-    <a href="?addtocalendar=1" onclick="{link$onclick}"><img src="/cal-red-04.png"/></a>
+    Return here on June 7
+    (<a href="?addtocalendar=1" onclick="{link$onclick}"><img src="/cal-red-04.png"/></a>)
+    for Election Information and Voter Alerts
   </p>
   <style>
     spt-schedule-banner {

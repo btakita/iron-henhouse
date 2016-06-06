@@ -13,7 +13,7 @@
         <var class="atc_organizer_email">contact@suppressthis.org</var>
       </var>
     </span>
-    <loading>loading&hellip;</loading>
+    <loading>Loading&hellip;</loading>
   </content>
   <style>
     ctx-dialog.spt-addtocalendar-dialog > content {
