@@ -42,9 +42,9 @@
   </style>
   <script type="text/babel">
     import {assign} from "ctx-core/object/lib";
-    import {fn$tag,link$onclick} from "ctx-core/tag/lib";
+    import {fn$tag} from "ctx-core/tag/lib";
     import {log,debug} from "ctx-core/logger/lib";
-    const tag = fn$tag(this, {link$onclick: link$onclick})
+    const tag = fn$tag(this)
         , logPrefix = "splash/spt-banner.tag";
     tag.on("mount", on$mount);
     tag.on("unmount", on$unmount);
