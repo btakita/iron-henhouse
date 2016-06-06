@@ -17,7 +17,7 @@ import koa$sslify from "koa-sslify";
 import koa$conditional_get from "koa-conditional-get";
 import koa$etag from "koa-etag";
 import koa$bodyparser from "koa-bodyparser";
-import koa$static$cache from "koa-static-cache";
+import koa$static from "koa-static";
 import koa$route from "koa-route";
 import path from "path";
 import {app$use__basic_auth} from "ctx-core/basic_auth/koa";
@@ -39,7 +39,10 @@ function start(id) {
   app$use__log$request$time(ctx);
   app$use__http$error(ctx);
   app.use(koa$bodyparser());
-  fn$koa$static$cache(ctx);
+  app.use(koa$static(path.join(__dirname, "public"), {
+    maxAge: 24 * 60 * 60,
+    hidden: true
+  }));
   if (!env.isLocalhost) {
     app.use(koa$sslify({trustProtoHeader: true}));
   }
@@ -57,17 +60,4 @@ function start(id) {
     log(`Worker ${id} exiting...`);
     process.exit();
   });
-}
-function fn$koa$static$cache(ctx) {
-  log(`${logPrefix}|fn$koa$static$cache`);
-  let koa$static$cache$files = {};
-  app.use(koa$static$cache(path.join(__dirname, "public"), {
-    maxAge: 24 * 60 * 60,
-    filter: []
-  }, koa$static$cache$files));
-  koa$static$cache(path.join(__dirname, "public/.well-known"), {
-    maxAge: 24 * 60 * 60,
-    prefix: "/.well-known"
-  }, koa$static$cache$files);
-  return ctx;
 }
