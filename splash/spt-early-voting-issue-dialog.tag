@@ -1,7 +1,7 @@
 <spt-early-voting-issue-dialog class="dialog" show="{ctx.dialog.tag$name === 'spt-early-voting-issue-dialog'}">
   <ctx-dialog-topbar ctx="{opts.ctx}"></ctx-dialog-topbar>
   <content>
-    <a class="yellow-link" href="tel:4157958065">
+    <a href="tel:4157958065">
       <img src="/textlinks-phone.svg" />
     </a>
   </content>

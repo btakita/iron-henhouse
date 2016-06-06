@@ -45,10 +45,6 @@ a, a:visited, a:active {
 a:hover {
   color: #AB9C53;
 }
-a.yellow-link:hover {
-  color: #AB9C53;
-  text-shadow: none;
-}
 a.yellow-button {
   background: #FDD102;
   color: #000000;
@@ -56,12 +52,5 @@ a.yellow-button {
 a.yellow-button:hover {
   background: #AB9C53;
   color: #000000;
-  text-shadow: none;
-}
-a.yellow-link {
-  color: #FDD102;
-}
-a.yellow-link:hover {
-  color: #AB9C53;
   text-shadow: none;
 }

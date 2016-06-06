@@ -6,10 +6,10 @@
       <a class="yellow-button" href="?early_voting=1" onclick="{link$onclick}">Early Voting</a>
     </early-voting-link>
     <check-registration-link class="splash-link">
-      <a class="yellow-link" href="?check_registration=1" onclick="{link$onclick}">Check Your Voter Registration</a>
+      <a href="?check_registration=1" onclick="{link$onclick}">Check Your Voter Registration</a>
     </check-registration-link>
     <npp-registration-link class="splash-link">
-      <a class="yellow-link" target="_blank" href="http://youdownwithnpp.com/?{ctx.ref$query}">Voting as No Party Preference?</a>
+      <a target="_blank" href="http://youdownwithnpp.com/?{ctx.ref$query}">Voting as No Party Preference?</a>
     </npp-registration-link>
     <bottom>
       <spt-about-us>
@@ -107,7 +107,8 @@
     spt-splash-root > content > bottom > spt-twitter iframe {
       float: right;
     }
-    spt-splash-root > content > bottom > spt-twitter .twitter-timeline {
+    spt-splash-root > content > bottom > spt-twitter a.twitter-timeline {
+      color: #ffffff;
       margin-top: 1.6em;
       width: 100%;
       float: right;
