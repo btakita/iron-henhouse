@@ -2,8 +2,8 @@
   <ctx-dialog-topbar ctx="{opts.ctx}"></ctx-dialog-topbar>
   <form-error-banner show="{ctx.tag$spt_zip_code_dialog__form$error}">{ctx.tag$spt_zip_code_dialog__form$error}</form-error-banner>
   <content>
-    <form action="#" onsubmit="{form$onsubmit}">
-      <label for="zip_code">Enter your zip code</label>
+    <form action="#" onsubmit="{co$form$onsubmit}">
+      <label for="zip_code">Your registered zip code</label>
       <input type="text" id="zip_code" maxlength="5" value="{ctx.zip_code}"/>
     </form>
     <reset show="{ctx.zip_code}" onclick="{reset$onclick}">Reset</reset>
@@ -52,16 +52,21 @@
     }
   </style>
   <script type="text/babel">
-    import {assign} from "ctx-core/object/lib";
+    import {assign,clone} from "ctx-core/object/lib";
     import {fn$tag} from "ctx-core/tag/lib";
     import {agent$$trigger$change} from "ctx-core/agent/lib";
     import {dom$} from "ctx-core/dom/lib";
     import {l10n__tag$mount} from "l10n/tag";
+    import co from "co";
+    import {assign__http$headers,contentType$json} from "ctx-core/http/lib";
+    import {xhr} from "ctx-core/xhr/lib";
+    import {error$throw} from "ctx-core/error/lib";
     import {log,debug} from "ctx-core/logger/lib";
     const tag = fn$tag(this, {
-            form$onsubmit: form$onsubmit,
+            co$form$onsubmit: co$form$onsubmit,
             reset$onclick: reset$onclick})
         , logPrefix = "zip-code/spt-zip-code-dialog.tag";
+    let ctx = tag.ctx;
     log(logPrefix);
     tag.on("show", on$show);
     tag.on("hide", on$hide);
@@ -78,16 +83,51 @@
       log(`${logPrefix}|on$hide`);
       reset();
     }
-    function form$onsubmit(e) {
+    function co$form$onsubmit(e) {
+      log(`${logPrefix}|co$form$onsubmit`);
+      co.wrap(form$onsubmit)(e)
+        .catch(error$ctx => error$throw(tag.ctx, error$ctx));
+    }
+    function *form$onsubmit(e) {
       log(`${logPrefix}|form$onsubmit`);
-      let ctx = tag.ctx;
       const dom$zip_code = dom$("#zip_code", e.target)
           , zip_code = dom$zip_code && dom$zip_code.value;
       if (zip_code && /[0-9]{5}/.test(zip_code)) {
-        agent$$trigger$change(ctx, {zip_code: zip_code});
-        ctx.dialog_agent.remove();
+        const zip_code$location = yield fn$zip_code$location({zip_code: zip_code});
+        if (zip_code$location) {
+          log(`${logPrefix}|form$onsubmit|zip_code$location`);
+          agent$$trigger$change(ctx, {zip_code: zip_code, zip_code$location: zip_code$location});
+          ctx.dialog_agent.remove();
+        } else {
+          log(`${logPrefix}|form$onsubmit|else`);
+          tag.assign__ctx$update({tag$spt_zip_code_dialog__form$error: "This zip code does not match any US zip codes"});
+        }
       } else {
-        assign(ctx, {tag$spt_zip_code_dialog__form$error: "Enter a valid zip code"})
+        tag.assign__ctx$update({tag$spt_zip_code_dialog__form$error: "Enter a valid zip code"});
+      }
+    }
+    function *fn$zip_code$location() {
+      log(`${logPrefix}|zip_code$location`);
+      let ctx$clone = clone(ctx, ...arguments);
+      try {
+        const response$ctx = yield xhr.http$get(ctx, assign__http$headers({
+                  url: `${ctx$clone.zip_code$url$base}/${ctx$clone.zip_code}`
+                }, contentType$json, {"Access-Control-Allow-Origin": "*"}))
+            , response = response$ctx.response;
+        if (response.ok) {
+          return yield response.json();
+        } else {
+          return null;
+        }
+        return yield response.status();
+      } catch(error$ctx) {
+        log(`${logPrefix}|zip_code$location|catch`, error$ctx);
+        const response$status = error$ctx.response$status;
+        if (response$status >= 400 && response$status <= 499) {
+          return null;
+        } else {
+          error$throw(ctx, error$ctx);
+        }
       }
     }
     function reset$onclick() {
@@ -97,7 +137,6 @@
     }
     function reset() {
       log(`${logPrefix}|reset`);
-      let ctx = tag.ctx;
       assign(ctx, {tag$spt_zip_code_dialog__form$error: null});
       dom$("#zip_code", tag.root).value = ctx.zip_code || "";
     }
