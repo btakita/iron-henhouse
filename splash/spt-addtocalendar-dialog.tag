@@ -13,15 +13,28 @@
         <var class="atc_organizer_email">contact@suppressthis.org</var>
       </var>
     </span>
+    <loading>Loading&hellip;</loading>
   </content>
   <style>
+    ctx-dialog.spt-addtocalendar-dialog > content {
+      overflow: hidden;
+      width: 20rem;
+      margin-left: -10rem;
+    }
+    spt-addtocalendar-dialog > content > loading ~ spt-addtocalendar-dialog > content > loading {
+      display: block;
+    }
+    .atcb-list ~ spt-addtocalendar-dialog > content > loading {
+      display: none;
+    }
     spt-addtocalendar-dialog {
       margin-top: 100px;
     }
     spt-addtocalendar-dialog > content {
+      position: relative;
       display: block;
       overflow: hidden;
-      min-height: 200px;
+      height: 10rem;
     }
     spt-addtocalendar-dialog > content > .addtocalendar {
       display: block;
@@ -33,16 +46,22 @@
       display: none;
     }
     spt-addtocalendar-dialog > content > .addtocalendar .atcb-list {
+      height: 200%;
+      margin: 0;
+      padding: 0;
       list-style-type: none;
     }
     spt-addtocalendar-dialog > content > .addtocalendar .atcb-list a {
-      display: block;
-      color: #ffffff;
-      margin-top: 4px;
+      line-height: 1.5em;
     }
-    @media (max-width: 650px) {
-      spt-addtocalendar-dialog {
-        margin-top: 0;
+    @media (max-width: 900px) {
+      ctx-dialog.spt-addtocalendar-dialog > content {
+        width: inherit;
+        margin-left: inherit;
+        height: inherit;
+      }
+      spt-addtocalendar-dialog > content {
+        height: 11rem;
       }
     }
   </style>

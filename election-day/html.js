@@ -1,6 +1,7 @@
 import {assign,clone,keys} from "ctx-core/object/lib";
 import layoutHtml from "ctx-core/layout/layout.html";
 import {fn$indentation,indentation$regexp} from "ctx-core/string/indendation";
+import {fn$riot$mount$ctx} from "html/lib";
 import {js$html} from "ctx-core/html/lib";
 import {log,debug} from "ctx-core/logger/lib"
 const logPrefix = "election-day/html";
@@ -21,11 +22,7 @@ export function election_day$html(ctx, ...ctx$rest$$) {
 export function election_day$body$html() {
   const ctx = assign({jsUrls: ["/dist/election-day"]}, ...arguments);
   log(`${logPrefix}|election_day$body$html`, keys(ctx));
-  let riot$mount$ctx = {
-    ctx: {
-      authentication: ctx.authentication
-    }
-  };
+  let riot$mount$ctx = fn$riot$mount$ctx(ctx);
   return `
     <body>
       <spt-election-day-layout>

@@ -21,11 +21,10 @@
     }
     spt-splash-dialog > ctx-dialog > content > * > content {
       background: #333333;
-      min-width: 400px;
       font-size: 18px;
       padding: 20px;
     }
-    @media (max-width: 650px) {
+    @media (max-width: 900px) {
       spt-splash-dialog > ctx-dialog > content {
         width: 100%;
         margin: 0;
@@ -102,7 +101,7 @@
         dialog$$_agent.push({
           dialog$$: {
             tag$name: "spt-early-voting-issue-dialog",
-            title: "Early Voting Problem"
+            title: "Get Help!"
           }
         });
       } else if (!early_voting_issue && dialog$spt_early_voting_issue_dialog) {

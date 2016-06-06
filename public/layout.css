@@ -1,8 +1,15 @@
 html {
-  background: #111111;
+  background: #000000;
   color: #FFFFFF;
   box-sizing: border-box;
+  font-size: 17px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+@media (max-width: 900px) {
+  html { font-size: 15px; }
+}
+@media (max-width: 400px) {
+  html { font-size: 13px; }
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -29,20 +36,21 @@ iframe {
   font-weight: bold;
   background: #dddddd;
 }
-a {
+a, a:visited, a:hover, a:active {
   text-decoration: none;
 }
-.yellow-button {
+a, a:visited, a:active {
+  color: #FDD102;
+}
+a:hover {
+  color: #AB9C53;
+}
+a.yellow-button {
   background: #FDD102;
   color: #000000;
 }
-.yellow-button:hover {
+a.yellow-button:hover {
   background: #AB9C53;
   color: #000000;
-}
-.yellow-link {
-  color: #FDD102;
-}
-.yellow-link:hover {
-  color: #AB9C53;
+  text-shadow: none;
 }

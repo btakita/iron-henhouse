@@ -6,10 +6,10 @@
       <a class="yellow-button" href="?early_voting=1" onclick="{link$onclick}">Early Voting</a>
     </early-voting-link>
     <check-registration-link class="splash-link">
-      <a class="yellow-link" href="?check_registration=1" onclick="{link$onclick}">Check Your Voter Registration</a>
+      <a href="?check_registration=1" onclick="{link$onclick}">Check Your Voter Registration</a>
     </check-registration-link>
     <npp-registration-link class="splash-link">
-      <a class="yellow-link" target="_blank" href="http://youdownwithnpp.com/">Voting as No Party Preference?</a>
+      <a target="_blank" href="http://youdownwithnpp.com/?{ctx.ref$query}">Voting as No Party Preference?</a>
     </npp-registration-link>
     <bottom>
       <spt-about-us>
@@ -24,26 +24,23 @@
         </p>
       </spt-about-us>
       <spt-twitter>
-        &nbsp;
-       <a class="twitter-timeline" href="https://twitter.com/search?q=%23SuppressThis%20OR%20%23SuppressThisCA%20OR%20%23SuppressThisCali%20OR%20from%3A%40SuppressThisCA%20include%3Aretweets" data-widget-id="737016220361232385">Tweets about #SuppressThis OR #SuppressThisCA OR #SuppressThisCali OR from:@SuppressThisCA include:retweets</a>
-  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+       <a class="twitter-timeline" href="https://twitter.com/search?q=%23SuppressThis%20OR%20%23SuppressThisCA%20OR%20%23SuppressThisCali%20OR%20from%3A%40SuppressThisCA%20include%3Aretweets" data-widget-id="737016220361232385">Loading &hellip;</a>
+       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
       </spt-twitter>
     </bottom>
   </content>
   <style>
     spt-splash-root {
-      flex: auto;
-      overflow-y: auto;
-      height: 100%;
+      display: block;
       position: relative;
     }
     spt-splash-root > background-mask {
       position: absolute;
       top: 0;
       left: 50%;
-      width: 1200px;
+      width: 80%;
       height: 100%;
-      margin: 0 0 0 -600px;
+      margin: 0 0 0 -40%;
       z-index: 1;
       background-image: url('/suppress-this/voter_suppression.png');
       background-repeat: repeat-y;
@@ -51,24 +48,21 @@
       opacity: 0.1;
     }
     spt-splash-root > content {
+      display: block;
       position: relative;
-      flex: auto;
+      z-index: 2;
       overflow-y: auto;
       width: 100%;
-      z-index: 2;
-      display: flex;
-      flex-direction: column;
       padding: 0 0 40px;
       align-items: center;
     }
     spt-splash-root > content > logo {
+      display: block;
       overflow: hidden;
       padding: 40px 0 0;
-      flex-grow: 0;
-      flex-shrink: 0;
+      text-align: center;
     }
     spt-splash-root > content > logo > img {
-      display: block;
       width: 772px;
       height: 372px;
     }
@@ -76,34 +70,47 @@
       display: block;
       overflow: hidden;
       padding: 40px 0 0;
+      text-align: center;
     }
-    spt-splash-root > content > early-voting-link > a {
+    spt-splash-root > content > early-voting-link {
       display: block;
       overflow: hidden;
+      margin: 20px 0 0;
+      height: 100px;
+      text-align: center;
+    }
+    spt-splash-root > content > early-voting-link > a {
       padding: 20px 80px;
       font-size: 30px;
       border-radius: 8px;
     }
     spt-splash-root > content > bottom {
       display: block;
-      margin: 40px 0 0;
-      padding: 0 40px;
+      position: relative;
+      width: 80%;
+      left: 50%;
+      margin: 40px 0 0 -40%;
+      overflow: hidden;
+      padding: 0;
     }
     spt-splash-root > content > bottom > * {
-      float: right;
+      display: block;
       box-sizing: border-box;
-      width: 536px;
+      width: 50%;
+      padding: 0 2rem;
     }
     spt-splash-root > content > bottom > spt-twitter {
-      display: block;
-      padding-right: 20px;
+      height: 600px;
     }
-    spt-splash-root > content > bottom > spt-twitter .twitter-timeline {
-      display: none;
+    spt-splash-root > content > bottom > spt-twitter iframe {
+      float: right;
+    }
+    spt-splash-root > content > bottom > spt-twitter a.twitter-timeline {
+      color: #ffffff;
+      margin-top: 1.6em;
       width: 100%;
-    }
-    spt-splash-root > content > bottom > spt-about-us {
-      padding-left: 20px;
+      float: right;
+      text-align: center;
     }
     spt-splash-root > content > bottom > spt-about-us > h2 {
       text-transform: uppercase;
@@ -112,35 +119,43 @@
       spt-splash-root > background-mask {
         width: 100%;
         margin: 0;
-        left: auto;
+        left: inherit;
       }
       spt-splash-root > content {
         width: 100%;
-        left: auto;
         margin: 0;
       }
       spt-splash-root > content > bottom {
-        display: flex;
+        display: block;
         margin-top: 40px;
-        flex-direction: column;
-        align-items: center;
       }
       spt-splash-root > content > bottom > * {
-        float: none;
-        width: auto;
-        padding: 0 0 40px;
+        float: inherit;
+        width: 100%;
+        margin-top: 40px;
+        padding: 0;
       }
       spt-splash-root > content > bottom > spt-twitter {
         padding-right: 0;
+      }
+      spt-splash-root > content > bottom > spt-twitter iframe {
+        float: inherit;
+        width: 100%;
       }
       spt-splash-root > content > bottom > spt-about-us {
         padding-left: 0;
       }
     }
-    @media (max-width: 650px) {
+    @media (max-width: 900px) {
       spt-splash-root > content > logo > img {
-        width: 386px;
-        height: 186px;
+        width: 90%;
+        margin: 0 5%;
+        height: auto;
+      }
+      spt-splash-root > content > early-voting-link > a {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
       }
     }
   </style>

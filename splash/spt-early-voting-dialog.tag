@@ -1,10 +1,15 @@
 <spt-early-voting-dialog class="dialog" show="{ctx.dialog.tag$name === 'spt-early-voting-dialog'}">
   <ctx-dialog-topbar ctx="{opts.ctx}"></ctx-dialog-topbar>
   <content>
-    <a target="_blank" class="yellow-link" href="http://voteearly.berniesandersvideo.com/">&nbsp;{ctx.l10n.vote_early_instructions$menu$text}&nbsp;</a>
-    <a class="yellow-link" href="?early_voting_issue=1" onclick="{link$onclick}">&nbsp;{ctx.l10n.early_voting_issue$menu$text}&nbsp;</a>
+    <a target="_blank" href="http://voteearly.berniesandersvideo.com/?{ctx.ref$query}">&nbsp;{ctx.l10n.vote_early_instructions$menu$text}&nbsp;</a>
+    <a href="?early_voting_issue=1" onclick="{link$onclick}">&nbsp;{ctx.l10n.early_voting_issue$menu$text}&nbsp;</a>
   </content>
   <style>
+    ctx-dialog.spt-early-voting-dialog > content {
+      width: 22rem;
+      margin-left: -11rem;
+      height: 40rem;
+    }
     spt-early-voting-dialog {
       margin-top: 100px;
     }
@@ -16,7 +21,12 @@
       padding: 12px 0;
       font-weight: bold;
     }
-    @media (max-width: 650px) {
+    @media (max-width: 900px) {
+      ctx-dialog.spt-early-voting-dialog > content {
+        width: inherit;
+        margin-left: inherit;
+        height: inherit;
+      }
       spt-early-voting-dialog {
         margin-top: 0;
       }

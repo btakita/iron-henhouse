@@ -1,7 +1,8 @@
 <spt-schedule-banner>
   <p>
-    Return here on June 7 for Election Information and Voter Alerts &mdash;
-    <a href="?addtocalendar=1" onclick="{link$onclick}">Add to Calendar</a>
+    Return here on June 7
+    (<a href="?addtocalendar=1" onclick="{link$onclick}"><img src="/cal-red-04.png"/></a>)
+    for Election Information and Voter Alerts
   </p>
   <style>
     spt-schedule-banner {
@@ -13,9 +14,27 @@
       border-bottom: 1px solid #FFFFFF;
       text-transform: uppercase;
       text-align: center;
+      padding: 0.4rem 0 0;
     }
     spt-schedule-banner > p {
       display: block;
+      margin: 0;
+      padding: 0;
+    }
+    spt-schedule-banner > p > a {
+      position: relative;
+      top: 4px;
+      overflow: hidden;
+    }
+    spt-schedule-banner > p > a > img {
+      display: inline-block;
+      height: 1.3em;
+      width: 1.3em;
+    }
+    @media (max-width: 900px) {
+      spt-schedule-banner {
+        padding: 0.6rem 0 0;
+      }
     }
   </style>
   <script type="text/babel">

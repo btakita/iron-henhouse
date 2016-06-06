@@ -1,6 +1,7 @@
 import {assign,keys} from "ctx-core/object/lib";
 import layoutHtml from "ctx-core/layout/layout.html";
 import {fn$indentation,indentation$regexp} from "ctx-core/string/indendation";
+import {fn$riot$mount$ctx} from "html/lib";
 import {addtocalendar$html} from "ctx-core/addtocalendar.com/html";
 import {js$html} from "ctx-core/html/lib";
 import {log,debug} from "ctx-core/logger/lib"
@@ -16,11 +17,7 @@ export function home$html(ctx) {
 export function home$body$html() {
   const ctx = assign({jsUrls: ["/dist/home"]}, ...arguments);
   log(`${logPrefix}|home$body$html`, keys(ctx));
-  let riot$mount$ctx = {
-    ctx: {
-      authentication: ctx.authentication
-    }
-  };
+  let riot$mount$ctx = fn$riot$mount$ctx(ctx);
   const indentation = fn$indentation(6);
   return `
     <body>
