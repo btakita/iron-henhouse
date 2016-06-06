@@ -95,13 +95,11 @@
     }
     spt-splash-root > content > bottom > * {
       display: block;
-      float: right;
       box-sizing: border-box;
       width: 50%;
       padding: 0 2rem;
     }
     spt-splash-root > content > bottom > spt-twitter {
-      float: right;
       height: 600px;
     }
     spt-splash-root > content > bottom > spt-twitter iframe {
@@ -114,9 +112,6 @@
       float: right;
       text-align: center;
     }
-    spt-splash-root > content > bottom > spt-about-us {
-      float: right;
-    }
     spt-splash-root > content > bottom > spt-about-us > h2 {
       text-transform: uppercase;
     }
@@ -124,7 +119,7 @@
       spt-splash-root > background-mask {
         width: 100%;
         margin: 0;
-        left: auto;
+        left: inherit;
       }
       spt-splash-root > content {
         width: 100%;
@@ -135,18 +130,23 @@
         margin-top: 40px;
       }
       spt-splash-root > content > bottom > * {
-        float: none;
-        width: auto;
-        padding: 0 0 40px;
+        float: inherit;
+        width: 100%;
+        margin-top: 40px;
+        padding: 0;
       }
       spt-splash-root > content > bottom > spt-twitter {
         padding-right: 0;
+      }
+      spt-splash-root > content > bottom > spt-twitter iframe {
+        float: inherit;
+        width: 100%;
       }
       spt-splash-root > content > bottom > spt-about-us {
         padding-left: 0;
       }
     }
-    @media (max-width: 772px) {
+    @media (max-width: 900px) {
       spt-splash-root > content > logo > img {
         width: 90%;
         margin: 0 5%;
