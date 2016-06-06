@@ -52,7 +52,6 @@
       list-style-type: none;
     }
     spt-addtocalendar-dialog > content > .addtocalendar .atcb-list a {
-      color: #ffffff;
       line-height: 1.5em;
     }
     @media (max-width: 900px) {

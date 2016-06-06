@@ -13,9 +13,6 @@
       width: 100%;
       overflow: hidden;
     }
-    spt-splash a {
-      color: #FFFFFF;
-    }
     spt-splash > spt-schedule-banner {
       height: 2.8rem;
     }
