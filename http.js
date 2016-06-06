@@ -20,7 +20,6 @@ import koa$bodyparser from "koa-bodyparser";
 import koa$static from "koa-static";
 import koa$route from "koa-route";
 import path from "path";
-import {app$use__basic_auth} from "ctx-core/basic_auth/koa";
 import {log,info,warn,error,debug} from "ctx-core/logger/lib";
 const app = koa()
     , env = env$assign({app: app})
@@ -48,9 +47,6 @@ function start(id) {
   }
   app$use__l10n(ctx);
   app$use__home(ctx);
-  if (!env.isLocalhost) {
-    app$use__basic_auth(ctx);
-  }
   app$use__http$post$cmd(ctx);
   app$use__election_day(ctx);
   app$use__echo(ctx);
