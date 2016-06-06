@@ -48,20 +48,28 @@
   <script type="text/babel">
     import {assign} from "ctx-core/object/lib";
     import {fn$tag} from "ctx-core/tag/lib";
+    import {agent$$trigger$change} from "ctx-core/agent/lib";
     import {dom$} from "ctx-core/dom/lib";
     import {l10n__tag$mount} from "l10n/tag";
     import {log,debug} from "ctx-core/logger/lib";
     const tag = fn$tag(this, {form$onsubmit: form$onsubmit})
         , logPrefix = "zip-code/spt-zip-code-dialog.tag";
     log(logPrefix);
+    tag.on("show", on$show);
     l10n__tag$mount(tag);
+    function on$show() {
+      log(`${logPrefix}|on$show`);
+      const dom$zip_code = dom$("#zip_code", tag.root);
+      // TODO: remove setTimeout
+      setTimeout(() => dom$zip_code.focus(), 100);
+    }
     function form$onsubmit(e) {
       log(`${logPrefix}|form$onsubmit`);
       let ctx = tag.ctx;
-      const dom$input = dom$("#zip_code", e.target)
-          , zip_code = dom$input && dom$input.value;
-      assign(ctx, {zip_code: zip_code});
-      if (zip_code && zip_code.length === 5) {
+      const dom$zip_code = dom$("#zip_code", e.target)
+          , zip_code = dom$zip_code && dom$zip_code.value;
+      if (zip_code && /[0-9]{5}/.test(zip_code)) {
+        agent$$trigger$change(ctx, {zip_code: zip_code});
         ctx.dialog_agent.remove();
       } else {
         tag.form$error = "Enter a valid zip code";

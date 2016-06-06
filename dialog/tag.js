@@ -44,7 +44,6 @@ export function dialog__tag$mount(tag) {
         , dialog$tag$name = dialog && dialog.tag$name
         , dialog$$_agent = ctx.dialog$$_agent
         , ctx$dialog = ctx.dialog;
-    debug(`${logPrefix}|refresh_dialog|1`, route$query$map, route$dialog, dialog$tag$name);
     if (ctx$dialog && (ctx$dialog.tag$name !== dialog$tag$name)) {
       dialog$$_agent.remove({dialog$$: ctx$dialog});
     }
