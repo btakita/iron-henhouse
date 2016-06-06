@@ -17,22 +17,12 @@
       color: #FFFFFF;
     }
     spt-splash > spt-schedule-banner {
-      display: block;
-      overflow: hidden;
-      height: 3em;
+      height: 2.8rem;
     }
     spt-splash > content {
       display: block;
       overflow-y: auto;
       height: calc(100% - 3em);
-    }
-    @media (max-width: 700px) {
-      spt-splash > spt-schedule-banner {
-        height: 3rem;
-      }
-      spt-splash > content {
-        height: calc(100% - 3rem);
-      }
     }
     @media (max-width: 900px) {
       spt-splash > spt-schedule-banner {

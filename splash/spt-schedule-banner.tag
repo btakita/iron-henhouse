@@ -13,11 +13,12 @@
       border-bottom: 1px solid #FFFFFF;
       text-transform: uppercase;
       text-align: center;
+      padding: 0.4rem 0 0;
     }
     spt-schedule-banner > p {
       display: block;
       margin: 0;
-      padding: 6px 0 10px;
+      padding: 0;
     }
     spt-schedule-banner > p > a {
       position: relative;
@@ -26,8 +27,13 @@
     }
     spt-schedule-banner > p > a > img {
       display: inline-block;
-      height: 1.6em;
-      width: 1.6em;
+      height: 1.3em;
+      width: 1.3em;
+    }
+    @media (max-width: 900px) {
+      spt-schedule-banner {
+        padding: 0.6rem 0 0;
+      }
     }
   </style>
   <script type="text/babel">
