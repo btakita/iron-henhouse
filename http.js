@@ -7,7 +7,7 @@ import {
 import app$use__http$post$cmd from "ctx-core/cmd/koa";
 import {app$use__home} from "splash/koa";
 import {app$use__l10n} from "l10n/koa";
-import {app$use__election_day} from "election-day/koa";
+import {app$use__election_day} from "pioneer/koa";
 import "babel-core";
 import {env$assign} from "ctx-core/env";
 import koa from "koa";

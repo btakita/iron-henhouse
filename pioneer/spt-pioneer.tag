@@ -1,10 +1,10 @@
-<election-day>
-  <bernie-election-day-root show="{ctx.route$name__election_day_root}" ctx="{opts.ctx}"></bernie-election-day-root>
+<spt-pioneer>
+  <bernie-pioneer-root show="{ctx.route$name__election_day_root}" ctx="{opts.ctx}"></bernie-pioneer-root>
   <vote-where show="{ctx.route$name__vote_where}" ctx="{opts.ctx}"></vote-where>
   <voting-issue show="{ctx.route$name__voting_issue}" ctx="{opts.ctx}"></voting-issue>
   <voting-issue-tile show="{ctx.voting_issue$tile}" ctx="{opts.ctx}"></voting-issue-tile>
   <style>
-    election-day {
+    spt-pioneer {
       display: block;
       overflow-y: auto;
       background: #FFFFFF;
@@ -18,7 +18,7 @@
     import {assign__election_day$route$$} from "./route";
     import {log,debug} from "ctx-core/logger/lib";
     const tag = fn$tag(this)
-        , logPrefix = "election-day/election-day.tag";
+        , logPrefix = "pioneer/spt-pioneer.tag";
     tag.on("mount", on$mount);
     tag.on("unmount", on$unmount);
     log(logPrefix);
@@ -41,4 +41,4 @@
       tag.assign__ctx$update();
     }
   </script>
-</election-day>
+</spt-pioneer>

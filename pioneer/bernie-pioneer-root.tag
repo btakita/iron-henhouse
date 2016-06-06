@@ -1,4 +1,4 @@
-<bernie-election-day-root>
+<bernie-pioneer-root>
   <img class="header-img" src="/bernie/bernie-2016.png" />
   <h1>&nbsp;{ctx.l10n.tag$election_day$title}&nbsp;</h1>
   <h2>&nbsp;{ctx.l10n.tag$election_day$subtitle}&nbsp;</h2>
@@ -7,13 +7,13 @@
   <a class="twitter-timeline" href="https://twitter.com/BernieSanders" data-widget-id="734025080737566720">Tweets by @BernieSanders</a>
   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
   <style>
-    bernie-election-day-root {
+    bernie-pioneer-root {
       display: block;
     }
-    bernie-election-day-root > .header-img {
+    bernie-pioneer-root > .header-img {
       height: 99px;
     }
-    bernie-election-day-root > .action {
+    bernie-pioneer-root > .action {
       display: block;
       padding: 20px;
       margin: 0;
@@ -21,16 +21,16 @@
       font: 22px bold;
       border: 2px solid transparent;
     }
-    bernie-election-day-root > .action:hover {
+    bernie-pioneer-root > .action:hover {
       border: 2px solid #111111;
     }
-    bernie-election-day-root > .where {
+    bernie-pioneer-root > .where {
       background: #087ED7;
     }
-    bernie-election-day-root > .issue {
+    bernie-pioneer-root > .issue {
       background: #EA504E;
     }
-    bernie-election-day-root > .twitter-timeline,bernie-election-day-root > iframe {
+    bernie-pioneer-root > .twitter-timeline,bernie-pioneer-root > iframe {
       display: none;
       position: relative;
       width: 520px;
@@ -43,7 +43,7 @@
     import {assign__l10n_agent} from "l10n/agent";
     import {log,debug} from "ctx-core/logger/lib";
     const tag = fn$tag(this, {link$onclick: link$onclick})
-        , logPrefix = "election-day/bernie-election-day-root.tag";
+        , logPrefix = "pioneer/bernie-pioneer-root.tag";
     tag.on("mount", on$mount);
     tag.on("unmount", on$unmount);
     log(logPrefix);
@@ -62,4 +62,4 @@
       tag.assign__ctx$update();
     }
   </script>
-</bernie-election-day-root>
+</bernie-pioneer-root>

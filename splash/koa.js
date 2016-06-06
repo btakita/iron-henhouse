@@ -6,7 +6,7 @@ import {home$html} from "splash/html";
 import koa$route from "koa-route";
 import {log,info,error,debug} from "ctx-core/logger/lib"
 const logPrefix = "splash/koa";
-//GET /election-day
+//GET /pioneer
 export function app$use__home() {
   log(`${logPrefix}|app$use__home`);
   const ctx = assign(...arguments)

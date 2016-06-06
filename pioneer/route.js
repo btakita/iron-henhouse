@@ -6,7 +6,7 @@ import {agent$$trigger$change} from "ctx-core/agent/lib";
 import riot from "riot";
 import co from "co";
 import {log,debug} from "ctx-core/logger/lib";
-const logPrefix = "election-day/route";
+const logPrefix = "pioneer/route";
 export function assign__election_day$route$$() {
   log(`${logPrefix}|assign__election_day$route$$`);
   let ctx = assign(...arguments);

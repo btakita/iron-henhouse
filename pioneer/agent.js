@@ -3,7 +3,7 @@ import {error$throw} from "ctx-core/error/lib";
 import {assign__agent,assign__cmd_agent} from "ctx-core/agent/lib";
 import co from "co";
 import {log,debug} from "ctx-core/logger/lib";
-const logPrefix = "election-day/agent";
+const logPrefix = "pioneer/agent";
 export function assign__polling_station$$_agent() {
   log(`${logPrefix}|assign__polling_station$$_agent`);
   let ctx = assign(...arguments);
