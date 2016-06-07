@@ -1,3 +1,3 @@
 <voting-issue-no-ballots>
-  <p>{opts.ctx.l10n.voting_issue$no_ballots.title} &mdash; your rights</p>
+  <p>{opts.ctx.l10n.voting_issue$no_ballots.title}</p>
 </voting-issue-no-ballots>
