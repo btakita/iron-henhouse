@@ -35,7 +35,7 @@
     }
     @media (max-width: 900px) {
       spt-banner {
-        height: 4rem;
+        height: 3.6rem;
         padding: 0.6rem 0 0;
       }
     }
