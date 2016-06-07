@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="93px" height="93px" viewBox="0 0 93 93" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8 (29681) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feMorphology radius="2" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="2" dy="4" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="2" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="2" dy="4" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.25 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="mobile2-copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01-problem-selection" transform="translate(-143.000000, -1743.000000)" fill="#000000">
+            <g id="a-#campaigning" filter="url(#filter-1)" transform="translate(15.000000, 1721.000000)">
+                <g id="noun_381712_cc" transform="translate(130.000000, 22.000000)">
+                    <g id="Group">
+                        <g>
+                            <circle id="Oval" cx="42.5" cy="25.5452128" r="8.47739362"></circle>
+                            <path d="M46.75,38.2726064 L41.5957447,38.2726064 L38.8151596,38.2726064 L24.6183511,34.7234043 L21.1821809,24.3922872 L29.4787234,21.7925532 L24.4375,5.60638298 L0.113031915,13.2021277 L5.15425532,29.3882979 L13.043883,26.9242021 L18.0172872,41.8218085 L34.0226064,45.8231383 L34.0226064,59.4547872 L34.0226064,63.6821809 L34.0452128,63.6821809 L34.0452128,80.6595745 C34.0452128,82.9880319 35.9441489,84.8869681 38.2726064,84.8869681 C40.6010638,84.8869681 42.5,82.9880319 42.5,80.6595745 L42.5,63.6821809 L42.5226064,63.6821809 L42.5226064,80.6595745 C42.5226064,82.9880319 44.4215426,84.8869681 46.75,84.8869681 C49.0784574,84.8869681 50.9773936,82.9880319 50.9773936,80.6595745 L50.9773936,63.6821809 L51,63.6821809 L51,59.4547872 L55.25,59.4547872 L55.25,46.75 C55.2273936,42.0478723 51.4295213,38.2726064 46.75,38.2726064 L46.75,38.2726064 Z" id="Shape"></path>
+                            <circle id="Oval" cx="72.1595745" cy="25.5452128" r="8.47739362"></circle>
+                            <path d="M76.4095745,38.2726064 L67.9321809,38.2726064 C63.2526596,38.2726064 59.4547872,42.0704787 59.4547872,46.75 L59.4547872,59.4547872 L63.6821809,59.4547872 L63.6821809,63.6821809 L63.7047872,63.6821809 L63.7047872,80.6595745 C63.7047872,82.9880319 65.6037234,84.8869681 67.9321809,84.8869681 C70.2606383,84.8869681 72.1595745,82.9880319 72.1595745,80.6595745 L72.1595745,63.6821809 L72.1821809,63.6821809 L72.1821809,80.6595745 C72.1821809,82.9880319 74.081117,84.8869681 76.4095745,84.8869681 C78.7380319,84.8869681 80.6369681,82.9880319 80.6369681,80.6595745 L80.6369681,63.6821809 L80.6595745,63.6821809 L80.6595745,59.4547872 L80.6595745,59.4547872 L84.8869681,59.4547872 L84.8869681,46.75 C84.8869681,42.0478723 81.0890957,38.2726064 76.4095745,38.2726064 L76.4095745,38.2726064 Z" id="Shape"></path>
+                            <circle id="Oval" cx="12.8178191" cy="50.9773936" r="8.47739362"></circle>
+                            <path d="M17.0678191,63.7047872 L8.59042553,63.7047872 C3.91090426,63.7047872 0.113031915,67.5026596 0.113031915,72.1821809 L0.113031915,84.8869681 L4.34042553,84.8869681 L21.2952128,84.8869681 L25.5452128,84.8869681 L25.5452128,72.1821809 C25.5452128,67.4800532 21.7473404,63.7047872 17.0678191,63.7047872 L17.0678191,63.7047872 Z" id="Shape"></path>
+                            <circle id="Oval" cx="57.3297872" cy="8.59042553" r="8.47739362"></circle>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,19 +1,5 @@
 <voting-issue-tile>
   <h1>{ctx.l10n[ctx.voting_issue$key].title}</h1>
-  <tabs>
-    <a
-      href="voting-issue/{ctx.voting_issue$route$path}/your-rights"
-      class="{selected: ctx.route$name__voting_issue$your_rights}"
-      onclick="{link$onclick}">{ctx.l10n.your_rights}</a>
-    <a
-      href="voting-issue/{ctx.voting_issue$route$path}/video"
-      class="{selected: ctx.route$name__voting_issue$video}"
-      onclick="{link$onclick}">{ctx.l10n.video}</a>
-    <a
-      href="voting-issue/{ctx.voting_issue$route$path}/help"
-      class="{selected: ctx.route$name__voting_issue$help}"
-      onclick="{link$onclick}">{ctx.l10n.help}</a>
-  </tabs>
   <content>
     <voting-issue-campaigning-within-100-feet show="{ctx.route$name__voting_issue$campaigning_within_100_feet}" ctx="{opts.ctx}"></voting-issue-campaigning-within-100-feet>
     <voting-issue-no-ballots show="{ctx.route$name__voting_issue$no_ballots}" ctx="{opts.ctx}"></voting-issue-no-ballots>
@@ -31,27 +17,12 @@
     voting-issue-tile {
       display: block;
       overflow: hidden;
+      text-align: center;
     }
     voting-issue-tile > * {
-      display: block;
     }
     voting-issue-tile > h1 {
-      color: #087ED7;
-    }
-    voting-issue-tile > tabs {
-      display: flex;
-      border-bottom: 2px solid #C2C2C2;
-    }
-    voting-issue-tile > tabs > a {
-      width: 33%;
-      border-bottom: 3px solid transparent;
-    }
-    voting-issue-tile > tabs > a:last-child {
-      width: auto;
-      flex: auto;
-    }
-    voting-issue-tile > tabs > a.selected {
-      border-bottom-color: #087ED7;
+      color: #fff;
     }
     voting-issue-tile > content {
       display: block;

@@ -11,7 +11,8 @@ export function home$html(ctx) {
     title: "suppressthis.org",
     body$html: home$body$html(ctx, {
     }),
-    cssUrls: ["/layout"]
+    cssUrls: ["/layout"],
+    fn$head$html: () => { return `<link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>`.replace(indentation$regexp(4), "");}
   });
 }
 export function home$body$html() {

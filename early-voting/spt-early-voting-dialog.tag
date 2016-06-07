@@ -2,7 +2,7 @@
   <ctx-dialog-topbar ctx="{opts.ctx}"></ctx-dialog-topbar>
   <content>
     <a target="_blank" href="http://voteearly.berniesandersvideo.com/?{ctx.ref$query}">&nbsp;{ctx.l10n.vote_early_instructions$menu$text}&nbsp;</a>
-    <a href="/?dialog=early_voting_issue" onclick="{link$onclick}">&nbsp;{ctx.l10n.early_voting_issue$menu$text}&nbsp;</a>
+    <a href="/?dialog=spt-early-voting-issue-dialog" onclick="{link$onclick}">&nbsp;{ctx.l10n.early_voting_issue$menu$text}&nbsp;</a>
   </content>
   <style>
     ctx-dialog.spt-early-voting-dialog > content {

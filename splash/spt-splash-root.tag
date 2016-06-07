@@ -3,10 +3,10 @@
   <content>
     <logo><img src="/suppress-this/logo.png"/></logo>
     <early-voting-link class="splash-link">
-      <a class="yellow-button" href="/?dialog=early_voting" onclick="{link$onclick}">Early Voting</a>
+      <a class="yellow-button" href="/?dialog=spt-early-voting-dialog" onclick="{link$onclick}">Early Voting</a>
     </early-voting-link>
     <check-registration-link class="splash-link">
-      <a href="/?dialog=check_registration" onclick="{link$onclick}">Check Your Voter Registration</a>
+      <a href="/?dialog=spt-check-registration-dialog" onclick="{link$onclick}">Check Your Voter Registration</a>
     </check-registration-link>
     <npp-registration-link class="splash-link">
       <a target="_blank" href="http://youdownwithnpp.com/?{ctx.ref$query}">Voting as No Party Preference?</a>
@@ -20,6 +20,7 @@
     spt-splash-root {
       display: block;
       position: relative;
+      font-family: 'Oswald', Helvetica-Neue, Helvetica, Arial, san-serif;
     }
     spt-splash-root > background-mask {
       position: absolute;

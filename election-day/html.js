@@ -11,11 +11,14 @@ export function election_day$html(ctx, ...ctx$rest$$) {
   return layoutHtml(ctx, {
     title: "Election Day",
     body$html: election_day$body$html(ctx, {}),
-    cssUrls: ["/layout"]
+    cssUrls: ["/layout"],
+    fn$head$html: () => { return `<link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>`.replace(indentation$regexp(4), "");}
   }, ...ctx$rest$$);
 }
 export function election_day$body$html() {
-  const ctx = assign({jsUrls: ["/dist/election-day"]}, ...arguments);
+  //const ctx = assign({jsUrls: ["/dist/election-day"]}, ...arguments);
+  const ctx = assign({jsUrls: ["/dist/election-day", "https://tool.votinginfoproject.org/app"]}, ...arguments);
+  //const ctx = assign({jsUrls: ["/dist/election-day", "/vip-app"]}, ...arguments);
   log(`${logPrefix}|election_day$body$html`);
   let riot$mount$ctx = fn$riot$mount$ctx(ctx);
   return `
