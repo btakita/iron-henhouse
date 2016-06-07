@@ -19,6 +19,7 @@
   <style>
     spt-election-day {
       display: block;
+      font-family: 'Oswald', Helvetica-Neue, Helvetica, Arial, san-serif;
     }
     spt-election-day > navigation {
       display: block;

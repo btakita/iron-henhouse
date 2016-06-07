@@ -11,7 +11,8 @@ export function election_day$html(ctx, ...ctx$rest$$) {
   return layoutHtml(ctx, {
     title: "Election Day",
     body$html: election_day$body$html(ctx, {}),
-    cssUrls: ["/layout"]
+    cssUrls: ["/layout"],
+    fn$head$html: () => { return `<link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>`.replace(indentation$regexp(4), "");}
   }, ...ctx$rest$$);
 }
 export function election_day$body$html() {
