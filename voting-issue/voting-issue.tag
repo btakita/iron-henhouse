@@ -26,7 +26,7 @@
     <p>&nbsp;{ctx.l10n.voting_issue$inadequate_disability_access.title}&nbsp;</p>
   </a>
   <h2>{ctx.l10n.tag$voting_issue$call_us}</h2>
-  <a href="tel:{ctx.spt__hotline$phone_number}" class="call-us">
+  <a href="tel:{ctx.spt__hotline$phone_number}" class="voting-issue-type hotline">
     <p>
       {ctx.l10n.call_us}<br/>
       {ctx.l10n.hotline$phone}
@@ -60,6 +60,8 @@
       left: 0;
       bottom: 0;
       width: 100%;
+      margin-bottom: 0.4em;
+      line-height: 1.25em;
       text-align: center;
     }
     voting-issue > .voting-issue-type {
@@ -69,9 +71,31 @@
     voting-issue > .voting-issue-type.no-ballots {
       background-image: url('/images/icon-no-ballots.svg');
     }
-    voting-issue > .call-us {
+    voting-issue > .voting-issue-type.long-lines {
+      background-image: url('/images/icon-long-lines.svg');
+    }
+    voting-issue > .voting-issue-type.no-party-preference {
+      background-image: url('/images/icon-no-party-preference.svg');
+    }
+    voting-issue > .voting-issue-type.provisional-ballot {
+      background-image: url('/images/icon-provisional-ballot.svg');
+    }
+    voting-issue > .voting-issue-type.not-allowed-to-vote {
+      background-image: url('/images/icon-not-allowed.svg');
+    }
+    voting-issue > .voting-issue-type.incorrect-party {
+      background-image: url('/images/icon-incorrect-party.svg');
+    }
+    voting-issue > .voting-issue-type.electioneering {
+      background-image: url('/images/icon-electioneering.svg');
+    }
+    voting-issue > .voting-issue-type.inadequate-disability-access {
+      background-image: url('/images/icon-disability.svg');
+    }
+    voting-issue > .hotline {
       color: #FFFFFF;
       background-color: #EA504E;
+      background-image: url('/images/icon-hotline.svg');
     }
   </style>
   <script type="text/babel">

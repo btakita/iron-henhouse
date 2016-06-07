@@ -29,6 +29,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     spt-splash-root {
       display: block;
       position: relative;
+      font-family: 'Oswald', Helvetica-Neue, Helvetica, Arial, san-serif;
     }
     spt-splash-root > background-mask {
       position: absolute;

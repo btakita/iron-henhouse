@@ -22,7 +22,7 @@
     voting-issue-tile > * {
     }
     voting-issue-tile > h1 {
-      color: #087ED7;
+      color: #fff;
     }
     voting-issue-tile > content {
       display: block;

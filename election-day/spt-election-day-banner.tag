@@ -13,7 +13,7 @@
     }
     spt-election-day-banner > spt-banner > .menu {
       position: absolute;
-      top: 0.3em;
+      top: 0.15em;
       right: 0;
       margin: 0;
       padding: 0 20px;
