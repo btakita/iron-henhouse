@@ -5,6 +5,11 @@
     <a href="voting-issue" onclick="{a$onclick}">&nbsp;{ctx.l10n.voting_issue$menu$text}&nbsp;</a>
   </content>
   <style>
+    ctx-dialog.spt-election-day-menu-dialog > content {
+      left: auto;
+      right: 0;
+      width: 22rem;
+    }
     ctx-dialog.spt-election-day-menu-dialog spt-election-day-menu-dialog {
       display: block;
     }
@@ -20,6 +25,14 @@
       display: block;
       padding: 12px 0;
       font-size: 18px;
+    }
+    @media (max-width: 900px) {
+      ctx-dialog.spt-election-day-menu-dialog > content {
+        left: inherit;
+        right: inherit;
+        width: inherit;
+        height: inherit;
+      }
     }
   </style>
   <script type="text/babel">

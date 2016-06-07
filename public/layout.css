@@ -59,10 +59,10 @@ a, a:visited, a:hover, a:active {
   text-decoration: none;
 }
 a, a:visited, a:active {
-  color: #FDD102;
+  color: #EEEEEE;
 }
 a:hover {
-  color: #AB9C53;
+  color: #FFFFFF;
 }
 a.yellow-button,a.red-button {
   display: block;
