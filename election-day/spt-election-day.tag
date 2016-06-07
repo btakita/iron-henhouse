@@ -3,6 +3,7 @@
   <spt-election-day-banner ctx="{opts.ctx}"></spt-election-day-banner>
   <content>
     <spt-election-day-root show="{ctx.route$name__election_day_root}" ctx="{opts.ctx}"></spt-election-day-root>
+    <vote-where show="{ctx.route$name__vote_where}" ctx="{opts.ctx}"></vote-where>
     <voting-issue show="{ctx.route$name__voting_issue}" ctx="{opts.ctx}"></voting-issue>
     <voting-issue-tile show="{ctx.voting_issue$tile}" ctx="{opts.ctx}"></voting-issue-tile>
     <navigation>
@@ -43,7 +44,7 @@
     import {zip_code__tag$mount} from "zip-code/tag";
     import {log,debug} from "ctx-core/logger/lib";
     const tag = fn$tag(this)
-        , logPrefix = "pioneer/spt-pioneer.tag";
+        , logPrefix = "election-day/spt-election-day.tag";
     log(logPrefix);
     tag.on("mount", on$mount);
     tag.on("unmount", on$unmount);

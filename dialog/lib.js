@@ -14,6 +14,9 @@ export function assign__route$dialog$map(ctx) {
         tag$name: "spt-check-registration-dialog",
         title: "Check Your Voter Registration"
       },
+      "spt-election-day-menu-dialog": {
+        tag$name: "spt-election-day-menu-dialog"
+      },
       "spt-early-voting-dialog": {
         tag$name: "spt-early-voting-dialog",
         title: "Early Voting"
