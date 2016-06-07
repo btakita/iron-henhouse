@@ -11,6 +11,9 @@
     <vote-where-link class="button-link">
       <a class="yellow-button" href="vote-where" onclick="{link$onclick}">&nbsp;{ctx.l10n.vote_where$menu$text}&nbsp;</a>
     </vote-where-link>
+    <I-voted-link class="button-link">
+      <a class="yellow-button" href="/?dialog=spt-i-voted-dialog" onclick="{link$onclick}">I Voted!</a>
+    </I-voted-link>
     <bottom>
       <spt-about-us ctx="{opts.ctx}"></spt-about-us>
       <spt-twitter ctx="{opts.ctx}"></spt-twitter>
