@@ -42,8 +42,9 @@
       const dialog = ctx.dialog
           , zip_code = ctx.zip_code;
       if (!dialog && !zip_code) {
+        log(`${logPrefix}|on$mount|zip_code`);
         ctx.dialog$$_agent.push({
-          dialog$$: ctx.route$dialog$map["zip_code"]
+          dialog$$: ctx.route$dialog$map["spt-zip-code-dialog"]
         });
       }
       dialog__assign__ctx$update__defer(tag);
