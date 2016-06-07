@@ -3,6 +3,7 @@
     <spt-election-day-menu-dialog ctx="{opts.ctx}"></spt-election-day-menu-dialog>
     <spt-check-registration-dialog ctx="{opts.ctx}"></spt-check-registration-dialog>
     <spt-zip-code-dialog ctx="{opts.ctx}"></spt-zip-code-dialog>
+    <spt-i-voted-dialog ctx="{opts.ctx}"></spt-i-voted-dialog>
   </ctx-dialog>
   <ctx-dialog-position-center ctx="{opts.ctx}"></ctx-dialog-position-center>
   <style>
