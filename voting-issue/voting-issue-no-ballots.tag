@@ -1,3 +1,4 @@
+
 <voting-issue-no-ballots>
   <article id="main">
     <header>
@@ -7,7 +8,7 @@
     <section class="wrapper style5">
       <div class="inner">
         <p>Oh no! Hang tight and give our legal hotline a call so we can resolve this issue ASAP!</p>
-        <a class="call-hotline" href="tel:{ctx.spt__hotline$phone_number}"><img src="/images/icon-hotline.svg" alt="">Call Elections Hotline</a>
+        <a class="call-hotline" href="tel:415-795-8065"><img src="/images/icon-hotline.svg" alt="">Call Elections Hotline</a>
       </div>
     </section>
   </article>

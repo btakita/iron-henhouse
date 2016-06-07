@@ -1,3 +1,4 @@
+
 <voting-issue-no-party-preference>
   <article id="main">
     <header>
@@ -15,7 +16,7 @@
         </div>
         <div id="i-am-not-given-democratic-ballot" class="hide">
           <p>Don’t cast a provisional ballot! You are entitled to “Democratic Ballot” or a “Crossover Democratic Ballot”. Give our legal hotline a call to get assistance from a legal professional!</p>
-          <a class="call-hotline" href="tel:{ctx.spt__hotline$phone_number}"><img src="/images/icon-hotline.svg" alt="">Call Elections Hotline</a>
+          <a class="call-hotline" href="tel:415-795-8065"><img src="/images/icon-hotline.svg" alt="">Call Elections Hotline</a>
         </div>
       </div>
     </section>
