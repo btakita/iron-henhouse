@@ -9,7 +9,7 @@
       <a class="yellow-button" href="/?dialog=spt-check-registration-dialog" onclick="{link$onclick}">Check Your Voter Registration</a>
     </check-registration-link>
     <vote-where-link class="button-link">
-      <a class="red-button" href="vote-where" onclick="{link$onclick}">&nbsp;{ctx.l10n.vote_where$menu$text}&nbsp;</a>
+      <a class="yellow-button" href="vote-where" onclick="{link$onclick}">&nbsp;{ctx.l10n.vote_where$menu$text}&nbsp;</a>
     </vote-where-link>
     <bottom>
       <spt-about-us ctx="{opts.ctx}"></spt-about-us>
