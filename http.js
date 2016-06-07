@@ -63,9 +63,9 @@ function start(id) {
 function app$use__lets_encrypt(ctx) {
   log(`${logPrefix}|app$use__lets_encrypt`);
   const app = ctx.app;
-  app.use(koa$route.get("/.well-known/acme-challenge/Stj1w3MX4W3oEJpBC-nNNQ8k0ASYO4nkKWz_IwhaZ7w", http$get$lets_encrypt_auth));
+  app.use(koa$route.get("/.well-known/acme-challenge/LNGJ8mAuJ2q-5CXGrI1dDKYO8XqOLF5qKZhcoV8qHa0", http$get$lets_encrypt_auth));
 }
 function *http$get$lets_encrypt_auth(id) {
   log(`${logPrefix}|http$get$lets_encrypt_auth`);
-  this.body = "Stj1w3MX4W3oEJpBC-nNNQ8k0ASYO4nkKWz_IwhaZ7w.6I756fHl3Ki6lug40LpcM8uOvzSHJ-n6_lUpA_YQWQw";
+  this.body = "LNGJ8mAuJ2q-5CXGrI1dDKYO8XqOLF5qKZhcoV8qHa0.6I756fHl3Ki6lug40LpcM8uOvzSHJ-n6_lUpA_YQWQw";
 }
