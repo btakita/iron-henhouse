@@ -1,4 +1,5 @@
 import {assign} from "ctx-core/object/lib";
+import env from "site/env";
 import {log,debug} from "ctx-core/logger/lib";
 const logPrefix = "html/lib";
 export function fn$riot$mount$ctx(ctx, ...riot$mount$ctx$$) {
@@ -7,7 +8,8 @@ export function fn$riot$mount$ctx(ctx, ...riot$mount$ctx$$) {
     ctx: {
       authentication: ctx.authentication,
       spt__hotline$phone_number: "18002498683",
-      ref$query: "ref=suppressthis.org"
+      ref$query: "ref=suppressthis.org",
+      zip_code$url$base: env.zip_code$url$base
     }
   }, ...riot$mount$ctx$$);
   return riot$mount$ctx;

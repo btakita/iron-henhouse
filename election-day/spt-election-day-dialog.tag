@@ -1,7 +1,6 @@
 <spt-election-day-dialog>
   <ctx-dialog ctx="{opts.ctx}">
-    <spt-early-voting-dialog ctx="{opts.ctx}"></spt-early-voting-dialog>
-    <spt-early-voting-issue-dialog ctx="{opts.ctx}"></spt-early-voting-issue-dialog>
+    <spt-election-day-menu-dialog ctx="{opts.ctx}"></spt-election-day-menu-dialog>
     <spt-check-registration-dialog ctx="{opts.ctx}"></spt-check-registration-dialog>
     <spt-zip-code-dialog ctx="{opts.ctx}"></spt-zip-code-dialog>
   </ctx-dialog>

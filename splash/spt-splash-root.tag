@@ -12,10 +12,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <content>
     <logo><img src="/suppress-this/logo.png"/></logo>
     <early-voting-link class="splash-link">
-      <a class="yellow-button" href="/?dialog=early_voting" onclick="{link$onclick}">Early Voting</a>
+      <a class="yellow-button" href="/?dialog=spt-early-voting-dialog" onclick="{link$onclick}">Early Voting</a>
     </early-voting-link>
     <check-registration-link class="splash-link">
-      <a href="/?dialog=check_registration" onclick="{link$onclick}">Check Your Voter Registration</a>
+      <a href="/?dialog=spt-check-registration-dialog" onclick="{link$onclick}">Check Your Voter Registration</a>
     </check-registration-link>
     <npp-registration-link class="splash-link">
       <a target="_blank" href="http://youdownwithnpp.com/?{ctx.ref$query}">Voting as No Party Preference?</a>

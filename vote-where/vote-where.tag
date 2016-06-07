@@ -1,3 +1,3 @@
 <vote-where>
-  <polling-station-select ctx="{opts.ctx}"></polling-station-select>
+  <h1>Find Your Polling Station</h1>
 </vote-where>
