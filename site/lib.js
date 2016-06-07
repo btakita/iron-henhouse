@@ -8,3 +8,8 @@ export function assign__ctx(ctx) {
   assign__dialog$$_agent(ctx);
   return ctx;
 }
+export function ctx$reset(ctx) {
+  log(`${logPrefix}|ctx$reset`);
+  assign(ctx, {zip_code: null});
+  return ctx;
+}
