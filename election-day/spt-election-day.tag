@@ -1,15 +1,18 @@
 <spt-election-day show="{show}" class="page">
   <ctx ctx="{opts.ctx}"></ctx>
   <spt-election-day-banner ctx="{opts.ctx}"></spt-election-day-banner>
-  <navigation>
-    <a href="/?dialog=early_voting" onclick="{link$onclick}">Early Voting</a>
-    <a href="/?dialog=early_voting_issue" onclick="{link$onclick}">Early Issue Voting</a>
-    <a href="/?dialog=check_registration" onclick="{link$onclick}">Check Registration</a>
-    <a href="/?dialog=zip_code" onclick="{link$onclick}">
-      Zip Code
-      <span show="{ctx.zip_code}">({ctx.zip_code})</span>
-    </a>
-  </navigation>
+  <content>
+    <spt-election-day-root ctx="{opts.ctx}"></spt-election-day-root>
+    <navigation>
+      <a href="/?dialog=spt-early-voting-dialog" onclick="{link$onclick}">Early Voting</a>
+      <a href="/?dialog=spt-early-voting-issue-dialog" onclick="{link$onclick}">Early Issue Voting</a>
+      <a href="/?dialog=spt-check-registration-dialog" onclick="{link$onclick}">Check Registration</a>
+      <a href="/?dialog=spt-zip-code-dialog" onclick="{link$onclick}">
+        Zip Code
+        <span show="{ctx.zip_code}">({ctx.zip_code})</span>
+      </a>
+    </navigation>
+  </content>
   <spt-election-day-dialog ctx="{opts.ctx}"></spt-election-day-dialog>
   <style>
     spt-election-day {

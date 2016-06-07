@@ -69,7 +69,17 @@ a.yellow-button {
   color: #000000;
 }
 a.yellow-button:hover {
-  background: #AB9C53;
-  color: #000000;
+  opacity: 0.8;
+  text-shadow: none;
+}
+a.red-button {
+  font-size: 30px;
+  padding: 20px 80px;
+  background: #CB1F26;
+  color: #FFFFFF;
+}
+a.red-button:hover {
+  background: #CB1F26;
+  opacity: 0.8;
   text-shadow: none;
 }

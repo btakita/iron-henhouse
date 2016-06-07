@@ -1,10 +1,10 @@
-<spt-splash-root>
+<spt-election-day-root>
   <background-mask>&nbsp;</background-mask>
   <content>
     <logo><img src="/suppress-this/logo.png"/></logo>
-    <early-voting-link class="splash-link">
-      <a class="yellow-button" href="/?dialog=spt-early-voting-dialog" onclick="{link$onclick}">Early Voting</a>
-    </early-voting-link>
+    <voting-issue-link class="splash-link">
+      <a class="red-button" href="/?dialog=spt-early-voting-dialog" onclick="{link$onclick}">I Have a Voting Problem</a>
+    </voting-issue-link>
     <check-registration-link class="splash-link">
       <a href="/?dialog=spt-check-registration-dialog" onclick="{link$onclick}">Check Your Voter Registration</a>
     </check-registration-link>
@@ -17,11 +17,11 @@
     </bottom>
   </content>
   <style>
-    spt-splash-root {
+    spt-election-day-root {
       display: block;
       position: relative;
     }
-    spt-splash-root > background-mask {
+    spt-election-day-root > background-mask {
       position: absolute;
       top: 0;
       left: 50%;
@@ -34,7 +34,7 @@
       background-size: cover;
       opacity: 0.1;
     }
-    spt-splash-root > content {
+    spt-election-day-root > content {
       display: block;
       position: relative;
       z-index: 2;
@@ -43,35 +43,28 @@
       padding: 0 0 40px;
       align-items: center;
     }
-    spt-splash-root > content > logo {
+    spt-election-day-root > content > logo {
       display: block;
       overflow: hidden;
       padding: 40px 0 0;
       text-align: center;
     }
-    spt-splash-root > content > logo > img {
+    spt-election-day-root > content > logo > img {
       width: 772px;
       height: 372px;
     }
-    spt-splash-root > content > .splash-link {
+    spt-election-day-root > content > .splash-link {
       display: block;
       overflow: hidden;
       padding: 40px 0 0;
       text-align: center;
-    }
-    spt-splash-root > content > early-voting-link {
       display: block;
       overflow: hidden;
       margin: 20px 0 0;
       height: 100px;
       text-align: center;
     }
-    spt-splash-root > content > early-voting-link > a {
-      padding: 20px 80px;
-      font-size: 30px;
-      border-radius: 8px;
-    }
-    spt-splash-root > content > bottom {
+    spt-election-day-root > content > bottom {
       display: block;
       position: relative;
       width: 80%;
@@ -80,60 +73,60 @@
       overflow: hidden;
       padding: 0;
     }
-    spt-splash-root > content > bottom > * {
+    spt-election-day-root > content > bottom > * {
       display: block;
       float: right;
       box-sizing: border-box;
       width: 50%;
       padding: 0 2rem;
     }
-    spt-splash-root > content > bottom > spt-twitter a.twitter-timeline {
+    spt-election-day-root > content > bottom > spt-twitter a.twitter-timeline {
       margin-top: 1.6em;
       width: 100%;
       text-align: center;
       float: right;
     }
-    spt-splash-root > content > bottom > spt-twitter iframe {
+    spt-election-day-root > content > bottom > spt-twitter iframe {
       float: right;
     }
     @media (max-width: 1200px) {
-      spt-splash-root > background-mask {
+      spt-election-day-root > background-mask {
         width: 100%;
         margin: 0;
         left: inherit;
       }
-      spt-splash-root > content {
+      spt-election-day-root > content {
         width: 100%;
         margin: 0;
       }
-      spt-splash-root > content > bottom {
+      spt-election-day-root > content > bottom {
         display: block;
         margin-top: 40px;
       }
-      spt-splash-root > content > bottom > * {
+      spt-election-day-root > content > bottom > * {
         float: inherit;
         width: 100%;
         margin-top: 40px;
         padding: 0;
       }
-      spt-splash-root > content > bottom > spt-twitter {
+      spt-election-day-root > content > bottom > spt-twitter {
         padding-right: 0;
       }
-      spt-splash-root > content > bottom > spt-twitter iframe {
+      spt-election-day-root > content > bottom > spt-twitter iframe {
         float: inherit;
         width: 100%;
       }
-      spt-splash-root > content > bottom > spt-about-us {
+      spt-election-day-root > content > bottom > spt-about-us {
         padding-left: 0;
       }
     }
     @media (max-width: 900px) {
-      spt-splash-root > content > logo > img {
+      spt-election-day-root > content > logo > img {
         width: 90%;
         margin: 0 5%;
         height: auto;
       }
-      spt-splash-root > content > early-voting-link > a {
+      spt-election-day-root > content > voting-issue-link > a {
         width: 90%;
         margin-left: 5%;
         margin-right: 5%;
@@ -146,7 +139,7 @@
     import {assign__dialog_agent} from "ctx-core/dialog/agent";
     import {log,debug} from "ctx-core/logger/lib";
     const tag = fn$tag(this)
-        , logPrefix = "splash/spt-splash-root.tag";
+        , logPrefix = "splash/spt-election-day-root.tag";
     tag.on("mount", on$mount);
     tag.on("unmount", on$unmount);
     log(logPrefix);
@@ -160,4 +153,4 @@
       self.ctx.route$fragment_agent.off("change", refresh);
     }
   </script>
-</spt-splash-root>
+</spt-election-day-root>

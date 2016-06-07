@@ -141,7 +141,7 @@
               out_of_state$url: out_of_state$url,
               out_of_state$text: out_of_state$text
             });
-            route$path = "?dialog=zip_code&dialog_nav=out-of-state";
+            route$path = "?dialog=spt-zip-code-dialog&dialog_nav=out-of-state";
           }
           route(ctx, route$path);
           agent$$trigger$change(ctx, zip_code$ctx);
