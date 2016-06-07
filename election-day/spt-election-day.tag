@@ -83,12 +83,6 @@
       assign(ctx, localStorage$load());
       assign__route$dialog$map(ctx);
       assign__dialog$$_agent(ctx);
-      const dialog = ctx.dialog
-          , zip_code = ctx.zip_code;
-      if (!dialog && !zip_code) {
-        log(`${logPrefix}|on$mount|zip_code`);
-        route(ctx, "/?dialog=spt-zip-code-dialog");
-      }
       dialog__assign__ctx$update__defer(tag);
     }
     function on$unmount() {
