@@ -1136,9 +1136,14 @@ em, i {
 p {
   margin: 0 0 2em 0; }
 
+@media screen and (min-width: 736px) {
+	p {
+  	width:60%;}
+}
+
 h1, h2, h3, h4, h5, h6 {
   color: #fff;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.225em;
   line-height: 1em;
   margin: 0 0 1em 0;
@@ -2119,6 +2124,11 @@ button,
 
     	text-transform: none;
     }
+    @media screen and (min-width: 736px) {
+      .wrapper.style5 h2, .wrapper.style5 h3, .wrapper.style5 h4, .wrapper.style5 h5, .wrapper.style5 h6 {
+      	margin-bottom: 5rem;} }
+
+
     .wrapper.style5 hr {
       border-color: #dfdfdf; }
     .wrapper.style5 blockquote {
