@@ -1,7 +1,7 @@
 <spt-i-voted-dialog class="dialog">
   <ctx-dialog-topbar ctx="{opts.ctx}"></ctx-dialog-topbar>
   <content>
-    <iframe src="https://docs.google.com/forms/d/1ptotgFk1gCtsxq6zDGCVqpkOh1cT65moObGB4sZciKk/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+    <iframe src="https://docs.google.com/forms/d/1ptotgFk1gCtsxq6zDGCVqpkOh1cT65moObGB4sZciKk/viewform?embedded=true" width="700" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
   </content>
   <style>
     ctx-dialog.spt-i-voted-dialog spt-i-voted-dialog {
