@@ -128,6 +128,7 @@
           log(`${logPrefix}|form$onsubmit|zip_code$location`);
           const state_abbr = zip_code$location.state_abbr;
           if (state_abbr === "CA") {
+            log(`${logPrefix}|form$onsubmit|zip_code$location|CA`);
             // message success
             assign(zip_code$ctx, {
               dialog$closing: true,
@@ -136,6 +137,7 @@
             });
             route$path = "/";
           } else {
+            log(`${logPrefix}|form$onsubmit|zip_code$location|out of state`);
             const out_of_state$url$map = ctx.out_of_state$url$map
                 , out_of_state$url = out_of_state$url$map[state_abbr] || out_of_state$url$map.__default
                 , out_of_state$text = parseUri(out_of_state$url).host;
