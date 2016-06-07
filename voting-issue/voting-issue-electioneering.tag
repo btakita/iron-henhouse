@@ -67,4 +67,14 @@
       </div>
     </section>
   </article>
+  <script type="text/babel">
+    import {assign} from "ctx-core/object/lib";
+    import {fn$tag} from "ctx-core/tag/lib";
+    import {voting_issue__tag$mount} from "voting-issue/tag";
+    import {log,debug} from "ctx-core/logger/lib";
+    const tag = fn$tag(this)
+        , logPrefix = "voting-issue/voting-issue-electioneering.tag";
+    log(logPrefix);
+    voting_issue__tag$mount(tag);
+  </script>
 </voting-issue-electioneering>
