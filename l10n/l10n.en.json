@@ -1,46 +1,46 @@
 {
-  "l10n": {
-    "call_us": "Call us!",
-    "vote_early_instructions$menu$text": "Early Voting Instructions",
-    "early_voting_issue$menu$text": "I have an early voting problem!",
-    "enter_zip_code": "Enter your zip code",
-    "get_help": "Get help!",
-    "help": "Help!",
-    "hotline$phone": "1-800-CHX-VOTE",
-    "select_polling_station": "Select your polling station",
-    "tag$election_day$title": "Suppress This",
-    "tag$election_day$subtitle": "We the People can stop voter suppression!",
-    "tag$spt_top_navigation$call_us": "Voting issue? 1-800-CHX-VOTE",
-    "tag$voting_issue$title": "What problems are you facing?",
-    "tag$voting_issue$subtitle": "Select from one of the problems below:",
-    "tag$voting_issue$call_us": "Didn't find an answer? Call our rapid response team. They'll sort you out!",
-    "video": "Video",
-    "vote_where": "Where do I vote?",
-    "vote_where$menu$text": "Where do I vote?",
-    "voting_issue$menu$text": "I have a voting problem!",
-    "voting_issue$no_ballots": {
-      "title": "No more Democratic ballots"
-    },
-    "voting_issue$long_lines": {
-      "title": "Long lines"
-    },
-    "voting_issue$no_party_preference": {
-      "title": "No party preference - unable to vote on Democratic Ballot"
-    },
-    "voting_issue$provisional_ballot": {
-      "title": "Given a provisional ballot"
-    },
-    "voting_issue$not_allowed_to_vote": {
-      "title": "Not allowed to vote"
-    },
-    "voting_issue$incorrect_party": {
-      "title": "Listed as incorrect party affiliation"
-    },
-    "voting_issue$electioneering": {
-      "title": "Electioneering / Campaigning"
-    },
-    "voting_issue$inadequate_disability_access": {
-      "title": "Inadequate disability access"
+    "l10n": {
+        "call_us": "Call us!",
+        "vote_early_instructions$menu$text": "Early Voting Instructions",
+        "early_voting_issue$menu$text": "I have an early voting problem!",
+        "enter_zip_code": "Enter your zip code",
+        "get_help": "Get help!",
+        "help": "Help!",
+        "hotline$phone": "18003458683",
+        "select_polling_station": "Select your polling station",
+        "tag$election_day$title": "Suppress This",
+        "tag$election_day$subtitle": "We the People can stop voter suppression!",
+        "tag$spt_top_navigation$call_us": "There are no voter alerts to report at this time.",
+        "tag$voting_issue$title": "What problems are you facing?",
+        "tag$voting_issue$subtitle": "Select from one of the problems below:",
+        "tag$voting_issue$call_us": "Didn't find an answer? Call our rapid response team. They'll sort you out!",
+        "video": "Video",
+        "vote_where": "Where do I vote?",
+        "vote_where$menu$text": "Where do I vote?",
+        "voting_issue$menu$text": "I have a voting problem!",
+        "voting_issue$no_ballots": {
+            "title": "No more Democratic ballots"
+        },
+        "voting_issue$long_lines": {
+            "title": "Long lines"
+        },
+        "voting_issue$no_party_preference": {
+            "title": "No party preference - unable to vote on Democratic Ballot"
+        },
+        "voting_issue$provisional_ballot": {
+            "title": "Given a provisional ballot"
+        },
+        "voting_issue$not_allowed_to_vote": {
+            "title": "Not allowed to vote"
+        },
+        "voting_issue$incorrect_party": {
+            "title": "Listed as incorrect party affiliation"
+        },
+        "voting_issue$electioneering": {
+            "title": "Electioneering / Campaigning"
+        },
+        "voting_issue$inadequate_disability_access": {
+            "title": "Inadequate disability access"
+        }
     }
-  }
 }
