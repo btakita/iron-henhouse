@@ -1,9 +1,7 @@
 <spt-election-day-banner>
   <spt-banner ctx="{opts.ctx}">
     <p>
-      <a href="tel:{ctx.spt__hotline$phone_number}" class="call-us">
-        &nbsp;{ctx.l10n.tag$spt_top_navigation$call_us}&nbsp;
-      </a>
+      &nbsp;{ctx.l10n.top_banner$text}&nbsp;
     </p>
     <a href="{ctx.route$path$url||'/'}?dialog=spt-election-day-menu-dialog" class="menu" onclick="{link$onclick}">&equiv;</a>
   </spt-banner>

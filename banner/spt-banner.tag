@@ -6,7 +6,7 @@
       position: relative;
       overflow: hidden;
       height: 2.8rem;
-      padding: 0.4rem 0 0;
+      padding: 0.6rem 0 0;
       color: #000000;
       background: #FDD102;
       border-top: 1px solid #FFFFFF;
@@ -35,8 +35,8 @@
     }
     @media (max-width: 900px) {
       spt-banner {
-        height: 3.6rem;
-        padding: 0.6rem 0 0;
+        height: 3.4rem;
+        padding: 0.8rem 0 0;
       }
     }
   </style>
