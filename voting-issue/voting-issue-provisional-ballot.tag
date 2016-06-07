@@ -72,7 +72,7 @@
               <a class="still-have-issues" href="#situation-not-resolved">The situation has not resolved.</a>
               <div id="situation-not-resolved">
                 <p>Hmm, let's have you speak with a legal professional.  Give our legal hotline a call and report the incident.</p>
-                <a class="call-hotline" href=""><img src="images/icon-hotline.svg" alt="">Call Elections Hotline</a>
+                <a class="call-hotline" href="tel:{ctx.spt__hotline$phone_number}"><img src="images/icon-hotline.svg" alt="">Call Elections Hotline</a>
               </div>
               <a class="still-have-issues" href="#unable-to-give-id">I am unable/unwilling to provide ID.</a>
               <div id="unable-to-give-id">
@@ -126,7 +126,7 @@
                 <a class="still-have-issues" href="#i-am-not-given-democratic-ballot">The situation was not resolved.</a>
                 <div id="i-am-not-given-democratic-ballot">
                   <p>Hmmm, let’s have you speak with a legal professional. Give our legal hotline a call and report the incident.</p>
-                  <a class="call-hotline" href=""><img src="images/icon-hotline.svg" alt="">Call Elections Hotline</a>
+                  <a class="call-hotline" href="tel:{ctx.spt__hotline$phone_number}"><img src="images/icon-hotline.svg" alt="">Call Elections Hotline</a>
                 </div>
               </div>
               <h2 class="issue-heading">Did you ask the poll worker if they can check the inactive list for your name? Keep this app handy and follow the advice below.</h2>
@@ -162,7 +162,7 @@
           <a class="still-have-issues" href="#no-party-preference-i-am-not-given-democratic-ballot">I am not being given the requested “Democratic Ballot” or “Crossover Democratic Ballot”.</a>
           <div id="no-party-preference-i-am-not-given-democratic-ballot">
             <p>Hmmm, let’s have you speak with a legal professional. Give our legal hotline a call and report the incident.</p>
-            <a class="call-hotline" href=""><img src="images/icon-hotline.svg" alt="">Call Elections Hotline</a>
+            <a class="call-hotline" href="tel:{ctx.spt__hotline$phone_number}"><img src="images/icon-hotline.svg" alt="">Call Elections Hotline</a>
           </div>
         </div>
     </section>

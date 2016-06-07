@@ -22,13 +22,13 @@
         <a class="still-have-issues" href="#no-more-ballots">There are no more ballots available to use.</a>
         <div id="no-more-ballots">
           <p>Oh no!  Hang tight and give our legal hotline a call so we can resolve this issue ASAP!</p>
-          <a class="call-hotline" href=""><img src="images/icon-hotline.svg" alt="">Call Elections Hotline</a>
+          <a class="call-hotline" href="tel:{ctx.spt__hotline$phone_number}"><img src="images/icon-hotline.svg" alt="">Call Elections Hotline</a>
         </div>
         <a class="still-have-issues" href="#homeless">I am homeless and am not allowed to vote because of that.</a>
         <div id="homeless">
           <p>If you are currently homeless, but are registered to vote, you should be allowed to vote today. Remember, as a voter experiencing homelessness, you can designate any place where you habitually spend time, including a street corner, as your residence.</p>
           <p>Please provide this legal information to the poll workers and assert your legal right to vote today.  If you are still unable to vote, give our legal hotline a call and report the incident.</p>
-          <a class="call-hotline" href=""><img src="images/icon-hotline.svg" alt="">Call Elections Hotline</a>
+          <a class="call-hotline" href="tel:{ctx.spt__hotline$phone_number}"><img src="images/icon-hotline.svg" alt="">Call Elections Hotline</a>
         </div>
       </div>
     </section>

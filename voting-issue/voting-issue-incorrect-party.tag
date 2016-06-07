@@ -7,7 +7,7 @@
     <section class="wrapper style5">
       <div class="inner">
         <p>If you are unable to vote because you are incorrectly listed as a party other than No Party Preference or Democrat, don’t vote on a provisional ballot! Give our legal hotline a call for assistance in resolving this issue.</p>
-        <a class="call-hotline" href=""><img src="images/icon-hotline.svg" alt="">Call Elections Hotline</a>
+        <a class="call-hotline" href="tel:{ctx.spt__hotline$phone_number}"><img src="images/icon-hotline.svg" alt="">Call Elections Hotline</a>
       </div>
     </section>
   </article>
