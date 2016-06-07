@@ -26,7 +26,7 @@
     <p>&nbsp;{ctx.l10n.voting_issue$inadequate_disability_access.title}&nbsp;</p>
   </a>
   <h2>{ctx.l10n.tag$voting_issue$call_us}</h2>
-  <a href="tel:{ctx.spt__hotline$phone_number}" class="voting-issue-type hotline">
+  <a href="tel:{ctx.spt__hotline$phone}" class="voting-issue-type hotline">
     <p>
       Call Elections Hotline<br/>
 

@@ -1,7 +1,7 @@
 <spt-election-day-banner>
   <spt-banner ctx="{opts.ctx}">
     <p>
-      <a href="tel:{ctx.spt__hotline$phone_number}" class="call-us">
+      <a href="tel:{ctx.spt__hotline$phone}" class="call-us">
         &nbsp;{ctx.l10n.tag$spt_top_navigation$call_us}&nbsp;
       </a>
     </p>
