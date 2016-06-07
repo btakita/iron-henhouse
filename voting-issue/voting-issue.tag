@@ -28,8 +28,8 @@
   <h2>{ctx.l10n.tag$voting_issue$call_us}</h2>
   <a href="tel:{ctx.spt__hotline$phone_number}" class="voting-issue-type hotline">
     <p>
-      {ctx.l10n.call_us}<br/>
-      {ctx.l10n.hotline$phone}
+      Call Elections Hotline<br/>
+
     </p>
   </a>
   <style>
