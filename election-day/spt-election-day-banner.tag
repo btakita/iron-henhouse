@@ -9,12 +9,12 @@
   </spt-banner>
   <style>
   .marquee {
-    width: 450px;
+    width: 330px;
     margin: 0 auto;
     overflow: hidden;
     white-space: pre;
     box-sizing: border-box;
-    animation: marquee 30s linear infinite;
+    -webkit-animation: marquee 30s linear infinite;
   }
 
   @keyframes marquee {
