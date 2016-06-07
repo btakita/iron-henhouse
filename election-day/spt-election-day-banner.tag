@@ -9,9 +9,18 @@
   </spt-banner>
   <style>
   .marquee {
-      -webkit-marquee: auto medium infinite scroll normal;
-    overflow-x: -webkit-marquee;
-    }
+    width: 450px;
+    margin: 0 auto;
+    overflow: hidden;
+    white-space: pre;
+    box-sizing: border-box;
+    animation: marquee 30s linear infinite;
+  }
+
+  @keyframes marquee {
+    0%   { text-indent: 27.5em }
+    100% { text-indent: -105em }
+  }
 
     spt-election-day-banner > spt-banner {
       color: #000000;
