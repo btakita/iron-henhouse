@@ -46,7 +46,6 @@ function fn$voting_issue$route$$(ctx, ...ctx$rest$$) {
           voting_issue$tile: true,
           voting_issue$route$path: voting_issue$route$path$
         });
-        route$ctx[`route$name__${voting_issue$key}`] = true;
       }
     }, []);
   return route$$;
@@ -72,5 +71,8 @@ function fn$ctx() {
     voting_issue$title: null,
     voting_issue$tile: null,
     voting_issue$route$path: null
-  }, ...arguments);
+  }, ...ctx.voting_issue$$.reduce((memo, voting_issue) => {
+      memo[`route$name__voting_issue$${voting_issue}`] = null;
+      return memo;
+    }, {}), ...arguments);
 }
