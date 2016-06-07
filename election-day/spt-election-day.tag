@@ -4,6 +4,7 @@
   <content>
     <spt-election-day-root show="{ctx.route$name__election_day_root}" ctx="{opts.ctx}"></spt-election-day-root>
     <voting-issue show="{ctx.route$name__voting_issue}" ctx="{opts.ctx}"></voting-issue>
+    <voting-issue-tile show="{ctx.voting_issue$tile}" ctx="{opts.ctx}"></voting-issue-tile>
     <navigation>
       <a href="/?dialog=voting-issue-dialog" onclick="{link$onclick}">Early Voting</a>
       <a href="/?dialog=spt-check-registration-dialog" onclick="{link$onclick}">Check Registration</a>

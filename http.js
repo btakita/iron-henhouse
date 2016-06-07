@@ -8,7 +8,6 @@ import app$use__http$post$cmd from "ctx-core/cmd/koa";
 import {app$use__home} from "splash/koa";
 import {app$use__l10n} from "l10n/koa";
 import {app$use__election_day} from "election-day/koa";
-import {app$use__pioneer} from "pioneer/koa";
 import "babel-core";
 import {env$assign} from "ctx-core/env";
 import koa from "koa";
@@ -51,7 +50,6 @@ function start(id) {
   app$use__home(ctx);
   app$use__http$post$cmd(ctx);
   app$use__election_day(ctx);
-  app$use__pioneer(ctx);
   app$use__echo(ctx);
   app.listen(env.port);
   info(`${logPrefix}|started|port`, env.port);

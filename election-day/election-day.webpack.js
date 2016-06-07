@@ -13,5 +13,7 @@ import "ctx-core/dialog/ctx-dialog.tag";
 import "ctx-core/dialog/ctx-dialog-topbar.tag";
 import "ctx-core/dialog/ctx-dialog-position-center.tag";
 import "voting-issue/voting-issue.tag";
+import "voting-issue/voting-issue-tile.tag";
+import "voting-issue/voting-issue.webpack";
 import "check-registration/spt-check-registration-dialog.tag";
 import "zip-code/spt-zip-code-dialog.tag";
