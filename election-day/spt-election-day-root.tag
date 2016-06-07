@@ -2,14 +2,14 @@
   <background-mask>&nbsp;</background-mask>
   <content>
     <logo><img src="/suppress-this/logo.png"/></logo>
-    <voting-issue-link class="splash-link">
+    <voting-problem-link class="button-link">
       <a class="red-button" href="/?dialog=spt-early-voting-dialog" onclick="{link$onclick}">I Have a Voting Problem</a>
-    </voting-issue-link>
-    <check-registration-link class="splash-link">
-      <a href="/?dialog=spt-check-registration-dialog" onclick="{link$onclick}">Check Your Voter Registration</a>
+    </voting-problem-link>
+    <check-registration-link class="button-link">
+      <a class="yellow-button" href="/?dialog=spt-check-registration-dialog" onclick="{link$onclick}">Check Your Voter Registration</a>
     </check-registration-link>
-    <npp-registration-link class="splash-link">
-      <a target="_blank" href="http://youdownwithnpp.com/?{ctx.ref$query}">Voting as No Party Preference?</a>
+    <npp-registration-link class="button-link">
+      <a class="yellow-button" target="_blank" href="http://youdownwithnpp.com/?{ctx.ref$query}">Voting as No Party Preference?</a>
     </npp-registration-link>
     <bottom>
       <spt-about-us ctx="{opts.ctx}"></spt-about-us>
@@ -46,22 +46,17 @@
     spt-election-day-root > content > logo {
       display: block;
       overflow: hidden;
-      padding: 40px 0 0;
+      padding: 40px 0 3rem;
       text-align: center;
     }
     spt-election-day-root > content > logo > img {
       width: 772px;
       height: 372px;
     }
-    spt-election-day-root > content > .splash-link {
+    spt-election-day-root > content > .button-link {
       display: block;
       overflow: hidden;
-      padding: 40px 0 0;
-      text-align: center;
-      display: block;
-      overflow: hidden;
-      margin: 20px 0 0;
-      height: 100px;
+      margin: 1.2em 0 0;
       text-align: center;
     }
     spt-election-day-root > content > bottom {
@@ -126,7 +121,7 @@
         margin: 0 5%;
         height: auto;
       }
-      spt-election-day-root > content > voting-issue-link > a {
+      spt-election-day-root > content > voting-problem-link > a {
         width: 90%;
         margin-left: 5%;
         margin-right: 5%;

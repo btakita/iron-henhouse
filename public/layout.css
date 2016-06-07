@@ -64,22 +64,39 @@ a, a:visited, a:active {
 a:hover {
   color: #AB9C53;
 }
+a.yellow-button,a.red-button {
+  display: block;
+  overflow: hidden;
+  width: 30rem;
+  position: relative;
+  left: 50%;
+  margin-left: -15rem;
+  font-size: 1.4rem;
+  padding: 1.4rem 0;
+}
+a.yellow-button:hover,a.red-button:hover {
+  opacity: 0.8;
+  text-shadow: none;
+}
 a.yellow-button {
   background: #FDD102;
   color: #000000;
 }
-a.yellow-button:hover {
-  opacity: 0.8;
-  text-shadow: none;
-}
 a.red-button {
-  font-size: 30px;
-  padding: 20px 80px;
   background: #CB1F26;
   color: #FFFFFF;
 }
-a.red-button:hover {
-  background: #CB1F26;
+@media (max-width: 900px) {
+  a.yellow-button,a.red-button {
+    font-size: 1.1rem;
+    padding: 1.2rem 0;
+  }
+}
+a.yellow-button-splash {
+  background: #FDD102;
+  color: #000000;
+}
+a.yellow-button-splash:hover {
   opacity: 0.8;
   text-shadow: none;
 }
