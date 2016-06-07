@@ -1,5 +1,4 @@
 <voting-issue-tile>
-  <h1>{ctx.l10n[ctx.voting_issue$key].title}</h1>
   <content>
     <voting-issue-no-ballots show="{ctx.route$name__voting_issue$no_ballots}" ctx="{opts.ctx}"></voting-issue-no-ballots>
     <voting-issue-long-lines show="{ctx.route$name__voting_issue$long_lines}" ctx="{opts.ctx}"></voting-issue-long-lines>
@@ -14,12 +13,8 @@
     voting-issue-tile {
       display: block;
       overflow: hidden;
-      text-align: center;
     }
     voting-issue-tile > * {
-    }
-    voting-issue-tile > h1 {
-      color: #fff;
     }
     voting-issue-tile > content {
       display: block;
@@ -28,6 +23,95 @@
       display: block;
     }
     voting-issue-tile > content > * > * {
+      display: block;
+    }
+    voting-issue-tile #main {
+      margin-top: 1.5rem;
+    }
+    voting-issue-tile #main > header {
+      padding-left: 3em;
+      padding-right: 3em;
+      text-align: center;
+    }
+    voting-issue-tile #main > header h2 {
+      font-size: 1.25em;
+      margin: 0 0 1em 0; }
+    voting-issue-tile #main > header h2 {
+      font-size: 3em;
+      letter-spacing: 0.08px;
+      line-height: 60px;
+      margin: 0 0 0.5em 0;
+      color: rgba(255,255,255,.5);
+      -ms-transform: rotate(-3.5deg);
+      -webkit-transform: rotate(-3.5deg);
+      transform: rotate(-3.5deg);
+    }
+    voting-issue-tile h2 {
+      font-size: 1.625rem;
+      line-height: 2.4375rem;
+      letter-spacing: 1.18px;
+    }
+    voting-issue-tile p {
+      width: 60%;
+      margin: 0 0 2em 0;
+    }
+    voting-issue-tile .wrapper {
+      padding: 4em 3em 2em 3em;
+    }
+    voting-issue-tile .wrapper.style5 h2, voting-issue-tile .wrapper.style5 h3, voting-issue-tile .wrapper.style5 h4, voting-issue-tile .wrapper.style5 h5, voting-issue-tile .wrapper.style5 h6 {
+      margin-bottom: 5rem;
+      -ms-transform: rotate(-3.5deg);
+      -webkit-transform: rotate(-3.5deg);
+      transform: rotate(-3.5deg);
+      text-transform: none;
+    }
+    voting-issue-tile .great-i-was-able-to-vote, .get-email {
+      display: block;
+      max-width: 345px;
+      border-radius: 2px;
+      background-color: #B8E986;
+      padding: .5rem;
+      margin: 1.25rem 0;
+      color: #000;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      line-height: 2.25rem;
+   }
+    voting-issue-tile .success-text {
+      color: #B8E986;
+    }
+    voting-issue-tile .still-have-issues {
+      display: block;
+      max-width: 345px;
+      border-radius: 2px;
+      background-color: #FED203;
+      padding: .5rem;
+      margin: 1.25rem 0;
+      color: #000;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      line-height: 2.25rem;
+    }
+    voting-issue-tile .call-hotline {
+      display: block;
+      max-width: 345px;
+      border-radius: 2px;
+      background-color: #CC2027;
+      padding: .5rem;
+      margin: 1.25rem 0;
+      color: #000;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      line-height: 2.25rem;
+    }
+    voting-issue-tile .call-hotline > img {
+      margin: 0 auto .5rem;
       display: block;
     }
   </style>

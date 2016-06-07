@@ -6,12 +6,55 @@
     <vote-where show="{ctx.route$name__vote_where}" ctx="{opts.ctx}"></vote-where>
     <voting-issue show="{ctx.route$name__voting_issue}" ctx="{opts.ctx}"></voting-issue>
     <voting-issue-tile show="{ctx.voting_issue$tile}" ctx="{opts.ctx}"></voting-issue-tile>
+    <footer id="footer">
+      <ul class="icons">
+        <li><a href="https://twitter.com/suppressthisCA" class="icon social-media-link fa-twitter"><span class="label">Twitter</span></a></li>
+        <li><a href="https://www.facebook.com/SuppressThisCA/" class="icon social-media-link fa-facebook"><span class="label">Facebook</span></a></li>
+      </ul>
+    </footer>
   </content>
   <spt-election-day-dialog ctx="{opts.ctx}"></spt-election-day-dialog>
   <style>
     spt-election-day {
       display: block;
       font-family: 'Oswald', Helvetica-Neue, Helvetica, Arial, san-serif;
+    }
+    spt-election-day > content > footer {
+      display: block;
+    }
+    spt-election-day > content > footer > .icons {
+      font-size: 1.25em;
+    }
+    spt-election-day > content > footer > ul.icons {
+      cursor: default;
+      list-style: none;
+      padding-left: 0;
+    }
+    spt-election-day > content > footer > ul.icons {
+      display: inline-block;
+      padding: 0 1em 0 0;
+    }
+    spt-election-day .icon:before {
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      font-family: FontAwesome;
+      font-style: normal;
+      font-weight: normal;
+      text-transform: none !important;
+    }
+    spt-election-day .social-media-link {
+      display: none;
+      heights: 100px;
+      width: 100px;
+    }
+    spt-election-day .fa-twitter {
+      background-position: -20px -800px;
+    }
+    spt-election-day .fa-facebook-f, spt-election-day .fa-facebook {
+      background-position: -20px 0;
+    }
+    spt-election-day .fa-facebook-f:before, spt-election-day .fa-facebook:before {
+      content: "\f09a";
     }
   </style>
   <script type="text/babel">
