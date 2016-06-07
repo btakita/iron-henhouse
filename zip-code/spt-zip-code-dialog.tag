@@ -4,7 +4,10 @@
   <content>
     <zip-code-form show="{!ctx.route$query$map.dialog_nav}">
       <form action="#" onsubmit="{co$form$onsubmit}">
-        <label for="zip_code">Your registered zip code</label>
+
+        <label for="zip_code">Please enter your registered zip code.<p>
+        Our legal response team is collecting information today to help us analyze California’s Primary Election. Any information provided will be used to help identify trending issues and activities at the polls today. Your information will not be used for any other purposes.
+</label>
         <input type="text" id="zip_code" maxlength="5" value="{ctx.zip_code}"/>
         <button>Save</button>
       </form>
