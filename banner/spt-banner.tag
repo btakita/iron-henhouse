@@ -5,9 +5,9 @@
       display: block;
       position: relative;
       overflow: hidden;
-      height: 2.8rem;
+      height: 3.3rem;
       padding: 0.6rem 0 0;
-      color: #000000;
+      color: #FFFFFF;
       background: #FDD102;
       border-top: 1px solid #FFFFFF;
       border-bottom: 1px solid #FFFFFF;
@@ -15,7 +15,7 @@
       text-align: center;
     }
     spt-banner a, spt-banner a:visited, spt-banner a:hover, spt-banner a:active {
-      color: #000000;
+      color: #FFFFFF;
     }
     spt-banner > p {
       display: block;
