@@ -1,6 +1,6 @@
 <spt-election-day-root>
   <background-mask>&nbsp;</background-mask>
-  <content id = "landing">
+  <content id="landing">
     <logo><img src="/suppress-this/logo.png"/></logo>
     <voting-problem-link class="button-link">
       <a class="red-button" href="voting-issue" onclick="{link$onclick}">I Have a Voting Problem</a>
