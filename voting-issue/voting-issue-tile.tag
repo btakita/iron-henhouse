@@ -114,6 +114,24 @@
       margin: 0 auto .5rem;
       display: block;
     }
+    voting-issue-tile .get-email-no {
+      display: block;
+      max-width: 345px;
+      border-radius: 2px;
+      border: 1px solid #fff;
+      padding: .5rem;
+      margin: 1.25rem 0;
+      color: #fff;
+      text-align: center;
+
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      line-height: 2.25rem;
+    }
+    voting-issue-tile .hide {
+      display: none;
+    }
   </style>
   <script type="text/babel">
     import {assign} from "ctx-core/object/lib";

@@ -40,7 +40,7 @@
     import {fn$tag,link$onclick} from "ctx-core/tag/lib";
     import {l10n__tag$mount} from "l10n/tag";
     import {log,debug} from "ctx-core/logger/lib";
-    const tag = fn$tag(this, {link$onclick: link$onclick})
+    const tag = fn$tag(this)
         , logPrefix = "splash/spt-early-voting-dialog.tag";
     tag.on("mount", on$mount);
     tag.on("unmount", on$unmount);
