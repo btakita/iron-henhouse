@@ -3,6 +3,7 @@
   <content>
     <a href="vote-where" onclick="{a$onclick}">&nbsp;{ctx.l10n.vote_where$menu$text}&nbsp;</a>
     <a href="voting-issue" onclick="{a$onclick}">&nbsp;{ctx.l10n.voting_issue$menu$text}&nbsp;</a>
+    <a href="election-day" onclick="{a$onclick}">&nbsp;Home&nbsp;</a>
   </content>
   <style>
     ctx-dialog.spt-election-day-menu-dialog > content {
