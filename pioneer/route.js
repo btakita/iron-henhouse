@@ -1,7 +1,6 @@
 import {assign,clone} from "ctx-core/object/lib";
-import {fn$route as route$lib__fn$route,assign__route$$} from "ctx-core/route/lib";
+import {route,fn$route as route$lib__fn$route,assign__route$$} from "ctx-core/route/lib";
 import {assign__voting_issue$$} from "voting-issue/lib";
-import riot from "riot";
 import {log,debug} from "ctx-core/logger/lib";
 const logPrefix = "pioneer/route";
 export function assign__pioneer$route$$() {
@@ -54,24 +53,24 @@ function fn$voting_issue$route$$(ctx, ...ctx$rest$$) {
       );
       return memo;
       function root__route(route$ctx) {
-        riot.route(your_rights$path);
+        route(ctx, your_rights$path);
       }
       function your_rights__route(route$ctx) {
         log(`${logPrefix}|fn$voting_issue$route$$|your_rights`);
         route$ctx.route$name__voting_issue$your_rights = true;
-        route(...arguments);
+        route2(...arguments);
       }
       function video__route(route$ctx) {
         log(`${logPrefix}|fn$voting_issue$route$$|video`);
         route$ctx.route$name__voting_issue$video = true;
-        route(...arguments);
+        route2(...arguments);
       }
       function help__route(route$ctx) {
         log(`${logPrefix}|fn$voting_issue$route$$|help`);
         route$ctx.route$name__voting_issue$help = true;
-        route(...arguments);
+        route2(...arguments);
       }
-      function route(route$ctx) {
+      function route2(route$ctx) {
         assign(route$ctx, {
           voting_issue$key: voting_issue$key,
           voting_issue$tile: true,

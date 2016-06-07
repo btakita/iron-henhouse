@@ -1,7 +1,6 @@
 import {assign__dialog$$_agent,assign__dialog_agent} from "ctx-core/dialog/agent";
 import {assign__route$dialog$map} from "dialog/lib";
-import {assign__route$fragment_agent} from "ctx-core/route/lib";
-import riot from "riot";
+import {assign__route$fragment_agent,route} from "ctx-core/route/lib";
 import {log,debug} from "ctx-core/logger/lib";
 const logPrefix = "dialog/tag";
 export function dialog__tag$mount(tag) {
@@ -27,17 +26,17 @@ export function dialog__tag$mount(tag) {
   }
   function route$fragment_agent$refresh() {
     log(`${logPrefix}|route$fragment_agent$refresh`);
-    refresh_dialog();
+    reload_dialog();
     tag.assign__ctx$update();
   }
   function dialog_agent$on$change() {
     log(`${logPrefix}|dialog_agent$on$change`);
     if (!ctx.dialog) {
-      riot.route("");
+      route(ctx, "");
     }
   }
-  function refresh_dialog() {
-    log(`${logPrefix}|refresh_dialog`);
+  function reload_dialog() {
+    log(`${logPrefix}|reload_dialog`);
     const route$query$map = ctx.route$query$map
         , route$dialog = route$query$map && route$query$map.dialog
         , dialog = ctx.route$dialog$map[route$dialog]
