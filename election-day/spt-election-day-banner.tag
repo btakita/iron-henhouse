@@ -1,6 +1,6 @@
 <spt-election-day-banner>
   <spt-banner ctx="{opts.ctx}">
-    <p>
+    <p class="marquee">
       <a href="/" onclick="{link$onclick}">
         &nbsp;{ctx.l10n.top_banner$text}&nbsp;
       </a>
@@ -8,6 +8,11 @@
     <a href="{ctx.route$path$url||'/'}?dialog=spt-election-day-menu-dialog" class="menu" onclick="{link$onclick}">&equiv;</a>
   </spt-banner>
   <style>
+  .marquee {
+      -webkit-marquee: auto medium infinite scroll normal;
+    overflow-x: -webkit-marquee;
+    }
+
     spt-election-day-banner > spt-banner {
       color: #000000;
     }
