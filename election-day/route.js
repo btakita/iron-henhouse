@@ -31,6 +31,10 @@ function fn$voting_issue$route$$(ctx, ...ctx$rest$$) {
         fn$route(ctx, {
           path: voting_issue$path,
           route$name: voting_issue$key,
+          fn: root__route}, ctx$rest),
+        fn$route(ctx, {
+          path: `${voting_issue$path}\\?*`,
+          route$name: voting_issue$key,
           fn: root__route}, ctx$rest)
       );
       return memo;
