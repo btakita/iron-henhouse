@@ -4,26 +4,26 @@
   <a href="voting-issue/no-ballots" class="voting-issue-type no-ballots" onclick="{link$onclick}">
     <p>&nbsp;{ctx.l10n.voting_issue$no_ballots.title}&nbsp;</p>
   </a>
-  <a href="voting-issue/wrong-ballots" class="voting-issue-type wrong-ballots" onclick="{link$onclick}">
-    <p>&nbsp;{ctx.l10n.voting_issue$wrong_ballots.title}&nbsp;</p>
+  <a href="voting-issue/long-lines" class="voting-issue-type long-lines" onclick="{link$onclick}">
+    <p>&nbsp;{ctx.l10n.voting_issue$long_lines.title}&nbsp;</p>
   </a>
-  <a href="voting-issue/no-evidence-of-registration" class="voting-issue-type no-evidence-of-registration" onclick="{link$onclick}">
-    <p>&nbsp;{ctx.l10n.voting_issue$no_evidence_of_registration.title}&nbsp;</p>
+  <a href="voting-issue/no-party-preference" class="voting-issue-type no-party-preference" onclick="{link$onclick}">
+    <p>&nbsp;{ctx.l10n.voting_issue$no_party_preference.title}&nbsp;</p>
   </a>
-  <a href="voting-issue/wrong-party-registration" class="voting-issue-type wrong-party-registration" onclick="{link$onclick}">
-    <p>&nbsp;{ctx.l10n.voting_issue$wrong_party_registration.title}&nbsp;</p>
+  <a href="voting-issue/provisional-ballot" class="voting-issue-type provisional-ballot" onclick="{link$onclick}">
+    <p>&nbsp;{ctx.l10n.voting_issue$provisional_ballot.title}&nbsp;</p>
   </a>
-  <a href="voting-issue/campaigning-within-100-feet" class="voting-issue-type campaigning-within-100-feet" onclick="{link$onclick}">
-    <p>&nbsp;{ctx.l10n.voting_issue$campaigning_within_100_feet.title}&nbsp;</p>
+  <a href="voting-issue/not-allowed-to-vote" class="voting-issue-type not-allowed-to-vote" onclick="{link$onclick}">
+    <p>&nbsp;{ctx.l10n.voting_issue$not_allowed_to_vote.title}&nbsp;</p>
   </a>
-  <a href="voting-issue/polling-station-closed" class="voting-issue-type polling-station-closed" onclick="{link$onclick}">
-    <p>&nbsp;{ctx.l10n.voting_issue$polling_station_closed.title}&nbsp;</p>
+  <a href="voting-issue/incorrect-party" class="voting-issue-type incorrect-party" onclick="{link$onclick}">
+    <p>&nbsp;{ctx.l10n.voting_issue$incorrect_party.title}&nbsp;</p>
   </a>
-  <a href="voting-issue/sending-voters-away" class="voting-issue-type sending-voters-away" onclick="{link$onclick}">
-    <p>&nbsp;{ctx.l10n.voting_issue$sending_voters_away.title}&nbsp;</p>
+  <a href="voting-issue/electioneering" class="voting-issue-type electioneering" onclick="{link$onclick}">
+    <p>&nbsp;{ctx.l10n.voting_issue$electioneering.title}&nbsp;</p>
   </a>
-  <a href="voting-issue/wrong-location" class="voting-issue-type wrong-location" onclick="{link$onclick}">
-    <p>&nbsp;{ctx.l10n.voting_issue$wrong_location.title}&nbsp;</p>
+  <a href="voting-issue/inadequate-disability-access" class="voting-issue-type inadequate-disability-access" onclick="{link$onclick}">
+    <p>&nbsp;{ctx.l10n.voting_issue$inadequate_disability_access.title}&nbsp;</p>
   </a>
   <h2>{ctx.l10n.tag$voting_issue$call_us}</h2>
   <a href="tel:{ctx.spt__hotline$phone_number}" class="call-us">
@@ -63,7 +63,11 @@
       text-align: center;
     }
     voting-issue > .voting-issue-type {
+      background: no-repeat center 1.2rem;
       color: #EA504E;
+    }
+    voting-issue > .voting-issue-type.no-ballots {
+      background-image: url('/images/icon-no-ballots.svg');
     }
     voting-issue > .call-us {
       color: #FFFFFF;

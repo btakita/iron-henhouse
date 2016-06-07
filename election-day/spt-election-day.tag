@@ -1,15 +1,20 @@
 <spt-election-day show="{show}" class="page">
   <ctx ctx="{opts.ctx}"></ctx>
   <spt-election-day-banner ctx="{opts.ctx}"></spt-election-day-banner>
-  <navigation>
-    <a href="/?dialog=early_voting" onclick="{link$onclick}">Early Voting</a>
-    <a href="/?dialog=early_voting_issue" onclick="{link$onclick}">Early Issue Voting</a>
-    <a href="/?dialog=check_registration" onclick="{link$onclick}">Check Registration</a>
-    <a href="/?dialog=zip_code" onclick="{link$onclick}">
-      Zip Code
-      <span show="{ctx.zip_code}">({ctx.zip_code})</span>
-    </a>
-  </navigation>
+  <content>
+    <spt-election-day-root show="{ctx.route$name__election_day_root}" ctx="{opts.ctx}"></spt-election-day-root>
+    <vote-where show="{ctx.route$name__vote_where}" ctx="{opts.ctx}"></vote-where>
+    <voting-issue show="{ctx.route$name__voting_issue}" ctx="{opts.ctx}"></voting-issue>
+    <voting-issue-tile show="{ctx.voting_issue$tile}" ctx="{opts.ctx}"></voting-issue-tile>
+    <navigation>
+      <a href="/?dialog=voting-issue-dialog" onclick="{link$onclick}">Early Voting</a>
+      <a href="/?dialog=spt-check-registration-dialog" onclick="{link$onclick}">Check Registration</a>
+      <a href="/?dialog=spt-zip-code-dialog" onclick="{link$onclick}">
+        Zip Code
+        <span show="{ctx.zip_code}">({ctx.zip_code})</span>
+      </a>
+    </navigation>
+  </content>
   <spt-election-day-dialog ctx="{opts.ctx}"></spt-election-day-dialog>
   <style>
     spt-election-day {
@@ -39,7 +44,7 @@
     import {zip_code__tag$mount} from "zip-code/tag";
     import {log,debug} from "ctx-core/logger/lib";
     const tag = fn$tag(this)
-        , logPrefix = "pioneer/spt-pioneer.tag";
+        , logPrefix = "election-day/spt-election-day.tag";
     log(logPrefix);
     tag.on("mount", on$mount);
     tag.on("unmount", on$unmount);

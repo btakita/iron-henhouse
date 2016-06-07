@@ -1,10 +1,10 @@
 import "./voting-issue.tag";
 import "./voting-issue-tile.tag";
+import "./voting-issue-electioneering.tag";
+import "./voting-issue-inadequate-disability-access.tag";
+import "./voting-issue-incorrect-party.tag";
+import "./voting-issue-long-lines.tag";
 import "./voting-issue-no-ballots.tag";
-import "./voting-issue-wrong-ballots.tag";
-import "./voting-issue-no-evidence-of-registration.tag";
-import "./voting-issue-wrong-party-registration.tag";
-import "./voting-issue-campaigning-within-100-feet.tag";
-import "./voting-issue-polling-station-closed.tag";
-import "./voting-issue-sending-voters-away.tag";
-import "./voting-issue-wrong-location.tag";
+import "./voting-issue-no-party-preference.tag";
+import "./voting-issue-not-allowed-to-vote.tag";
+import "./voting-issue-provisional-ballot.tag";

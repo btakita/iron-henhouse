@@ -19,28 +19,28 @@
     "vote_where$menu$text": "Where do I vote?",
     "voting_issue$menu$text": "I have a voting problem!",
     "voting_issue$no_ballots": {
-      "title": "No ballots available"
+      "title": "No more Democratic ballots"
     },
-    "voting_issue$wrong_ballots": {
-      "title": "Wrong ballots available"
+    "voting_issue$long_lines": {
+      "title": "Long lines"
     },
-    "voting_issue$no_evidence_of_registration": {
-      "title": "No evidence of registration"
+    "voting_issue$no_party_preference": {
+      "title": "No party preference - unable to vote on Democratic Ballot"
     },
-    "voting_issue$wrong_party_registration": {
-      "title": "Wrong party registration"
+    "voting_issue$provisional_ballot": {
+      "title": "Given a provisional ballot"
     },
-    "voting_issue$campaigning_within_100_feet": {
-      "title": "Campaigning within 100 feet"
+    "voting_issue$not_allowed_to_vote": {
+      "title": "Not allowed to vote"
     },
-    "voting_issue$polling_station_closed": {
-      "title": "Polling place closed"
+    "voting_issue$incorrect_party": {
+      "title": "Listed as incorrect party affiliation"
     },
-    "voting_issue$sending_voters_away": {
-      "title": "Sending voters away"
+    "voting_issue$electioneering": {
+      "title": "Electioneering / Campaigning"
     },
-    "voting_issue$wrong_location": {
-      "title": "Wrong location"
+    "voting_issue$inadequate_disability_access": {
+      "title": "Inadequate disability access"
     },
     "your_rights": "Your Rights"
  }

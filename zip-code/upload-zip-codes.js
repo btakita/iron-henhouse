@@ -11,7 +11,7 @@ co(run).catch(e => console.error(e));
 function *run() {
   log(`${logPrefix}|run`);
   let ctx = {};
-  const response = yield fetch("https://gist.githubusercontent.https://gist.githubusercontent.com/btakita/ab8b8cdd67ba0f878f239720099763e3/raw/2365d1d42d0146a5873d4b8d002bd679e516ad84/us-locations.json.json")
+  const response = yield fetch("https://raw.githubusercontent.com/sjlu/cities/master/locations.json")
       , locations = yield response.json();
   let s3 = new AWS.S3();
   const locations$ctx = locations
@@ -59,8 +59,7 @@ function *run() {
         Key: s3$key,
         Body: location$json,
         ContentType: "application/json",
-        CacheControl: "public, max-age=86400",
-        "Access-Control-Allow-Origin": "*"
+        CacheControl: "public, max-age=86400"
       }, err => {
         if (err) {
           warn(`Error: ${err}`);

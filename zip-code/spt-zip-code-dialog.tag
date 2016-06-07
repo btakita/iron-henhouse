@@ -2,17 +2,30 @@
   <ctx-dialog-topbar ctx="{opts.ctx}"></ctx-dialog-topbar>
   <form-error-banner show="{ctx.tag$spt_zip_code_dialog__form$error}">{ctx.tag$spt_zip_code_dialog__form$error}</form-error-banner>
   <content>
-    <form action="#" onsubmit="{co$form$onsubmit}">
-      <label for="zip_code">Your registered zip code</label>
-      <input type="text" id="zip_code" maxlength="5" value="{ctx.zip_code}"/>
-    </form>
-    <reset show="{ctx.zip_code}" onclick="{reset$onclick}">Reset</reset>
+    <zip-code-form show="{!ctx.route$query$map.dialog_nav}">
+      <form action="#" onsubmit="{co$form$onsubmit}">
+        <label for="zip_code">Your registered zip code</label>
+        <input type="text" id="zip_code" maxlength="5" value="{ctx.zip_code}"/>
+        <button>Save</button>
+      </form>
+      <reset show="{ctx.zip_code}" onclick="{reset$onclick}">Reset</reset>
+    </zip-code-form>
+    <out-of-state show="{!ctx.route$in_process && ctx.route$query$map.dialog_nav == 'out-of-state'}">
+      <p>
+        This app is intended for people in the State of California for the June 7 Presidential Primary.
+        If you are looking for information about voting in your state,
+        please visit <a target="_blank" href="{ctx.out_of_state$url}">{ctx.out_of_state$text}</a>.
+      </p>
+      <p>
+        Click &quot;<a href="/" onclick="{link$onclick}">Skip</a>&quot; to proceed.
+      </p>
+    </out-of-state>
   </content>
   <style>
     ctx-dialog.spt-zip-code-dialog > content {
-      width: 300px;
-      margin-left: -150px;
-      height: 400px;
+      width: 30rem;
+      margin-left: -15rem;
+      height: 40rem;
     }
     ctx-dialog.spt-zip-code-dialog spt-zip-code-dialog {
       display: block;
@@ -27,15 +40,16 @@
       background-color: #aa3333;
       padding: 1em 0;
     }
-    spt-zip-code-dialog > content > form > label {
+    spt-zip-code-dialog > content > zip-code-form > form > label {
       display: block;
       padding: 0 0 1em;
     }
-    spt-zip-code-dialog > content > form > input {
+    spt-zip-code-dialog > content > zip-code-form > form > input, spt-zip-code-dialog > content > zip-code-form > form > button {
+      display: inline-block;
       height: 2em;
       width: 4em;
     }
-    spt-zip-code-dialog > content > reset {
+    spt-zip-code-dialog > content > zip-code-form > reset {
       display: block;
       overflow: hidden;
       cursor: pointer;
@@ -57,8 +71,11 @@
     import {agent$$trigger$change} from "ctx-core/agent/lib";
     import {dom$} from "ctx-core/dom/lib";
     import {l10n__tag$mount} from "l10n/tag";
+    import {route} from "ctx-core/route/lib";
     import co from "co";
+    import parseUri from "parseUri";
     import {assign__http$headers,contentType$json} from "ctx-core/http/lib";
+    import {assign__out_of_state$url$map} from "state/lib";
     import {xhr} from "ctx-core/xhr/lib";
     import {error$throw} from "ctx-core/error/lib";
     import {log,debug} from "ctx-core/logger/lib";
@@ -68,9 +85,14 @@
         , logPrefix = "zip-code/spt-zip-code-dialog.tag";
     let ctx = tag.ctx;
     log(logPrefix);
+    tag.on("mount", on$mount);
     tag.on("show", on$show);
     tag.on("hide", on$hide);
     l10n__tag$mount(tag);
+    function on$mount() {
+      log(`${logPrefix}|on$mount`);
+      assign__out_of_state$url$map(ctx);
+    }
     function on$show() {
       log(`${logPrefix}|on$show`);
       reset();
@@ -94,10 +116,35 @@
           , zip_code = dom$zip_code && dom$zip_code.value;
       if (zip_code && /[0-9]{5}/.test(zip_code)) {
         const zip_code$location = yield fn$zip_code$location({zip_code: zip_code});
+        let zip_code$ctx = {
+              zip_code: zip_code,
+              zip_code$location: zip_code$location
+            }
+          , route$path;
         if (zip_code$location) {
           log(`${logPrefix}|form$onsubmit|zip_code$location`);
-          agent$$trigger$change(ctx, {zip_code: zip_code, zip_code$location: zip_code$location});
-          ctx.dialog_agent.remove();
+          const state_abbr = zip_code$location.state_abbr;
+          if (state_abbr === "CA") {
+            // message success
+            assign(zip_code$ctx, {
+              dialog$closing: true,
+              out_of_state$url: null,
+              out_of_state$text: null
+            });
+            route$path = "/";
+          } else {
+            const out_of_state$url$map = ctx.out_of_state$url$map
+                , out_of_state$url = out_of_state$url$map[state_abbr] || out_of_state$url$map.__default
+                , out_of_state$text = parseUri(out_of_state$url).host;
+            assign(zip_code$ctx, {
+              dialog$closing: true,
+              out_of_state$url: out_of_state$url,
+              out_of_state$text: out_of_state$text
+            });
+            route$path = "?dialog=spt-zip-code-dialog&dialog_nav=out-of-state";
+          }
+          route(ctx, route$path);
+          agent$$trigger$change(ctx, zip_code$ctx);
         } else {
           log(`${logPrefix}|form$onsubmit|else`);
           tag.assign__ctx$update({tag$spt_zip_code_dialog__form$error: "This zip code does not match any US zip codes"});

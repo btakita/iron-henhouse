@@ -6,23 +6,26 @@ export function assign__route$dialog$map(ctx) {
   if (ctx.route$dialog$map) return ctx;
   assign(ctx, {
     route$dialog$map: {
-      addtocalendar: {
+      "spt-addtocalendar-dialog": {
         tag$name: "spt-addtocalendar-dialog",
         "title": "Add to Calendar"
       },
-      check_registration: {
+      "spt-check-registration-dialog": {
         tag$name: "spt-check-registration-dialog",
         title: "Check Your Voter Registration"
       },
-      early_voting: {
+      "spt-election-day-menu-dialog": {
+        tag$name: "spt-election-day-menu-dialog"
+      },
+      "spt-early-voting-dialog": {
         tag$name: "spt-early-voting-dialog",
         title: "Early Voting"
       },
-      early_voting_issue: {
+      "spt-early-voting-issue-dialog": {
         tag$name: "spt-early-voting-issue-dialog",
         title: "Get Help!"
       },
-      zip_code: {
+      "spt-zip-code-dialog": {
         tag$name: "spt-zip-code-dialog",
         title: "Where do you vote?"
       }
