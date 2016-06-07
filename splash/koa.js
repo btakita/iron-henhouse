@@ -2,7 +2,7 @@ import "./env";
 import {assign} from "ctx-core/object/lib";
 import {error$throw} from "ctx-core/error/lib";
 import {http$cache__5min} from "ctx-core/koa/lib";
-import {home$html} from "splash/html";
+import {election_day$html} from "election-day/html";
 import koa$route from "koa-route";
 import {log,info,error,debug} from "ctx-core/logger/lib"
 const logPrefix = "splash/koa";
@@ -18,7 +18,7 @@ function *http$get$home() {
   let ctx = {};
   try {
     http$cache__5min(this);
-    this.body = home$html(ctx);
+    this.body = election_day$html(ctx);
   } catch (error$ctx) {
     error$throw(ctx, error$ctx);
   }
