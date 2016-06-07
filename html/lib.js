@@ -1,22 +1,32 @@
-import {assign} from "ctx-core/object/lib";
-import env from "site/env";
-import {log,debug} from "ctx-core/logger/lib";
-const logPrefix = "html/lib";
-export function fn$riot$mount$ctx(ctx, ...riot$mount$ctx$$) {
-  log(`${logPrefix}|fn$riot$mount$ctx`);
-  let riot$mount$ctx = assign({}, {
-    ctx: {
-      authentication: ctx.authentication,
-      spt__hotline$phone_number: "18002498683",
-      ref$query: "ref=suppressthis.org",
-      zip_code$url$base: env.zip_code$url$base
-    }
-  }, ...riot$mount$ctx$$);
-  return riot$mount$ctx;
+import {
+    assign
 }
-export function google$analytics$html() {
-  log(`${logPrefix}|google$analytics$html`);
-  return `
+from "ctx-core/object/lib";
+import env from "site/env";
+import {
+    log, debug
+}
+from "ctx-core/logger/lib";
+const logPrefix = "html/lib";
+export
+
+function fn$riot$mount$ctx(ctx, ...riot$mount$ctx$$) {
+    log(`${logPrefix}|fn$riot$mount$ctx`);
+    let riot$mount$ctx = assign({}, {
+        ctx: {
+            authentication: ctx.authentication,
+            spt__hotline$phone_number: "18002498683",
+            ref$query: "ref=suppressthis.org",
+            zip_code$url$base: env.zip_code$url$base
+        }
+    }, ...riot$mount$ctx$$);
+    return riot$mount$ctx;
+}
+export
+
+function google$analytics$html() {
+    log(`${logPrefix}|google$analytics$html`);
+    return `
 <!-- Google Tag Manager -->
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TGLKRF"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
