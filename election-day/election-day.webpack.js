@@ -19,3 +19,4 @@ import "voting-issue/voting-issue.webpack";
 import "vote-where/vote-where.tag";
 import "check-registration/spt-check-registration-dialog.tag";
 import "zip-code/spt-zip-code-dialog.tag";
+import "i-voted/spt-i-voted-dialog.tag";
