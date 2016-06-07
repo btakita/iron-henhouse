@@ -12,7 +12,7 @@
         <a class="still-have-issues" onclick="{show$target}" href="#not-assigned-precinct">I’m not at my assigned precinct.</a>
         <div class="hide" id="not-assigned-precinct">
           <p>According to (EC § 14310(c)(3).), this is an acceptable reason to cast a provisional ballot. If you do not have enough time to make it to your correct precinct location, please go ahead and cast a provisional ballot today but make sure to track your ballot and ensure that your vote is counted! <a href="http://www.sos.ca.gov/elections/ballot-status">Here’s a link</a> to track your ballot and make sure it’s counted.</p>
-          <h2 class="issue-heading">Would you like to have the link emailed to you to check the status after today?</h2>
+          <!--<h2 class="issue-heading">Would you like to have the link emailed to you to check the status after today?</h2>
           <a class="get-email" onclick="{show$target}" href="#not-assigned-precinct-send-email-yes">Yes</a>
           <form class="hide" id="not-assigned-precinct-send-email-yes" action="">
             <label for=""><input type="text">Enter Your Email</label>
@@ -21,7 +21,7 @@
           <a class="get-email-no" onclick="{show$target}" href="#not-assigned-precinct-send-email-no">No</a>
           <div class="hide" id="not-assigned-precinct-send-email-no">
             <p>No problem! We hope this helped. Any more questions can be sent directly to <a href="mailto:cavoterprotection@berniesanders.com">cavoterprotection@berniesanders.com</a>.</p>
-          </div>
+          </div>-->
         </div>
 
 
@@ -29,7 +29,7 @@
         <div class="hide" id="vote-by-mail">
           <p>According to (EC § 3016.), this is an acceptable reason to cast a provisional ballot. But if you are able to retrieve your Vote-By-Mail ballot and return to the polls by 8pm, you can surrender your Vote-By-Mail ballot and will be given a Democratic Ballot. In that case, your vote will be counted today. If that isn’t possible, please go ahead and cast a provisional ballot but make sure to track your ballot and ensure that your vote is counted!</p>
           <p>Click this <a href="http://www.sos.ca.gov/elections/ballot-status">link</a> to track your ballot and make sure it’s counted.</p>
-          <h2 class="issue-heading">Would you like to have the link emailed to you to check the status after today?</h2>
+         <!--<h2 class="issue-heading">Would you like to have the link emailed to you to check the status after today?</h2>
           <a class="get-email" onclick="{show$target}" href="#vote-by-mail-send-email-yes">Yes</a>
           <form class="hide" id="vote-by-mail-send-email-yes" action="">
             <label for=""><input type="text">Enter Your Email</label>
@@ -38,7 +38,7 @@
           <a class="get-email-no" onclick="{show$target}" href="#vote-by-mail-send-email-no">No</a>
           <div class="hide" id="vote-by-mail-send-email-no">
             <p>No problem! We hope this helped. Any more questions can be sent directly to <a href="mailto:cavoterprotection@berniesanders.com">cavoterprotection@berniesanders.com</a>.</p>
-          </div>
+          </div>-->
         </div>
 
 
@@ -46,7 +46,7 @@
         <div class="hide" id="another-party-preference">
           <p>According to (EC § 3016.), this is an acceptable reason to cast a provisional ballot. Please cast a provisional ballot today.  If you believe your registration status was an error on the part of the elections office and would like to report the incident, please email us at <a href="mailto:cavoterprotection@berniesanders.com">cavoterprotection@berniesanders.com</a> so that we can make sure that the legal response team gets back to you.</p>
           <p>You can track your ballot <a href="http://www.sos.ca.gov/elections/ballot-status">here</a> to see if your vote is counted!</p>
-          <h2 class="issue-heading">Would you like to have the link emailed to you to check the status after today?</h2>
+          <!--<h2 class="issue-heading">Would you like to have the link emailed to you to check the status after today?</h2>
           <a class="get-email" onclick="{show$target}" href="#another-party-preference-send-email-yes">Yes</a>
           <form class="hide" id="another-party-preference-send-email-yes" action="">
             <label for=""><input type="text">Enter Your Email</label>
@@ -55,7 +55,7 @@
           <a class="get-email-no" onclick="{show$target}" href="#another-party-preference-send-email-no">No</a>
           <div class="hide" id="another-party-preference-send-email-no">
             <p>No problem! We hope this helped. Any more questions can be sent directly to <a href="mailto:cavoterprotection@berniesanders.com">cavoterprotection@berniesanders.com</a>.</p>
-          </div>
+          </div>-->
         </div>
 
         <a class="still-have-issues" onclick="{show$target}" href="#first-time-voting">This is my first time voting.</a>
@@ -77,7 +77,7 @@
               <a class="still-have-issues" onclick="{show$target}" href="#unable-to-give-id">I am unable/unwilling to provide ID.</a>
               <div class="hide" id="unable-to-give-id">
                 <p>According to (EC § 14310.), this is an acceptable reason to cast a provisional ballot. Please go ahead and cast a provisional ballot today but make sure to track your ballot and ensure that your vote is counted! Here’s a <a href="http://www.sos.ca.gov/elections/ballot-status">link</a> to track your ballot count.</p>
-                <h2 class="issue-heading">Would you like to have the link emailed to you to check the status after today?</h2>
+                <!--<h2 class="issue-heading">Would you like to have the link emailed to you to check the status after today?</h2>
                 <a class="get-email" onclick="{show$target}" href="#unable-to-give-id-send-email-yes">Yes</a>
                 <form class="hide" id="unable-to-give-id-send-email-yes" action="">
                   <label for=""><input type="text">Enter Your Email</label>
@@ -86,7 +86,7 @@
                 <a class="get-email-no" onclick="{show$target}" href="#unable-to-give-id-send-email-no">No</a>
                 <div class="hide" id="unable-to-give-id-send-email-no">
                   <p>No problem! We hope this helped. Any more questions can be sent directly to <a href="mailto:cavoterprotection@berniesanders.com">cavoterprotection@berniesanders.com</a>.</p>
-                </div>
+                </div>-->
               </div>
             </li>
           </ul>
@@ -96,7 +96,7 @@
         <div class="hide" id="moved">
           <p>According to (EC § 14311(b).), this is an acceptable reason to cast a provisional ballot. If you have enough time to make it to your correct precinct by 8pm, please do not cast a provisional ballot vote. Instead, head to your correct precinct and cast a regular ballot to ensure that it gets counted today.</p>
           <p>If you don’t have enough time to make it to your correct precinct location, please go ahead and cast a provisional ballot today. Make sure to track your ballot and ensure that your vote is counted <a href="http://www.sos.ca.gov/elections/ballot-status">here!</a></p>
-          <h2 class="issue-heading">Would you like to have the link emailed to you to check the status after today?</h2>
+          <!--<h2 class="issue-heading">Would you like to have the link emailed to you to check the status after today?</h2>
           <a class="get-email" onclick="{show$target}" href="#moved-send-email-yes">Yes</a>
           <form class="hide" id="moved-send-email-yes" action="">
             <label for=""><input type="text">Enter Your Email</label>
@@ -105,7 +105,7 @@
           <a class="get-email-no" onclick="{show$target}" href="#moved-send-email-no">No</a>
           <div class="hide" id="moved-send-email-no">
             <p>No problem! We hope this helped. Any more questions can be sent directly to <a href="mailto:cavoterprotection@berniesanders.com">cavoterprotection@berniesanders.com</a>.</p>
-          </div>
+          </div>-->
         </div>
 
 
