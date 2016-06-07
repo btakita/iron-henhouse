@@ -4,11 +4,10 @@
     <iframe src="https://docs.google.com/forms/d/1ptotgFk1gCtsxq6zDGCVqpkOh1cT65moObGB4sZciKk/viewform?embedded=true" width="100%" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
   </content>
   <style>
-  spt-i-voted-dialog > content#i-voted-iframe {
+    #i-voted-iframe {
     -webkit-overflow-scrolling: touch;
     overflow-y: scroll;
   }
-
     ctx-dialog.spt-i-voted-dialog spt-i-voted-dialog {
       display: block;
     }
