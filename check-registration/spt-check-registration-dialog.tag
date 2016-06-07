@@ -7,9 +7,6 @@
     ctx-dialog.spt-check-registration-dialog spt-check-registration-dialog {
       display: block;
     }
-    spt-check-registration-dialog {
-      height: 100vh;
-    }
     spt-check-registration-dialog > content {
       display: block;
       overflow: hidden;
