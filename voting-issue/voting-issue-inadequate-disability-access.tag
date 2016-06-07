@@ -1,3 +1,4 @@
+
 <voting-issue-inadequate-disability-access>
   <article id="main">
     <header>
@@ -10,7 +11,7 @@
         <p>If you are unable to use the voting system due to a disability, you can select any person (other than your employer, an agent of your employer, and officer or agent of your union) to assist you in the voting booth.</p>
         <p>At every polling location, there should be at least one voting machine that can be used with a person with disabilities that may prevent them from filling out a paper ballot.</p>
         <p>If you are experiencing trouble voting because of inadequate disability access, then you should speak with a legal professional. Give our legal hotline a call and report the incident.</p>
-        <a class="call-hotline" href="tel:{ctx.spt__hotline$phone_number}"><img src="/images/icon-hotline.svg" alt="">Call Elections Hotline</a>
+        <a class="call-hotline" href="tel:415-795-8065"><img src="/images/icon-hotline.svg" alt="">Call Elections Hotline</a>
       </div>
     </section>
   </article>

@@ -1,3 +1,4 @@
+
 <voting-issue-tile>
   <content>
     <voting-issue-no-ballots show="{ctx.route$name__voting_issue$no_ballots}" ctx="{opts.ctx}"></voting-issue-no-ballots>
