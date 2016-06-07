@@ -8,13 +8,13 @@ export function assign__voting_issue$$() {
   return assign(ctx, {
     voting_issue$$: [
       "no_ballots",
-      "wrong_ballots",
-      "no_evidence_of_registration",
-      "wrong_party_registration",
-      "campaigning_within_100_feet",
-      "polling_station_closed",
-      "sending_voters_away",
-      "wrong_location"
+      "long_lines",
+      "no_party_preference",
+      "provisional_ballot",
+      "not_allowed_to_vote",
+      "incorrect_party",
+      "electioneering",
+      "inadequate_disability_access"
     ]
   });
 }
