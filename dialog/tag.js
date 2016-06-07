@@ -32,7 +32,7 @@ export function dialog__tag$mount(tag) {
   function dialog_agent$on$change() {
     log(`${logPrefix}|dialog_agent$on$change`);
     if (!ctx.dialog) {
-      route(ctx, "");
+      route(ctx, ctx.route$path);
     }
   }
   function reload_dialog() {

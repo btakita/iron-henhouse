@@ -11,6 +11,8 @@ export function assign__election_day$route$$() {
     ctx,
     fn$route(ctx, {path: "", route$name: "election_day_root"}),
     fn$route(ctx, {path: "\\?*", route$name: "election_day_root"}),
+    fn$route(ctx, {path: "vote-where", route$name: "vote_where"}),
+    fn$route(ctx, {path: "vote-where\\?*", route$name: "vote_where"}),
     fn$route(ctx, {path: "voting-issue", route$name: "voting_issue"}),
     fn$route(ctx, {path: "voting-issue\\?*", route$name: "voting_issue"}),
     ...fn$voting_issue$route$$(ctx)
@@ -53,6 +55,7 @@ function fn$ctx() {
   log(`${logPrefix}|fn$ctx`);
   return assign({
     route$name__election_day_root: null,
+    route$name__vote_where: null,
     route$name__voting_issue: null,
     voting_issue$title: null,
     voting_issue$tile: null,

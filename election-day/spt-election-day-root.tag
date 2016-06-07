@@ -134,7 +134,7 @@
     import {assign__dialog_agent} from "ctx-core/dialog/agent";
     import {log,debug} from "ctx-core/logger/lib";
     const tag = fn$tag(this)
-        , logPrefix = "splash/spt-election-day-root.tag";
+        , logPrefix = "election-day/spt-election-day-root.tag";
     tag.on("mount", on$mount);
     tag.on("unmount", on$unmount);
     log(logPrefix);
