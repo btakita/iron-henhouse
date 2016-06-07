@@ -6,31 +6,12 @@
     <vote-where show="{ctx.route$name__vote_where}" ctx="{opts.ctx}"></vote-where>
     <voting-issue show="{ctx.route$name__voting_issue}" ctx="{opts.ctx}"></voting-issue>
     <voting-issue-tile show="{ctx.voting_issue$tile}" ctx="{opts.ctx}"></voting-issue-tile>
-    <navigation>
-      <a href="/?dialog=voting-issue-dialog" onclick="{link$onclick}">Early Voting</a>
-      <a href="/?dialog=spt-check-registration-dialog" onclick="{link$onclick}">Check Registration</a>
-      <a href="/?dialog=spt-zip-code-dialog" onclick="{link$onclick}">
-        Zip Code
-        <span show="{ctx.zip_code}">({ctx.zip_code})</span>
-      </a>
-    </navigation>
   </content>
   <spt-election-day-dialog ctx="{opts.ctx}"></spt-election-day-dialog>
   <style>
     spt-election-day {
       display: block;
       font-family: 'Oswald', Helvetica-Neue, Helvetica, Arial, san-serif;
-    }
-    spt-election-day > navigation {
-      display: block;
-      overflow: hidden;
-      margin-top: 2rem;
-    }
-    spt-election-day > navigation > * {
-      display: block;
-      overflow: hidden;
-      margin: 0.2em 0;
-      text-align: center;
     }
   </style>
   <script type="text/babel">
