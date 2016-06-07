@@ -1,6 +1,7 @@
 <spt-election-day-root>
   <background-mask>&nbsp;</background-mask>
-  <content>
+  <content id="landing" style="-webkit-overflow-scrolling: touch;
+        overflow-y: scroll;">
     <logo><img src="/suppress-this/logo.png"/></logo>
     <voting-problem-link class="button-link">
       <a class="red-button" href="voting-issue" onclick="{link$onclick}">I Have a Voting Problem</a>
