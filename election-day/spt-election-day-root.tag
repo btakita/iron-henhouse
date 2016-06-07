@@ -1,6 +1,6 @@
 <spt-election-day-root>
   <background-mask>&nbsp;</background-mask>
-  <content>
+  <content id = "landing">
     <logo><img src="/suppress-this/logo.png"/></logo>
     <voting-problem-link class="button-link">
       <a class="red-button" href="voting-issue" onclick="{link$onclick}">I Have a Voting Problem</a>
@@ -20,6 +20,7 @@
     </bottom>
   </content>
   <style>
+
     spt-election-day-root {
       display: block;
       position: relative;
@@ -46,6 +47,12 @@
       padding: 0 0 40px;
       align-items: center;
     }
+
+    spt-election-day-root > content#landing {
+      -webkit-overflow-scrolling: touch;
+      overflow-y: scroll;
+    }
+
     spt-election-day-root > content > logo {
       display: block;
       overflow: hidden;
