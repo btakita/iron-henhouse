@@ -1,17 +1,14 @@
 <voting-issue-tile>
   <h1>{ctx.l10n[ctx.voting_issue$key].title}</h1>
   <content>
-    <voting-issue-campaigning-within-100-feet show="{ctx.route$name__voting_issue$campaigning_within_100_feet}" ctx="{opts.ctx}"></voting-issue-campaigning-within-100-feet>
     <voting-issue-no-ballots show="{ctx.route$name__voting_issue$no_ballots}" ctx="{opts.ctx}"></voting-issue-no-ballots>
-    <voting-issue-no-evidence-of-registration show="{ctx.route$name__voting_issue$no_evidence_of_registration}" ctx="{opts.ctx}"></voting-issue-no-evidence-of-registration>
-    <voting-issue-polling-station-closed show="{ctx.route$name__voting_issue$polling_station_closed}" ctx="{opts.ctx}"></voting-issue-polling-station-closed>
-    <voting-issue-sending-voters-away show="{ctx.route$name__voting_issue$sending_voters_away}" ctx="{opts.ctx}"></voting-issue-sending-voters-away>
-    <voting-issue-wrong-ballots show="{ctx.route$name__voting_issue$wrong_ballots}" ctx="{opts.ctx}"></voting-issue-wrong-ballots>
-    <voting-issue-wrong-location show="{ctx.route$name__voting_issue$wrong_location}" ctx="{opts.ctx}"></voting-issue-wrong-location>
-    <voting-issue-wrong-party-registration show="{ctx.route$name__voting_issue$wrong_party_registration}" ctx="{opts.ctx}"></voting-issue-wrong-party-registration>
-    <voting-issue-help ctx="{opts.ctx}" show="{ctx.route$name__voting_issue$help}">
-      <p>{ctx.l10n[ctx.voting_issue$key].title} &mdash; Help</p>
-    </voting-issue-help>
+    <voting-issue-long-lines show="{ctx.route$name__voting_issue$long_lines}" ctx="{opts.ctx}"></voting-issue-long-lines>
+    <voting-issue-no-party-preference show="{ctx.route$name__voting_issue$no_party_preference}" ctx="{opts.ctx}"></voting-issue-no-party-preference>
+    <voting-issue-provisional-ballot show="{ctx.route$name__voting_issue$provisional_ballot}" ctx="{opts.ctx}"></voting-issue-provisional-ballot>
+    <voting-issue-not-allowed-to-vote show="{ctx.route$name__voting_issue$not_allowed_to_vote}" ctx="{opts.ctx}"></voting-issue-not-allowed-to-vote>
+    <voting-issue-incorrect-party show="{ctx.route$name__voting_issue$incorrect_party}" ctx="{opts.ctx}"></voting-issue-incorrect-party>
+    <voting-issue-electioneering show="{ctx.route$name__voting_issue$electioneering}" ctx="{opts.ctx}"></voting-issue-electioneering>
+    <voting-issue-inadequate-disability-access show="{ctx.route$name__voting_issue$inadequate_disability_access}" ctx="{opts.ctx}"></voting-issue-inadequate-disability-access>
   </content>
   <style>
     voting-issue-tile {
