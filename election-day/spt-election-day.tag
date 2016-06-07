@@ -3,9 +3,9 @@
   <spt-election-day-banner ctx="{opts.ctx}"></spt-election-day-banner>
   <content>
     <spt-election-day-root show="{ctx.route$name__election_day_root}" ctx="{opts.ctx}"></spt-election-day-root>
-    <spt-voting-issue show="{ctx.route$name__voting_issue}" ctx="{opts.ctx}"></spt-voting-issue>
+    <voting-issue show="{ctx.route$name__voting_issue}" ctx="{opts.ctx}"></voting-issue>
     <navigation>
-      <a href="/?dialog=spt-voting-issue-dialog" onclick="{link$onclick}">Early Voting</a>
+      <a href="/?dialog=voting-issue-dialog" onclick="{link$onclick}">Early Voting</a>
       <a href="/?dialog=spt-check-registration-dialog" onclick="{link$onclick}">Check Registration</a>
       <a href="/?dialog=spt-zip-code-dialog" onclick="{link$onclick}">
         Zip Code
