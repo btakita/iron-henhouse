@@ -13,12 +13,12 @@
       overflow: hidden;
     }
     spt-election-day-banner .marquee {
-      width: 450px;
+      width: 330px;
       margin: 0 auto;
       overflow: hidden;
       white-space: pre;
       box-sizing: border-box;
-      animation: marquee 30s linear infinite;
+      -webkit-animation: marquee 30s linear infinite;
     }
     @keyframes marquee {
       0%   { text-indent: 27.5em }
