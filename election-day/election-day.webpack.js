@@ -12,7 +12,6 @@ import "election-day/spt-election-day-dialog.tag";
 import "ctx-core/dialog/ctx-dialog.tag";
 import "ctx-core/dialog/ctx-dialog-topbar.tag";
 import "ctx-core/dialog/ctx-dialog-position-center.tag";
-import "early-voting/spt-early-voting-dialog.tag";
-import "early-voting-issue/spt-early-voting-issue-dialog.tag";
+import "voting-issue/spt-voting-issue.tag";
 import "check-registration/spt-check-registration-dialog.tag";
 import "zip-code/spt-zip-code-dialog.tag";

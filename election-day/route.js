@@ -8,7 +8,9 @@ export function assign__election_day$route$$() {
   return assign__route$$(
     ctx,
     fn$route(ctx, {path: "", route$name: "election_day_root"}),
-    fn$route(ctx, {path: "\\?*", route$name: "election_day_root"})
+    fn$route(ctx, {path: "\\?*", route$name: "election_day_root"}),
+    fn$route(ctx, {path: "voting-issue", route$name: "voting_issue"}),
+    fn$route(ctx, {path: "voting-issue\\?*", route$name: "voting_issue"})
   );
 }
 function fn$route(ctx, ...ctx$rest$$) {
@@ -17,6 +19,7 @@ function fn$route(ctx, ...ctx$rest$$) {
 function fn$ctx() {
   log(`${logPrefix}|fn$ctx`);
   return assign({
-    route$name__election_day_root: null
+    route$name__election_day_root: null,
+    route$name__voting_issue: null,
   }, ...arguments);
 }

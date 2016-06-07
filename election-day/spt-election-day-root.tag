@@ -3,7 +3,7 @@
   <content>
     <logo><img src="/suppress-this/logo.png"/></logo>
     <voting-problem-link class="button-link">
-      <a class="red-button" href="/?dialog=spt-early-voting-dialog" onclick="{link$onclick}">I Have a Voting Problem</a>
+      <a class="red-button" href="voting-issue" onclick="{link$onclick}">I Have a Voting Problem</a>
     </voting-problem-link>
     <check-registration-link class="button-link">
       <a class="yellow-button" href="/?dialog=spt-check-registration-dialog" onclick="{link$onclick}">Check Your Voter Registration</a>
@@ -145,7 +145,6 @@
     }
     function on$unmount() {
       log(`${logPrefix}|on$unmount`);
-      self.ctx.route$fragment_agent.off("change", refresh);
     }
   </script>
 </spt-election-day-root>
