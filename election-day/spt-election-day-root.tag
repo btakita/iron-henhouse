@@ -8,9 +8,9 @@
     <check-registration-link class="button-link">
       <a class="yellow-button" href="/?dialog=spt-check-registration-dialog" onclick="{link$onclick}">Check Your Voter Registration</a>
     </check-registration-link>
-    <npp-registration-link class="button-link">
-      <a class="yellow-button" target="_blank" href="http://youdownwithnpp.com/?{ctx.ref$query}">Voting as No Party Preference?</a>
-    </npp-registration-link>
+    <vote-where-link class="button-link">
+      <a class="red-button" href="vote-where" onclick="{link$onclick}">&nbsp;{ctx.l10n.vote_where$menu$text}&nbsp;</a>
+    </vote-where-link>
     <bottom>
       <spt-about-us ctx="{opts.ctx}"></spt-about-us>
       <spt-twitter ctx="{opts.ctx}"></spt-twitter>
@@ -132,12 +132,14 @@
     import {assign} from "ctx-core/object/lib";
     import {fn$tag} from "ctx-core/tag/lib";
     import {assign__dialog_agent} from "ctx-core/dialog/agent";
+    import {l10n__tag$mount} from "l10n/tag";
     import {log,debug} from "ctx-core/logger/lib";
     const tag = fn$tag(this)
         , logPrefix = "election-day/spt-election-day-root.tag";
+    log(logPrefix);
     tag.on("mount", on$mount);
     tag.on("unmount", on$unmount);
-    log(logPrefix);
+    l10n__tag$mount(tag);
     function on$mount() {
       log(`${logPrefix}|on$mount`);
       let ctx = self.ctx;

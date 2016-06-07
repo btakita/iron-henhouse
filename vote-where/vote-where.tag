@@ -11,6 +11,13 @@
     }
     vote-where #_vit {
     }
+    @media (max-width: 900px) {
+      vote-where {
+        width: 100%;
+        margin-left: inherit;
+        left: inherit;
+      }
+    }
   </style>
   <script type="text/babel">
     import {assign} from "ctx-core/object/lib";
