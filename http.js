@@ -43,6 +43,7 @@ function start(id) {
     maxAge: 24 * 60 * 60,
     hidden: true
   }));
+  app$use__lets_encrypt(ctx);
   if (!env.isLocalhost) {
     app.use(koa$sslify({trustProtoHeader: true}));
   }
@@ -58,4 +59,13 @@ function start(id) {
     log(`Worker ${id} exiting...`);
     process.exit();
   });
+}
+function app$use__lets_encrypt(ctx) {
+  log(`${logPrefix}|app$use__lets_encrypt`);
+  const app = ctx.app;
+  app.use(koa$route.get("/.well-known/acme-challenge/Stj1w3MX4W3oEJpBC-nNNQ8k0ASYO4nkKWz_IwhaZ7w", http$get$lets_encrypt_auth));
+}
+function *http$get$lets_encrypt_auth(id) {
+  log(`${logPrefix}|http$get$lets_encrypt_auth`);
+  this.body = "Stj1w3MX4W3oEJpBC-nNNQ8k0ASYO4nkKWz_IwhaZ7w.6I756fHl3Ki6lug40LpcM8uOvzSHJ-n6_lUpA_YQWQw";
 }
