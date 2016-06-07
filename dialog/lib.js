@@ -24,7 +24,7 @@ export function assign__route$dialog$map(ctx) {
       },
       zip_code: {
         tag$name: "spt-zip-code-dialog",
-        title: "Zip Code"
+        title: "Where do you vote?"
       }
     }
   });
