@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="77px" height="89px" viewBox="0 0 77 89" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8 (29681) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-no-ballots</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="mobile2-copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01-problem-selection" transform="translate(-149.000000, -474.000000)">
+            <g id="a-#no-ballots" transform="translate(15.000000, 455.000000)">
+                <g id="icon-no-ballots" transform="translate(134.000000, 20.000000)">
+                    <g id="noun_11440">
+                        <g id="Group">
+                            <polygon id="Shape" fill="#000000" points="76.419 32.62776 68.476625 40.52576 68.30075 85.69352 76.59575 74.17168"></polygon>
+                            <rect id="Rectangle-path" fill="#000000" x="0.00875" y="41.14704" width="66.527125" height="46.85296"></rect>
+                            <polygon id="Shape" stroke="#000000" stroke-dasharray="2,2" points="28.856625 0 20.6325 28.82704 47.9395 36.70744 56.1645 7.88128"></polygon>
+                            <polygon id="Shape" fill="#000000" points="50.350125 31.29632 49.60025 33.39424 63.8085 33.4268 59.639125 37.07792 16.499875 36.89664 22.7395 33.33616 32.88075 33.24024 26.45825 31.3104 16.77025 31.19424 0 39.37032 66.71875 39.73288 75.3585 31.37552"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
