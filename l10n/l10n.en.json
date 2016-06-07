@@ -1,47 +1,47 @@
 {
-  "l10n": {
-    "call_us": "Call us!",
-    "vote_early_instructions$menu$text": "Early Voting Instructions",
-    "early_voting_issue$menu$text": "I have an early voting problem!",
-    "enter_zip_code": "Enter your zip code",
-    "get_help": "Get help!",
-    "help": "Help!",
-    "hotline$phone": "1-800-CHX-VOTE",
-    "select_polling_station": "Select your polling station",
-    "tag$election_day$title": "Suppress This",
-    "tag$election_day$subtitle": "We the People can stop voter suppression!",
-    "tag$spt_top_navigation$call_us": "Voting issue? 1-800-CHX-VOTE",
-    "tag$voting_issue$title": "What problems are you facing?",
-    "tag$voting_issue$subtitle": "Select from one of the problems below:",
-    "tag$voting_issue$call_us": "Didn't find an answer? Call our rapid response team. They'll sort you out!",
-    "video": "Video",
-    "vote_where": "Where do I vote?",
-    "vote_where$menu$text": "Where do I vote?",
-    "voting_issue$menu$text": "I have a voting problem!",
-    "voting_issue$no_ballots": {
-      "title": "No ballots available"
-    },
-    "voting_issue$wrong_ballots": {
-      "title": "Wrong ballots available"
-    },
-    "voting_issue$no_evidence_of_registration": {
-      "title": "No evidence of registration"
-    },
-    "voting_issue$wrong_party_registration": {
-      "title": "Wrong party registration"
-    },
-    "voting_issue$campaigning_within_100_feet": {
-      "title": "Campaigning within 100 feet"
-    },
-    "voting_issue$polling_station_closed": {
-      "title": "Polling place closed"
-    },
-    "voting_issue$sending_voters_away": {
-      "title": "Sending voters away"
-    },
-    "voting_issue$wrong_location": {
-      "title": "Wrong location"
-    },
-    "your_rights": "Your Rights"
- }
+    "l10n": {
+        "call_us": "Call us!",
+        "vote_early_instructions$menu$text": "Early Voting Instructions",
+        "early_voting_issue$menu$text": "I have an early voting problem!",
+        "enter_zip_code": "Enter your zip code",
+        "get_help": "Get help!",
+        "help": "Help!",
+        "hotline$phone": "1-800-345-VOTE",
+        "select_polling_station": "Select your polling station",
+        "tag$election_day$title": "Suppress This",
+        "tag$election_day$subtitle": "We the People can stop voter suppression!",
+        "tag$spt_top_navigation$call_us": "No voting alerts have been issued yet.  Return here for more information.",
+        "tag$voting_issue$title": "What problems are you facing?",
+        "tag$voting_issue$subtitle": "Select from one of the problems below:",
+        "tag$voting_issue$call_us": "Didn't find an answer? Call our rapid response team. They'll sort you out!",
+        "video": "Video",
+        "vote_where": "Where do I vote?",
+        "vote_where$menu$text": "Where do I vote?",
+        "voting_issue$menu$text": "I have a voting problem!",
+        "voting_issue$no_ballots": {
+            "title": "No ballots available"
+        },
+        "voting_issue$wrong_ballots": {
+            "title": "Wrong ballots available"
+        },
+        "voting_issue$no_evidence_of_registration": {
+            "title": "No evidence of registration"
+        },
+        "voting_issue$wrong_party_registration": {
+            "title": "Wrong party registration"
+        },
+        "voting_issue$campaigning_within_100_feet": {
+            "title": "Campaigning within 100 feet"
+        },
+        "voting_issue$polling_station_closed": {
+            "title": "Polling place closed"
+        },
+        "voting_issue$sending_voters_away": {
+            "title": "Sending voters away"
+        },
+        "voting_issue$wrong_location": {
+            "title": "Wrong location"
+        },
+        "your_rights": "Your Rights"
+    }
 }
