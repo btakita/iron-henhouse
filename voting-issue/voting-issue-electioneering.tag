@@ -1,3 +1,4 @@
+
 <voting-issue-electioneering>
   <article id="main">
     <header>
@@ -26,7 +27,7 @@
               <a class="still-have-issues" onclick="{show$target}" href="#still-not-resolved">Still not resolved?</a>
               <div class="hide" id="still-not-resolved">
                 <p>Oh no! Hang tight and give our legal hotline a call so we can resolve this issue ASAP!</p>
-                <a class="call-hotline" href="tel:{ctx.spt__hotline$phone_number}"><img src="/images/icon-hotline.svg" alt="">Call Elections Hotline</a>
+                <a class="call-hotline" href="tel:415-795-8065"><img src="/images/icon-hotline.svg" alt="">Call Elections Hotline</a>
             </div>
           </li>
           <li>
@@ -38,7 +39,7 @@
             <a class="still-have-issues" onclick="{show$target}" href="#still-not-resolved2">Still not resolved?</a>
               <div class="hide" id="still-not-resolved2">
                 <p>Oh no! Hang tight and give our legal hotline a call so we can resolve this issue ASAP!</p>
-                <a class="call-hotline" href="tel:{ctx.spt__hotline$phone_number}"><img src="/images/icon-hotline.svg" alt="">Call Elections Hotline</a>
+                <a class="call-hotline" href="tel:415-795-8065"><img src="/images/icon-hotline.svg" alt="">Call Elections Hotline</a>
             </div>
           </li>
         </ol>
@@ -55,14 +56,14 @@
           <a class="still-have-issues" onclick="{show$target}" href="#denied-right-to-vote">I was denied the right to vote today.</a>
             <div class="hide" id="denied-right-to-vote">
               <p>Hmmm, let’s have you speak with a legal professional. Give our legal hotline a call and report the incident.</p>
-              <a class="call-hotline" href="tel:{ctx.spt__hotline$phone_number}"><img src="/images/icon-hotline.svg" alt="">Call Elections Hotline</a>
+              <a class="call-hotline" href="tel:415-795-8065"><img src="/images/icon-hotline.svg" alt="">Call Elections Hotline</a>
             </div>
           <p>If you were attempting to persuade voters, that is considered “electioneering/campaigning” and is reason to be given a misdemeanor. Please cease from electioneering/campaigning immediately.</p>
         </div>
         <a class="still-have-issues" onclick="{show$target}" href="#holdup">Yes, I’m not able to vote because of a holdup or interruption caused by electioneering/campaigning. </a>
           <div class="hide" id="holdup">
             <p>Hmmm, let’s have you speak with a legal professional. Give our legal hotline a call and report the incident. </p>
-            <a class="call-hotline" href="tel:{ctx.spt__hotline$phone_number}"><img src="/images/icon-hotline.svg" alt="">Call Elections Hotline</a>
+            <a class="call-hotline" href="tel:415-795-8065"><img src="/images/icon-hotline.svg" alt="">Call Elections Hotline</a>
           </div>
       </div>
     </section>
