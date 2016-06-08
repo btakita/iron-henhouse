@@ -13,10 +13,10 @@
       overflow: hidden;
     }
     spt-election-day-banner > spt-banner {
-      color: #FFFFFF;
+      color: #000000;
     }
     spt-election-day-banner spt-banner a, spt-election-day-banner spt-banner a:visited, spt-election-day-banner spt-banner a:hover, spt-election-day-banner spt-banner a:active {
-      color: #FFFFFF;
+      color: #000000;
     }
     spt-election-day-banner > spt-banner > p {
       text-align: center;

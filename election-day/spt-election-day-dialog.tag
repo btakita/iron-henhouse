@@ -6,17 +6,17 @@
   </ctx-dialog>
   <ctx-dialog-position-center ctx="{opts.ctx}"></ctx-dialog-position-center>
   <style>
-    spt-election-day-dialog > ctx-dialog > content > .topbar {
+    spt-election-day-dialog > ctx-dialog > content > * > .topbar {
       background: #222222;
       color: #ffffff;
+      padding-left: 20px;
+      padding-right: 10px;
+    }
+    spt-election-day-dialog > ctx-dialog > content > * > .topbar > back-button::before {
+      color: #FFFFFF;
     }
     spt-election-day-dialog > ctx-dialog {
       background: rgba(0,0,0,0.6);
-    }
-    spt-election-day-dialog > ctx-dialog > content > * > .topbar {
-      background: #222222;
-      padding-left: 20px;
-      padding-right: 10px;
     }
     spt-election-day-dialog > ctx-dialog > content > * > content {
       background: #333333;
