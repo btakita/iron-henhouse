@@ -13,6 +13,9 @@
     ctx-dialog.spt-election-day-menu-dialog spt-election-day-menu-dialog {
       display: block;
     }
+    spt-election-day-menu-dialog {
+      height: 100%;
+    }
     spt-election-day-menu-dialog > * {
       padding-left: 10px;
       padding-right: 10px;
