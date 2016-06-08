@@ -8,11 +8,15 @@
     <a href="{ctx.route$path$url||'/'}?dialog=spt-election-day-menu-dialog" class="menu" onclick="{link$onclick}">&equiv;</a>
   </spt-banner>
   <style>
+    spt-election-day-banner {
+      display: block;
+      overflow: hidden;
+    }
     spt-election-day-banner > spt-banner {
-      color: #000000;
+      color: #FFFFFF;
     }
     spt-election-day-banner spt-banner a, spt-election-day-banner spt-banner a:visited, spt-election-day-banner spt-banner a:hover, spt-election-day-banner spt-banner a:active {
-      color: #000000;
+      color: #FFFFFF;
     }
     spt-election-day-banner > spt-banner > p {
       text-align: center;
