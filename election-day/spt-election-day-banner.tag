@@ -18,7 +18,7 @@
       overflow: hidden;
       white-space: pre;
       box-sizing: border-box;
-      -webkit-animation: marquee 30s linear infinite;
+      -webkit-animation: marquee 30s 0.1s linear infinite;
     }
     @keyframes marquee {
       0%   { text-indent: 27.5em }
