@@ -10,7 +10,7 @@
     import {fn$tag} from "ctx-core/tag/lib";
     import {route__tag$mount} from "ctx-core/route/tag";
     import {assign__splash$route$$} from "./route";
-    import {dialog__assign__ctx$update__defer} from "dialog/tag";
+    import {dialog__assign__ctx$update__defer} from "ctx-core/dialog/tag";
     import {log,debug} from "ctx-core/logger/lib";
     const tag = fn$tag(this)
         , logPrefix = "splash/spt-splash.tag";

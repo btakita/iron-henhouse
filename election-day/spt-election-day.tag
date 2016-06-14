@@ -62,8 +62,8 @@
     import {fn$tag} from "ctx-core/tag/lib";
     import {assign__election_day$route$$} from "./route";
     import {assign__dialog$$_agent} from "ctx-core/dialog/agent";
+    import {dialog__assign__ctx$update__defer} from "ctx-core/dialog/tag";
     import {assign__route$dialog$map} from "dialog/lib";
-    import {dialog__assign__ctx$update__defer} from "dialog/tag";
     import {localStorage$load} from "ctx-core/localStorage/lib";
     import {route} from "ctx-core/route/lib";
     import {route__tag$mount} from "ctx-core/route/tag";
